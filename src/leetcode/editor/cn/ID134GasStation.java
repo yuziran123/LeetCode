@@ -22,18 +22,21 @@ public class ID134GasStation {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         /**
-         * 描述:  53. 最大子数组和的马甲题
+         * 描述:  动态规划求解
          * Date 2024/8/30
          *
          * @param gas
          * @param cost
          * @return int
          */
-
         public int canCompleteCircuit(int[] gas, int[] cost) {
+
+            return 0;
+        }
+
+        public int canCompleteCircuit1(int[] gas, int[] cost) {
             int sum = 0;
             int len = gas.length;
-            int max = 0;
             int start = 0;
             // i->i+1 可余油量
             for (int i = 0; i < len; i++) {
@@ -43,20 +46,24 @@ public class ID134GasStation {
             if (sum < 0)
                 return -1;
             // sum >= 0：一定可以完成环路
-            gas[0] = gas[0] + gas[1];
-            max = gas[0];
-            for (int i = 1; i < len; i++) {
-                gas[i] = gas[i] + gas[(i + 1) % len];
-                if (gas[i] >= max) {
-                    max = gas[i];
-                    start = i;
+            sum = 0;
+            /**对于问题的拆解分析——算是利用数组和问题的性质求解
+             * start表示环路起始  即使start之前的和为负，可是sum >= 0 start之后一定满足要求
+             */
+            for (int i = 0; i < len; i++) {
+                sum += gas[i];
+                // 从左我往右寻找其后sum>=0的起始点
+                if (sum < 0 && gas[i] < 0) {
+                    sum = 0;
+                    start = i + 1;
                 }
             }
-            System.out.println(start);
             return start;
         }
     }
-// leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region end(Prohibit modification and deletion)
+
      /*// 时间复杂度O(N²)，超出时间限制
         public int canCompleteCircuit(int[] gas, int[] cost) {
             int sum = 0;
