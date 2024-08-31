@@ -23,11 +23,18 @@ public class ID53MaximumSubarray {
          */
         public int maxSubArray(int[] nums) {
             int len = nums.length;
-            int sum = 0;
             int max = nums[0];
-
-
-
+            int sum = 0;
+            int[] dp = new int[len];
+            dp[0] = nums[0];
+            for (int i = 1; i < len; i++) {
+                // dp[i] 取决于 dp[i-1]
+                // 1.dp[i-1]<=0 ;nums[i]作为新序列的起始
+                // 2.dp[i-1]>0 ;nums[i]作为新序列的末尾
+                dp[i] = Math.max(dp[i - 1], 0) + nums[i];
+                // 取所有递增自序列和最大的情况
+                max = Math.max(max, dp[i]);
+            }
             return max;
         }
     }
