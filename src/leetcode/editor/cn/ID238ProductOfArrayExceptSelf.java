@@ -22,21 +22,62 @@ public class ID238ProductOfArrayExceptSelf {
          * @param nums
          * @return int[]
          */
-        public int[] productExceptSelf(int[] nums) {
+        public int[] productExceptSelf1(int[] nums) {
             int len = nums.length;
             int[] answer = new int[len];
-            // O(N²)的时间复杂度——超时了
+            // i=（i-1）*（i+1）
+            // 左边
+            int[] left = new int[len];
+            left[0] = 1;
+            for (int i = 1; i < len; i++) {
+                left[i] = left[i - 1] * nums[i - 1];
+                if (left[i] == 0) break;
+            }
+            // 右边
+            int[] right = new int[len];
+            right[len - 1] = 1;
+            for (int i = len - 2; i >= 0; i--) {
+                right[i] = right[i + 1] * nums[i + 1];
+                if (right[i] == 0) break;
+            }
+            // ans=left*right
             for (int i = 0; i < len; i++) {
-                nums[i] = nums[(i + len - 1) % len] * nums[(i + 1) % len];
-
+                answer[i] = left[i] * right[i];
             }
             return answer;
+        }
+
+        /**
+         * 描述:空间优化版本
+         */
+        public int[] productExceptSelf(int[] nums) {
+            int len = nums.length;
+            // i=（i-1）*（i+1）
+            // 左边
+            int[] left = new int[len];
+            left[0] = 1;
+            for (int i = 1; i < len; i++) {
+                left[i] = left[i - 1] * nums[i - 1];
+                if (left[i] == 0) break;
+            }
+            // 右边
+            int[] right = new int[len];
+            right[len - 1] = 1;
+            for (int i = len - 2; i >= 0; i--) {
+                right[i] = right[i + 1] * nums[i + 1];
+                if (right[i] == 0) break;
+            }
+            // ans=left*right
+            for (int i = 0; i < len; i++) {
+                left[i] = left[i] * right[i];
+            }
+            return left;
         }
 
     }
 
     // leetcode submit region end(Prohibit modification and deletion)
-   /* public int[] productExceptSelf(int[] nums) {
+    public int[] productExceptSelf(int[] nums) {
         int len = nums.length;
         int[] answer = new int[len];
         // O(N²)的时间复杂度——超时了
@@ -50,5 +91,6 @@ public class ID238ProductOfArrayExceptSelf {
             }
         }
         return answer;
-    }*/
+    }
+
 }
