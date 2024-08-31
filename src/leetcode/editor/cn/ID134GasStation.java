@@ -29,9 +29,55 @@ public class ID134GasStation {
          * @param cost
          * @return int
          */
-        public int canCompleteCircuit(int[] gas, int[] cost) {
+        public int canCompleteCircuit2(int[] gas, int[] cost) {
+            int sum = 0;
+            int len = gas.length;
+            int start = 0;
+            // i->i+1 可余油量
+            for (int i = 0; i < len; i++) {
+                gas[i] = gas[i] - cost[i];
+                sum += gas[i];
+            }
+            if (sum < 0)
+                return -1;
 
-            return 0;
+            int[] dp = new int[len];
+            dp[0] = gas[0];
+            for (int i = 1; i < len; i++) {
+                dp[i] = Math.max(dp[i - 1], 0) + gas[i];
+                if (dp[i - 1] < 0 && dp[i] >= 0)
+                    start = i;
+            }
+            return start;
+        }
+
+        /**
+         * 描述:动态规划空间优化版本
+         */
+        public int canCompleteCircuit(int[] gas, int[] cost) {
+            int sum = 0;
+            int len = gas.length;
+            int start = 0;
+            // i->i+1 可余油量
+            for (int i = 0; i < len; i++) {
+                gas[i] = gas[i] - cost[i];
+                sum += gas[i];
+            }
+            if (sum < 0)
+                return -1;
+
+            // 用两个变量代替数组；空间复杂度为O(n)
+            // sum代替dp[i]   pre代替dp[i-1]
+            // 1.sum初始化为dp[0]   2.sum未更新前就是dp[i-1] 用pre暂存
+            sum = gas[0];
+            int pre = 0;
+            for (int i = 1; i < len; i++) {
+                pre = sum;
+                sum = Math.max(pre, 0) + gas[i];
+                if (pre < 0 && sum >= 0)
+                    start = i;
+            }
+            return start;
         }
 
         public int canCompleteCircuit1(int[] gas, int[] cost) {
