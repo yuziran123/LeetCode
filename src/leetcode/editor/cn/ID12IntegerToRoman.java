@@ -13,7 +13,7 @@ public class ID12IntegerToRoman {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         /*简单的暴力枚举*/
-        public String intToRoman(int num) {
+       /* public String intToRoman(int num) {
             String res = "";
             int[] val = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
             String[] str = new String[]{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
@@ -56,10 +56,28 @@ public class ID12IntegerToRoman {
             }
 
             return res;
-        }
+        }*/
 
 
         /*优化：val和str数组的索引对应关系可以利用*/
+        public String intToRoman(int num) {
+            String res = "";
+            int[] val = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+            String[] str = new String[]{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+            // 和贪心算法的硬币问题本质一样
+            int index = 0;
+            while (num > 0) {
+                if (num >= val[index]) {
+                    res += str[index];
+                    num -= val[index];
+                    continue;
+                }
+                index++;
+            }
+
+            return res;
+        }
 
         /*num各位数转为数组存储*/
         public static void intToArray(int num, int[] arr) {
