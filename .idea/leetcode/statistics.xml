@@ -6,11 +6,11 @@
         <entry key="leetcode.cn">
           <value>
             <Statistics>
-              <option name="easy" value="48" />
+              <option name="easy" value="50" />
               <option name="hard" value="3" />
-              <option name="medium" value="41" />
+              <option name="medium" value="43" />
               <option name="questionTotal" value="3696" />
-              <option name="solvedTotal" value="92" />
+              <option name="solvedTotal" value="96" />
             </Statistics>
           </value>
         </entry>
