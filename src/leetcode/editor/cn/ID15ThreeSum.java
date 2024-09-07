@@ -50,15 +50,4 @@ public class ID15ThreeSum {
 
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    /**
-     * 描述:哈希表法
-     * Date 2024/9/7
-     */
-    public List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> ans = new ArrayList<>();
-
-        return ans;
-    }
-
 }
