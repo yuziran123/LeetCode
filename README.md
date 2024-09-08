@@ -1,62 +1,48 @@
 # LeetCode刷题记录
 
 ## 数组
-合并两个有序数组
-移除元素
-删除有序数组中的重复项
-删除有序数组中的重复项Ⅱ
-多数元素
-轮转数组
-买卖股票的最佳时机
-买卖股票的最佳时机Ⅱ
-跳跃游戏
-跳跃游戏Ⅱ
-H指数
-O(1) 时间插入、删除和获取随机元素
-除自身以外数组的乘积
-加油站
-分发糖果
-接雨水
+1. [删除有序数组中的重复项Ⅱ ](src/leetcode/editor/cn/ID80RemoveDuplicatesFromSortedArrayIi.java)
+2. [轮转数组](src/leetcode/editor/cn/ID189RotateArray.java)
+3. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID122BestTimeToBuyAndSellStockIi.java)
+4. [跳跃游戏](src/leetcode/editor/cn/ID55JumpGame.java)
+5. [跳跃游戏Ⅱ](src/leetcode/editor/cn/ID45JumpGameIi.java)
+6. [H指数](src/leetcode/editor/cn/ID274HIndex.java)[除自身以外数组的乘积](src/leetcode/editor/cn/ID238ProductOfArrayExceptSelf.java)
+7. [加油站](src/leetcode/editor/cn/ID134GasStation.java)
+
+- [ ] O(1) 时间插入、删除和获取随机元素
+
+
 
 ### 字符串
 
-罗马数字转整数
-整数转罗马数字
-最后一个单词的长度
-最长公共前缀
-反转字符串中的单词
-Z字形变换
-找出字符串中第一个匹配项的下标
-文本左右对齐
+1. [整数转罗马数字](src/leetcode/editor/cn/ID12IntegerToRoman.java)
+2. [Z字形变换](src/leetcode/editor/cn/ID6ZigzagConversion.java)
+
+- [ ] 文本左右对齐
 
 
 ### 双指针
-验证回文串
-判断子序列
-两数之和Ⅱ-输入有序数组
-盛最多水的容器
-三数之和
+1. [验证回文串](src/leetcode/editor/cn/ID125ValidPalindrome.java)
+2. [判断子序列](src/leetcode/editor/cn/ID392IsSubsequence.java)
+3. [两数之和Ⅱ-输入有序数组](src/leetcode/editor/cn/ID167TwoSumIiInputArrayIsSorted.java)
+4. [盛最多水的容器](src/leetcode/editor/cn/ID11ContainerWithMostWater.java)
+5. [三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)
 
 ### 滑动窗口
-长度最小的子数组
-无重复字符的最长子串
-串联所有单词的子串
-最小覆盖子串
+1. [长度最小的子数组](src/leetcode/editor/cn/ID209MinimumSizeSubarraySum.java)
+2. [无重复字符的最长子串](src/leetcode/editor/cn/ID3LongestSubstringWithoutRepeatingCharacters.java)
+
+- [ ] 串联所有单词的子串
+- [ ] 最小覆盖子串
 
 ### 哈希表
-赎金信
-同构字符串
-单词规律
-
-[有效的字母异位词](src/leetcode/editor/cn/ID242ValidAnagram.java)
-
-字母异位词分组
-两数之和
-快乐数
-存在重复元素Ⅱ
-最长连续序列
-
-[三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)		[参考题解](https://leetcode.cn/problems/3sum/solutions/12307/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/)
+1. [赎金信](src/leetcode/editor/cn/ID383RansomNote.java)
+2. [有效的字母异位词](src/leetcode/editor/cn/ID242ValidAnagram.java)
+3. [字母异位词分组](src/leetcode/editor/cn/ID49GroupAnagrams.java)
+4. [快乐数](src/leetcode/editor/cn/ID202HappyNumber.java)
+5. [存在重复元素Ⅱ](src/leetcode/editor/cn/ID219ContainsDuplicateIi.java)
+6. [最长连续序列](src/leetcode/editor/cn/ID128LongestConsecutiveSequence.java)
+7. [三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)		[参考题解](https://leetcode.cn/problems/3sum/solutions/12307/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/)
 
 
 ### 区间
@@ -84,8 +70,8 @@ Z字形变换
 
 ### Kadane算法
 
-最大子数组和
-环形子数组的最大和
+1. 最大子数组和
+2. 环形子数组的最大和
 
 ## 数据结构
 
@@ -94,8 +80,9 @@ Z字形变换
 1. [有效的括号](src/leetcode/editor/cn/ID20ValidParentheses.java)
 2. [简化路径](src/leetcode/editor/cn/ID71SimplifyPath.java)
 3. [最小栈](src/leetcode/editor/cn/ID155MinStack.java) ——用栈+辅助栈实现
-4. [逆波兰表达式求值](src/leetcode/editor/cn/ID150EvaluateReversePolishNotation.java)       
-   - [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
+4. [逆波兰表达式求值](src/leetcode/editor/cn/ID150EvaluateReversePolishNotation.java)
+
+- [ ] [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
 
 #### 笔记
 
@@ -131,24 +118,16 @@ Z字形变换
 4. 
 
 ### 链表
-环形链表
-两数相加
-合并两个有序链表
-随机链表的复制
-反转链表Ⅱ
-K个一组翻转链表
-删除链表的倒数第N个结点
-删除排序链表中的重复元素Ⅱ
-旋转链表
-分隔链表
-LRU缓存
-
-### 堆
-
-数组中的第K个最大元素
-IPO
-查找和最小的K对数字
-数据流的中位数
+1. [环形链表](src/leetcode/editor/cn/ID141LinkedListCycle.java)
+2. [两数相加](src/leetcode/editor/cn/ID2AddTwoNumbers.java)
+3. [合并两个有序链表](src/leetcode/editor/cn/ID21MergeTwoSortedLists.java)
+4. [随机链表的复制](src/leetcode/editor/cn/IDLCR138BiaoShiShuZhiDeZiFuChuanLcof.java)
+5. [反转链表](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)Ⅱ
+6. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
+7. [删除排序链表中的重复元素](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)Ⅱ
+8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
+9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
+10. LRU[缓存](src/leetcode/editor/cn/ID146LruCache.java)
 
 ## 二叉树
 
@@ -223,6 +202,13 @@ N皇后Ⅱ
 在排序数组中查找元素的第一个和最后一个位置
 寻找旋转排序数组中的最小值
 寻找两个正序数组的中位数
+
+### 堆
+
+数组中的第K个最大元素
+IPO
+查找和最小的K对数字
+数据流的中位数
 
 ## 数学
 回文数
