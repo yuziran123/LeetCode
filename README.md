@@ -1,62 +1,48 @@
 # LeetCode刷题记录
 
 ## 数组
-合并两个有序数组
-移除元素
-删除有序数组中的重复项
-删除有序数组中的重复项Ⅱ
-多数元素
-轮转数组
-买卖股票的最佳时机
-买卖股票的最佳时机Ⅱ
-跳跃游戏
-跳跃游戏Ⅱ
-H指数
-O(1) 时间插入、删除和获取随机元素
-除自身以外数组的乘积
-加油站
-分发糖果
-接雨水
+1. [删除有序数组中的重复项Ⅱ ](src/leetcode/editor/cn/ID80RemoveDuplicatesFromSortedArrayIi.java)
+2. [轮转数组](src/leetcode/editor/cn/ID189RotateArray.java)
+3. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID122BestTimeToBuyAndSellStockIi.java)
+4. [跳跃游戏](src/leetcode/editor/cn/ID55JumpGame.java)
+5. [跳跃游戏Ⅱ](src/leetcode/editor/cn/ID45JumpGameIi.java)
+6. [H指数](src/leetcode/editor/cn/ID274HIndex.java)[除自身以外数组的乘积](src/leetcode/editor/cn/ID238ProductOfArrayExceptSelf.java)
+7. [加油站](src/leetcode/editor/cn/ID134GasStation.java)
+
+- [ ] O(1) 时间插入、删除和获取随机元素
+
+
 
 ### 字符串
 
-罗马数字转整数
-整数转罗马数字
-最后一个单词的长度
-最长公共前缀
-反转字符串中的单词
-Z字形变换
-找出字符串中第一个匹配项的下标
-文本左右对齐
+1. [整数转罗马数字](src/leetcode/editor/cn/ID12IntegerToRoman.java)
+2. [Z字形变换](src/leetcode/editor/cn/ID6ZigzagConversion.java)
+
+- [ ] 文本左右对齐
 
 
 ### 双指针
-验证回文串
-判断子序列
-两数之和Ⅱ-输入有序数组
-盛最多水的容器
-三数之和
+1. [验证回文串](src/leetcode/editor/cn/ID125ValidPalindrome.java)
+2. [判断子序列](src/leetcode/editor/cn/ID392IsSubsequence.java)
+3. [两数之和Ⅱ-输入有序数组](src/leetcode/editor/cn/ID167TwoSumIiInputArrayIsSorted.java)
+4. [盛最多水的容器](src/leetcode/editor/cn/ID11ContainerWithMostWater.java)
+5. [三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)
 
 ### 滑动窗口
-长度最小的子数组
-无重复字符的最长子串
-串联所有单词的子串
-最小覆盖子串
+1. [长度最小的子数组](src/leetcode/editor/cn/ID209MinimumSizeSubarraySum.java)
+2. [无重复字符的最长子串](src/leetcode/editor/cn/ID3LongestSubstringWithoutRepeatingCharacters.java)
+
+- [ ] 串联所有单词的子串
+- [ ] 最小覆盖子串
 
 ### 哈希表
-赎金信
-同构字符串
-单词规律
-
-[有效的字母异位词](src/leetcode/editor/cn/ID242ValidAnagram.java)
-
-字母异位词分组
-两数之和
-快乐数
-存在重复元素Ⅱ
-最长连续序列
-
-[三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)		[参考题解](https://leetcode.cn/problems/3sum/solutions/12307/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/)
+1. [赎金信](src/leetcode/editor/cn/ID383RansomNote.java)
+2. [有效的字母异位词](src/leetcode/editor/cn/ID242ValidAnagram.java)
+3. [字母异位词分组](src/leetcode/editor/cn/ID49GroupAnagrams.java)
+4. [快乐数](src/leetcode/editor/cn/ID202HappyNumber.java)
+5. [存在重复元素Ⅱ](src/leetcode/editor/cn/ID219ContainsDuplicateIi.java)
+6. [最长连续序列](src/leetcode/editor/cn/ID128LongestConsecutiveSequence.java)
+7. [三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)		[参考题解](https://leetcode.cn/problems/3sum/solutions/12307/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/)
 
 
 ### 区间
@@ -84,8 +70,8 @@ Z字形变换
 
 ### Kadane算法
 
-最大子数组和
-环形子数组的最大和
+1. 最大子数组和
+2. 环形子数组的最大和
 
 ## 数据结构
 
@@ -94,12 +80,13 @@ Z字形变换
 1. [有效的括号](src/leetcode/editor/cn/ID20ValidParentheses.java)
 2. [简化路径](src/leetcode/editor/cn/ID71SimplifyPath.java)
 3. [最小栈](src/leetcode/editor/cn/ID155MinStack.java) ——用栈+辅助栈实现
-4. [逆波兰表达式求值](src/leetcode/editor/cn/ID150EvaluateReversePolishNotation.java)       
-   - [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
+4. [逆波兰表达式求值](src/leetcode/editor/cn/ID150EvaluateReversePolishNotation.java)
+
+- [ ] [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
 
 #### 笔记
 
-1. `path.split("/")`：将 `path` 字符串按 `/` 拆分成一个字符串数组。	
+1.`path.split("/")`：将 `path` 字符串按 `/` 拆分成一个字符串数组。	
 
 `"/home//user/"`的切割结果是	
 
@@ -107,65 +94,54 @@ Z字形变换
 []	home	[]	user	[]
 ```
 
-2. Deque<>` 和 `Stack<>` 都可以用于实现栈。
+2.Deque<>` 和 `Stack<>` 都可以用于实现栈。
 
-   - **`Deque<>`**:`LinkedList` 实现的 `Deque` 不是线程安全的。如果需要线程安全，可以使用 `ConcurrentLinkedDeque`。
+- **`Deque<>`**:`LinkedList` 实现的 `Deque` 不是线程安全的。如果需要线程安全，可以使用 `ConcurrentLinkedDeque`。
 
-   - **`Stack<>`**:是线程安全的，因为它的方法是同步的，但这种线程安全特性可能会引入额外的开销。
-     
-   -  **总结**
-     
-     如果应用场景需要线程安全的栈，`Stack<>` 可能会更合适。
-     
-     在大多数情况下，特别是当不需要线程安全性时，使用 `Deque<>`（尤其是 `ArrayDeque` 实现）会更高效，并且是推荐的做法
+- **`Stack<>`**:是线程安全的，因为它的方法是同步的，但这种线程安全特性可能会引入额外的开销。
 
+-  **总结**
+  
+  如果应用场景需要线程安全的栈，`Stack<>` 可能会更合适。
+  
+  在大多数情况下，特别是当不需要线程安全性时，使用 `Deque<>`（尤其是 `ArrayDeque` 实现）会更高效，并且是推荐的做法
 
-3.  `StringBuilder` 的 `equals` 方法
+3.`StringBuilder` 的 `equals` 方法
 
-   - `StringBuilder` 类的 `equals` 方法并没有被重写，因此它继承了 `Object` 类的默认 `equals` 实现。这个默认实现比较的是对象的引用，而不是对象的内容。
+- `StringBuilder` 类的 `equals` 方法并没有被重写，因此它继承了 `Object` 类的默认 `equals` 实现。这个默认实现比较的是对象的引用，而不是对象的内容。
 
-   - 因此，`ans.equals("")` 会检查 `ans` 对象是否与 `""`（一个空字符串对象）相同，而这永远是 `false`，因为 `StringBuilder` 和 `String` 是不同的类，即使 `StringBuilder` 为空，它也不等于一个空字符串。
+- 因此，`ans.equals("")` 会检查 `ans` 对象是否与 `""`（一个空字符串对象）相同，而这永远是 `false`，因为 `StringBuilder` 和 `String` 是不同的类，即使 `StringBuilder` 为空，它也不等于一个空字符串。
 
-   - 要检查一个 `StringBuilder` 对象是否为空（即其内容是否为空），应该使用 `StringBuilder` 提供的方法，比如 `length()` 或 `toString()`
-
-4. 
+- 要检查一个 `StringBuilder` 对象是否为空（即其内容是否为空），应该使用 `StringBuilder` 提供的方法，比如 `length()` 或 `toString()`
 
 ### 链表
-环形链表
-两数相加
-合并两个有序链表
-随机链表的复制
-反转链表Ⅱ
-K个一组翻转链表
-删除链表的倒数第N个结点
-删除排序链表中的重复元素Ⅱ
-旋转链表
-分隔链表
-LRU缓存
-
-### 堆
-
-数组中的第K个最大元素
-IPO
-查找和最小的K对数字
-数据流的中位数
+1. [环形链表](src/leetcode/editor/cn/ID141LinkedListCycle.java)
+2. [两数相加](src/leetcode/editor/cn/ID2AddTwoNumbers.java)
+3. [合并两个有序链表](src/leetcode/editor/cn/ID21MergeTwoSortedLists.java)
+4. [随机链表的复制](src/leetcode/editor/cn/IDLCR138BiaoShiShuZhiDeZiFuChuanLcof.java)
+5. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)
+6. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
+7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
+8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
+9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
+10. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
 
 ## 二叉树
 
-二叉树的最大深度
-相同的树
-翻转二叉树
-对称二叉树
-从前序与中序遍历序列构造二叉树
-从中序与后序遍历序列构造二叉树
-填充每个节点的下一个右侧节点指针Ⅱ
-二叉树展开为链表
-路径总和
-求根节点到叶节点数字之和
-二叉树中的最大路径和
-二叉搜索树迭代器
-完全二叉树的节点个数
-二叉树的最近公共祖先
+1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)
+2. [相同的树](src/leetcode/editor/cn/ID100SameTree.java)
+3. [翻转二叉树](src/leetcode/editor/cn/ID226InvertBinaryTree.java)
+4. [对称二叉树](src/leetcode/editor/cn/ID101SymmetricTree.java)
+5. [从前序与中序遍历序列构造二叉树](src/leetcode/editor/cn/ID105ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
+6. [从中序与后序遍历序列构造二叉树](src/leetcode/editor/cn/ID106ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
+7. [填充每个节点的下一个右侧节点指针](src/leetcode/editor/cn/ID117PopulatingNextRightPointersInEachNodeIi.java)Ⅱ
+8. [二叉树展开为链表](src/leetcode/editor/cn/ID114FlattenBinaryTreeToLinkedList.java)
+9. [路径总和](src/leetcode/editor/cn/ID112PathSum.java)
+10. [求根节点到叶节点数字之和](src/leetcode/editor/cn/ID129SumRootToLeafNumbers.java)
+11. [二叉树中的最大路径和](src/leetcode/editor/cn/ID124BinaryTreeMaximumPathSum.java)
+12. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)
+13. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
+14. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)
 
 ### 二叉树层次遍历
 二叉树的右视图
@@ -223,6 +199,13 @@ N皇后Ⅱ
 在排序数组中查找元素的第一个和最后一个位置
 寻找旋转排序数组中的最小值
 寻找两个正序数组的中位数
+
+### 堆
+
+数组中的第K个最大元素
+IPO
+查找和最小的K对数字
+数据流的中位数
 
 ## 数学
 回文数
