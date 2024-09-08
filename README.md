@@ -126,7 +126,7 @@
 7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
 8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
 9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
-10. LRU[缓存](src/leetcode/editor/cn/ID146LruCache.java)
+10. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
 ## 二叉树
 
 1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)
