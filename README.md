@@ -51,7 +51,7 @@ Z字形变换
 同构字符串
 单词规律
 
-[242.有效的字母异位词](src/leetcode/editor/cn/ID242ValidAnagram.java)
+[有效的字母异位词](src/leetcode/editor/cn/ID242ValidAnagram.java)
 
 字母异位词分组
 两数之和
@@ -59,18 +59,19 @@ Z字形变换
 存在重复元素Ⅱ
 最长连续序列
 
-[15.三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)		[参考题解](https://leetcode.cn/problems/3sum/solutions/12307/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/)
+[三数之和](src/leetcode/editor/cn/ID15ThreeSum.java)		[参考题解](https://leetcode.cn/problems/3sum/solutions/12307/hua-jie-suan-fa-15-san-shu-zhi-he-by-guanpengchn/)
 
 
 
 
 ## 区间
-汇总区间
+[汇总区间](src/leetcode/editor/cn/ID228SummaryRanges.java)
 
 [合并区间](src/leetcode/editor/cn/ID56MergeIntervals.java)			[参考题解](https://leetcode.cn/problems/merge-intervals/solutions/2798138/jian-dan-zuo-fa-yi-ji-wei-shi-yao-yao-zh-f2b3/?envType=study-plan-v2&envId=top-interview-150)
 
-插入区间
-用最少数量的箭引爆气球
+[插入区间](src/leetcode/editor/cn/ID57InsertInterval.java)
+
+[用最少数量的箭引爆气球](src/leetcode/editor/cn/ID452MinimumNumberOfArrowsToBurstBalloons.java)	[参考题解](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solutions/858320/dai-ma-sui-xiang-lu-dai-ni-xue-tou-tan-x-5wfl/?envType=study-plan-v2&envId=top-interview-150)
 
 ### 笔记
 
@@ -87,16 +88,15 @@ Z字形变换
    Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
    ```
 
-3. 
-4. 
+3. 区间问题的关键在于左右端点的判断和更新时机
 
 ## 栈
 
 有效的括号
-简化路径
-最小栈
+[简化路径](src/leetcode/editor/cn/ID71SimplifyPath.java)
+[最小栈](src/leetcode/editor/cn/ID155MinStack.java)
 逆波兰表达式求值
-基本计算器
+[基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java)
 
 ## 链表
 环形链表
