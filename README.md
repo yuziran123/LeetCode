@@ -9,7 +9,7 @@
 6. [H指数](src/leetcode/editor/cn/ID274HIndex.java)[除自身以外数组的乘积](src/leetcode/editor/cn/ID238ProductOfArrayExceptSelf.java)
 7. [加油站](src/leetcode/editor/cn/ID134GasStation.java)
 
-- [ ] O(1) 时间插入、删除和获取随机元素
+- [ ] [O(1) 时间插入、删除和获取随机元素](src/leetcode/editor/cn/ID380InsertDeleteGetrandomO1.java)
 
 
 
@@ -18,7 +18,7 @@
 1. [整数转罗马数字](src/leetcode/editor/cn/ID12IntegerToRoman.java)
 2. [Z字形变换](src/leetcode/editor/cn/ID6ZigzagConversion.java)
 
-- [ ] 文本左右对齐
+- [ ] [文本左右对齐](src/leetcode/editor/cn/ID68TextJustification.java)
 
 
 ### 双指针
@@ -32,8 +32,8 @@
 1. [长度最小的子数组](src/leetcode/editor/cn/ID209MinimumSizeSubarraySum.java)
 2. [无重复字符的最长子串](src/leetcode/editor/cn/ID3LongestSubstringWithoutRepeatingCharacters.java)
 
-- [ ] 串联所有单词的子串
-- [ ] 最小覆盖子串
+- [ ] [串联所有单词的子串](src/leetcode/editor/cn/ID30SubstringWithConcatenationOfAllWords.java)
+- [ ] [最小覆盖子串](src/leetcode/editor/cn/ID76MinimumWindowSubstring.java)
 
 ### 哈希表
 1. [赎金信](src/leetcode/editor/cn/ID383RansomNote.java)
@@ -88,11 +88,7 @@
 
 1.`path.split("/")`：将 `path` 字符串按 `/` 拆分成一个字符串数组。	
 
-`"/home//user/"`的切割结果是	
-
-```Java
-[]	home	[]	user	[]
-```
+`"/home//user/"`的切割结果是：	`[]		home	[]	user	[]`
 
 2.Deque<>` 和 `Stack<>` 都可以用于实现栈。
 
@@ -125,7 +121,12 @@
 8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
 9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
 10. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
-
+5. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)
+6. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
+7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
+8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
+9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
+10. LRU[缓存](src/leetcode/editor/cn/ID146LruCache.java)
 ## 二叉树
 
 1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)
@@ -134,7 +135,7 @@
 4. [对称二叉树](src/leetcode/editor/cn/ID101SymmetricTree.java)
 5. [从前序与中序遍历序列构造二叉树](src/leetcode/editor/cn/ID105ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
 6. [从中序与后序遍历序列构造二叉树](src/leetcode/editor/cn/ID106ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
-7. [填充每个节点的下一个右侧节点指针](src/leetcode/editor/cn/ID117PopulatingNextRightPointersInEachNodeIi.java)Ⅱ
+7. [填充每个节点的下一个右侧节点指针Ⅱ](src/leetcode/editor/cn/ID117PopulatingNextRightPointersInEachNodeIi.java)
 8. [二叉树展开为链表](src/leetcode/editor/cn/ID114FlattenBinaryTreeToLinkedList.java)
 9. [路径总和](src/leetcode/editor/cn/ID112PathSum.java)
 10. [求根节点到叶节点数字之和](src/leetcode/editor/cn/ID129SumRootToLeafNumbers.java)
@@ -144,112 +145,110 @@
 14. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)
 
 ### 二叉树层次遍历
-二叉树的右视图
-二叉树的层平均值
-二叉树的层序遍历
-二叉树的锯齿形层序遍历
+1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)
+2. [二叉树的层平均值](src/leetcode/editor/cn/ID637AverageOfLevelsInBinaryTree.java)
+3. [二叉树的层序遍历](src/leetcode/editor/cn/ID102BinaryTreeLevelOrderTraversal.java)
+4. [二叉树的锯齿形层序遍历](src/leetcode/editor/cn/ID103BinaryTreeZigzagLevelOrderTraversal.java)
 
 ### 二叉搜索树
-二叉搜索树的最小绝对差
-二叉搜索树中第K小的元素
-验证二叉搜索树
+1. [二叉搜索树的最小绝对差](src/leetcode/editor/cn/ID530MinimumAbsoluteDifferenceInBst.java)
+2. [二叉搜索树中第K小的元素](src/leetcode/editor/cn/ID230KthSmallestElementInABst.java)
+3. [验证二叉搜索树](src/leetcode/editor/cn/ID98ValidateBinarySearchTree.java)
 
 ## 图
-岛屿数量
-被围绕的区域
-克隆图
-除法求值
-课程表
-课程表Ⅱ
+1. [岛屿数量](src/leetcode/editor/cn/ID200NumberOfIslands.java)
+2. [被围绕的区域](src/leetcode/editor/cn/ID130SurroundedRegions.java)
+3. [克隆图](src/leetcode/editor/cn/ID133CloneGraph.java)
+4. [除法求值](src/leetcode/editor/cn/ID399EvaluateDivision.java)
+5. [课程表](src/leetcode/editor/cn/ID207CourseSchedule.java)
+6. [课程表Ⅱ](src/leetcode/editor/cn/ID210CourseScheduleIi.java)
 
 ### 图的广度优先搜索
-蛇梯棋
-最小基因变化
-单词接龙
+1. [蛇梯棋](src/leetcode/editor/cn/ID909SnakesAndLadders.java)
+2. [最小基因变化](src/leetcode/editor/cn/ID433MinimumGeneticMutation.java)
+3. [单词接龙](src/leetcode/editor/cn/ID127WordLadder.java)
 
 ## 回溯
-电话号码的字母组合
-组合
-全排列
-组合总和
-N皇后Ⅱ
-括号生成
-单词搜索
+1. [电话号码的字母组合](src/leetcode/editor/cn/ID17LetterCombinationsOfAPhoneNumber.java)
+2. [组合](src/leetcode/editor/cn/ID77Combinations.java)
+3. [全排列](src/leetcode/editor/cn/ID46Permutations.java)
+4. [组合总和](src/leetcode/editor/cn/ID39CombinationSum.java)
+5. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
+6. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)
+7. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
 
 ## 分治
-将有序数组转换为二叉搜索树
-排序链表
-建立四叉树
-合并K个升序链表
+1. [将有序数组转换为二叉搜索树](src/leetcode/editor/cn/ID108ConvertSortedArrayToBinarySearchTree.java)
+2. [排序链表](src/leetcode/editor/cn/ID148SortList.java)
+3. [建立四叉树](src/leetcode/editor/cn/ID427ConstructQuadTree.java)
+4. [合并K个升序链表](src/leetcode/editor/cn/ID23MergeKSortedLists.java)
 
 ## 查找
 
 ### 字典树
 
-实现Trie(前缀树)
-添加与搜索单词-数据结构设计
-单词搜索Ⅱ
+1. [实现Trie(前缀树)](src/leetcode/editor/cn/ID208ImplementTriePrefixTree.java)
+2. [添加与搜索单词-数据结构设计](src/leetcode/editor/cn/ID211DesignAddAndSearchWordsDataStructure.java)
+3. [单词搜索Ⅱ](src/leetcode/editor/cn/ID212WordSearchIi.java)
 
 ### 二分查找
 
-搜索插入位置
-搜索二维矩阵
-寻找峰值
-搜索旋转排序数组
-在排序数组中查找元素的第一个和最后一个位置
-寻找旋转排序数组中的最小值
-寻找两个正序数组的中位数
+1. [搜索插入位置](src/leetcode/editor/cn/ID35SearchInsertPosition.java)
+2. [搜索二维矩阵](src/leetcode/editor/cn/ID74SearchA2dMatrix.java)
+3. [寻找峰值](src/leetcode/editor/cn/ID162FindPeakElement.java)
+4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)
+5. [在排序数组中查找元素的第一个和最后一个位置](src/leetcode/editor/cn/ID34FindFirstAndLastPositionOfElementInSortedArray.java)
+6. [寻找旋转排序数组中的最小值](src/leetcode/editor/cn/ID153FindMinimumInRotatedSortedArray.java)
+7. [寻找两个正序数组的中位数](src/leetcode/editor/cn/ID4MedianOfTwoSortedArrays.java)
 
 ### 堆
 
-数组中的第K个最大元素
-IPO
-查找和最小的K对数字
-数据流的中位数
+1. [数组中的第K个最大元素](src/leetcode/editor/cn/ID215KthLargestElementInAnArray.java)
+2. [IPO](src/leetcode/editor/cn/ID502Ipo.java)
+3. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)
+4. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
 
 ## 数学
-回文数
-加一
-阶乘后的零
-x的平方根
-Pow(x, n)
-直线上最多的点数
+1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
+2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
+3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)
+4. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
+5. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
+6. [直线上最多的点数](src/leetcode/editor/cn/ID149MaxPointsOnALine.java)
 
 ### 矩阵
 
-有效的数独
-螺旋矩阵
-旋转图像
-矩阵置零
-生命游戏
+1. [有效的数独](src/leetcode/editor/cn/ID36ValidSudoku.java)
+2. [旋转图像](src/leetcode/editor/cn/ID36ValidSudoku.java)
+3. [矩阵置零](src/leetcode/editor/cn/ID73SetMatrixZeroes.java)
+4. [生命游戏](src/leetcode/editor/cn/ID289GameOfLife.java)
 
 ### 位运算
 
-二进制求和
-颠倒二进制位
-位1的个数
-只出现一次的数字
-只出现一次的数字Ⅱ
-数字范围按位OR
+1. [二进制求和](src/leetcode/editor/cn/ID67AddBinary.java)
+2. [颠倒二进制位](src/leetcode/editor/cn/ID190ReverseBits.java)
+3. [位1的个数](src/leetcode/editor/cn/ID191NumberOf1Bits.java)
+4. [只出现一次的数字](src/leetcode/editor/cn/ID136SingleNumber.java)
+5. [只出现一次的数字Ⅱ](src/leetcode/editor/cn/ID137SingleNumberIi.java)
+6. [数字范围按位OR](src/leetcode/editor/cn/ID201BitwiseAndOfNumbersRange.java)
 
 ## 动态规划
 
 ### 一维动态规划
 
-爬楼梯
-打家劫舍
-单词拆分
-零钱兑换
-最长递增子序列
+1. [爬楼梯](src/leetcode/editor/cn/ID70ClimbingStairs.java)
+2. [打家劫舍](src/leetcode/editor/cn/ID198HouseRobber.java)
+3. [单词拆分](src/leetcode/editor/cn/ID139WordBreak.java)
+4. [零钱兑换](src/leetcode/editor/cn/ID322CoinChange.java)
+5. [最长递增子序列](src/leetcode/editor/cn/ID300LongestIncreasingSubsequence.java)
 
 ### 多维动态规划
-三角形最小路径和
-最小路径和
-不同路径Ⅱ
-最长回文子串
-交错字符串
-编辑距离
-买卖股票的最佳时机Ⅱ
-买卖股票的最佳时机Ⅳ
-最大正方形
-设置学习计划
+1. [三角形最小路径和](src/leetcode/editor/cn/ID120Triangle.java)
+2. [最小路径和](src/leetcode/editor/cn/ID64MinimumPathSum.java)
+3. [不同路径Ⅱ](src/leetcode/editor/cn/ID63UniquePathsIi.java)
+4. [最长回文子串](src/leetcode/editor/cn/ID5LongestPalindromicSubstring.java)
+5. [交错字符串](src/leetcode/editor/cn/ID97InterleavingString.java)
+6. [编辑距离](src/leetcode/editor/cn/ID72EditDistance.java)
+7. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID123BestTimeToBuyAndSellStockIii.java)
+8. [买卖股票的最佳时机Ⅳ](src/leetcode/editor/cn/ID188BestTimeToBuyAndSellStockIv.java)
+9. [最大正方形](src/leetcode/editor/cn/ID221MaximalSquare.java)
