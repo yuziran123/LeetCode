@@ -17,6 +17,7 @@ public class ID141LinkedListCycle {
         public boolean hasCycle(ListNode head) {
 
 
+
             return true;
         }
     }
