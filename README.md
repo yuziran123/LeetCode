@@ -111,7 +111,7 @@
 - 要检查一个 `StringBuilder` 对象是否为空（即其内容是否为空），应该使用 `StringBuilder` 提供的方法，比如 `length()` 或 `toString()`
 
 ### 链表
-1. [环形链表](src/leetcode/editor/cn/ID141LinkedListCycle.java)
+1. [环形链表](src/leetcode/editor/cn/ID141LinkedListCycle.java)  [环形链表Ⅱ](src/leetcode/editor/cn/ID142LinkedListCycleIi.java)  [快慢指针参考题解](https://leetcode.cn/problems/linked-list-cycle-ii/solutions/12616/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/)
 2. [两数相加](src/leetcode/editor/cn/ID2AddTwoNumbers.java)
 3. [合并两个有序链表](src/leetcode/editor/cn/ID21MergeTwoSortedLists.java)
 4. [随机链表的复制](src/leetcode/editor/cn/IDLCR138BiaoShiShuZhiDeZiFuChuanLcof.java)
@@ -121,12 +121,24 @@
 8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
 9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
 10. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
-5. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)
-6. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
-7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
-8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
-9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
-10. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
+11. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)
+12. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
+13. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
+14. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
+15. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
+16. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
+
+#### 笔记
+
+1. 链表遍历注意
+
+   ```Java
+   //修改 head 可能会导致链表丢失；使用额外的 current 指针，可以在不改变原链表结构的情况下遍历链表。
+   ```
+
+2. 
+3. 
+
 ## 二叉树
 
 1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)

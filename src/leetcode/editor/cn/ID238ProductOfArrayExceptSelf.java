@@ -1,3 +1,9 @@
+/*
+ * @Author: yuran
+ * @Date: 2024-09-01 18:28:41
+ * @LastEditTime: 2024-09-08 19:43:18
+ * @描述: 
+ */
 package leetcode.editor.cn;
 
 public class ID238ProductOfArrayExceptSelf {
