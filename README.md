@@ -86,11 +86,11 @@
 
 #### 笔记
 
-1.`path.split("/")`：将 `path` 字符串按 `/` 拆分成一个字符串数组。	
+1. `path.split("/")`：将 `path` 字符串按 `/` 拆分成一个字符串数组。	
 
 `"/home//user/"`的切割结果是：	`[]		home	[]	user	[]`
 
-2.Deque<>` 和 `Stack<>` 都可以用于实现栈。
+2. Deque<>` 和 `Stack<>` 都可以用于实现栈。
 
 - **`Deque<>`**:`LinkedList` 实现的 `Deque` 不是线程安全的。如果需要线程安全，可以使用 `ConcurrentLinkedDeque`。
 
@@ -102,7 +102,7 @@
   
   在大多数情况下，特别是当不需要线程安全性时，使用 `Deque<>`（尤其是 `ArrayDeque` 实现）会更高效，并且是推荐的做法
 
-3.`StringBuilder` 的 `equals` 方法
+3. `StringBuilder` 的 `equals` 方法
 
 - `StringBuilder` 类的 `equals` 方法并没有被重写，因此它继承了 `Object` 类的默认 `equals` 实现。这个默认实现比较的是对象的引用，而不是对象的内容。
 
