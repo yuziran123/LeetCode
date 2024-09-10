@@ -120,12 +120,6 @@
 7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
 8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
 9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
-10. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
-11. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)
-12. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
-13. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
-14. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
-15. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
 16. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
 
 #### 笔记
