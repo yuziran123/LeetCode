@@ -115,7 +115,7 @@
 2. [两数相加](src/leetcode/editor/cn/ID2AddTwoNumbers.java)
 3. [合并两个有序链表](src/leetcode/editor/cn/ID21MergeTwoSortedLists.java)
 4. [随机链表的复制](src/leetcode/editor/cn/IDLCR138BiaoShiShuZhiDeZiFuChuanLcof.java)
-5. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)
+5. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)   [反转链表](src/leetcode/editor/cn/ID206ReverseLinkedList.java)   [参考题解](https://leetcode.cn/problems/reverse-linked-list/solutions/1992225/you-xie-cuo-liao-yi-ge-shi-pin-jiang-tou-o5zy/)
 6. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
 7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
 8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
