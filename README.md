@@ -111,16 +111,18 @@
 - 要检查一个 `StringBuilder` 对象是否为空（即其内容是否为空），应该使用 `StringBuilder` 提供的方法，比如 `length()` 或 `toString()`
 
 ### 链表
-1. [环形链表](src/leetcode/editor/cn/ID141LinkedListCycle.java)  [环形链表Ⅱ](src/leetcode/editor/cn/ID142LinkedListCycleIi.java)  [快慢指针参考题解](https://leetcode.cn/problems/linked-list-cycle-ii/solutions/12616/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/)
-2. [两数相加](src/leetcode/editor/cn/ID2AddTwoNumbers.java)
-3. [合并两个有序链表](src/leetcode/editor/cn/ID21MergeTwoSortedLists.java)
-4. [随机链表的复制](src/leetcode/editor/cn/IDLCR138BiaoShiShuZhiDeZiFuChuanLcof.java)
-5. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)   [反转链表](src/leetcode/editor/cn/ID206ReverseLinkedList.java)   [参考题解](https://leetcode.cn/problems/reverse-linked-list/solutions/1992225/you-xie-cuo-liao-yi-ge-shi-pin-jiang-tou-o5zy/)
-6. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
-7. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
-8. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
-9. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)
-16. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)
+1. [环形链表](src/leetcode/editor/cn/ID141LinkedListCycle.java) 
+2.  [环形链表Ⅱ](src/leetcode/editor/cn/ID142LinkedListCycleIi.java)  [快慢指针参考题解](https://leetcode.cn/problems/linked-list-cycle-ii/solutions/12616/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/)
+3. [两数相加](src/leetcode/editor/cn/ID2AddTwoNumbers.java)
+4. [合并两个有序链表](src/leetcode/editor/cn/ID21MergeTwoSortedLists.java)
+5. [随机链表的复制](src/leetcode/editor/cn/IDLCR138BiaoShiShuZhiDeZiFuChuanLcof.java)    [参考题解](https://leetcode.cn/problems/copy-list-with-random-pointer/solutions/295083/liang-chong-shi-xian-tu-jie-138-fu-zhi-dai-sui-ji-/?envType=study-plan-v2&envId=top-interview-150)
+6. [反转链表Ⅱ](src/leetcode/editor/cn/ID92ReverseLinkedListIi.java)  
+7.  [反转链表](src/leetcode/editor/cn/ID206ReverseLinkedList.java)   [参考题解](https://leetcode.cn/problems/reverse-linked-list/solutions/1992225/you-xie-cuo-liao-yi-ge-shi-pin-jiang-tou-o5zy/)
+8. [K个一组翻转链表](src/leetcode/editor/cn/ID25ReverseNodesInKGroup.java)
+9. [删除排序链表中的重复元素Ⅱ](src/leetcode/editor/cn/ID82RemoveDuplicatesFromSortedListIi.java)
+10. [旋转链表](src/leetcode/editor/cn/ID61RotateList.java)
+11. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)     [参考题解](https://leetcode.cn/problems/partition-list/solutions/2362068/86-fen-ge-lian-biao-shuang-zhi-zhen-qing-hha7/?envType=study-plan-v2&envId=top-interview-150)
+12. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)     [参考题解](https://leetcode.cn/problems/lru-cache/solutions/2456294/tu-jie-yi-zhang-tu-miao-dong-lrupythonja-czgt/)
 
 #### 笔记
 

@@ -1,43 +1,45 @@
-/*
- * @Author: yuran
- * @Date: 2024-09-08 15:20:01
- * @LastEditTime: 2024-09-08 19:38:13
- * @描述: 
- */
 package leetcode.editor.cn;
 
-import java.util.*;
-public class ID146LruCache{
-	public static void main(String[] args) {
-        LRUCache solution = new ID146LruCache().new LRUCache(1);
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class LRUCache {
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-    public LRUCache(int capacity) {
+public class ID146LruCache {
+    // leetcode submit region begin(Prohibit modification and deletion)
+    // 利用LinkHashMap实现
+    class LRUCache {
+        private int cacapacity = 0;
+        private Map<Integer, Integer> LRU = new LinkedHashMap<>();
+
+        public LRUCache(int capacity) {
+            this.cacapacity = capacity;
+        }
+
+        public int get(int key) {
+            // remove-返回与 key 关联的上一个值，如果没有 key 的映射，则为 null
+            Integer val = LRU.remove(key);
+            if (val == null)
+                return -1;
+            else {
+                LRU.put(key, val);
+                return val;
+            }
+        }
+
+        public void put(int key, int value) {
+            if (LRU.remove(key) != null) {
+                LRU.put(key, value);
+                return;
+            } else {
+                if (LRU.size() == this.cacapacity) {
+                    // 使用 iterator() 方法获取迭代器，并通过 next() 方法获取第一个键，即最久未使用的键。
+                    Integer firstKey = LRU.keySet().iterator().next();
+                    LRU.remove(firstKey);
+                }
+            }
+            LRU.put(key, value);
+            return;
+        }
     }
-    
-    public int get(int key) {
-
-        return 0;
-    }
-    
-    public void put(int key, int value) {
-
-    }
-}
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */
-//leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
