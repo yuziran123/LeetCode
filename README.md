@@ -144,10 +144,11 @@
 8. [二叉树展开为链表](src/leetcode/editor/cn/ID114FlattenBinaryTreeToLinkedList.java)
 9. [路径总和](src/leetcode/editor/cn/ID112PathSum.java)
 10. [求根节点到叶节点数字之和](src/leetcode/editor/cn/ID129SumRootToLeafNumbers.java)
-11. [二叉树中的最大路径和](src/leetcode/editor/cn/ID124BinaryTreeMaximumPathSum.java)
-12. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)
-13. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
-14. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)
+    - [ ] [二叉树中的最大路径和](src/leetcode/editor/cn/ID124BinaryTreeMaximumPathSum.java)
+
+11. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)
+12. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
+13. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)
 
 #### 笔记
 

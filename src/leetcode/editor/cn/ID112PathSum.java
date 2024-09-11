@@ -32,7 +32,6 @@ public class ID112PathSum {
             pathSum(root.right, target);
             sum -= root.val; // 每次退出递归，要将当前节点值再减去
         }
-
     }
     // leetcode submit region end(Prohibit modification and deletion)
 
