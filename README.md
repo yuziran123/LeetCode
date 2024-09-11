@@ -132,16 +132,13 @@
    //修改 head 可能会导致链表丢失；使用额外的 current 指针，可以在不改变原链表结构的情况下遍历链表。
    ```
 
-2. 
-3. 
-
 ## 二叉树
 
 1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)
 2. [相同的树](src/leetcode/editor/cn/ID100SameTree.java)  
 3. [翻转二叉树](src/leetcode/editor/cn/ID226InvertBinaryTree.java)
 4. [对称二叉树](src/leetcode/editor/cn/ID101SymmetricTree.java)        [参考题解](https://leetcode.cn/problems/symmetric-tree/solutions/2361627/101-dui-cheng-er-cha-shu-fen-zhi-qing-xi-8oba/)
-5. [从前序与中序遍历序列构造二叉树](src/leetcode/editor/cn/ID105ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
+5. [从前序与中序遍历序列构造二叉树](src/leetcode/editor/cn/ID105ConstructBinaryTreeFromPreorderAndInorderTraversal.java)        [参考题解](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solutions/2646359/tu-jie-cong-on2-dao-onpythonjavacgojsrus-aob8/)        [参考题解2](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solutions/2361558/105-cong-qian-xu-yu-zhong-xu-bian-li-xu-4lvkz/)
 6. [从中序与后序遍历序列构造二叉树](src/leetcode/editor/cn/ID106ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
 7. [填充每个节点的下一个右侧节点指针Ⅱ](src/leetcode/editor/cn/ID117PopulatingNextRightPointersInEachNodeIi.java)
 8. [二叉树展开为链表](src/leetcode/editor/cn/ID114FlattenBinaryTreeToLinkedList.java)
@@ -155,6 +152,16 @@
 #### 笔记
 
 1. [写树算法的套路框架](https://leetcode.cn/problems/same-tree/solutions/6558/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/)
+
+2. 对称二叉树定义
+
+   ```Java
+   1.L.val = R.val ：即此两对称节点值相等。
+   2.L.left.val = R.right.val ：即 L 的 左子节点 和 R 的 右子节点 对称。
+   3.L.right.val = R.left.val ：即 L 的 右子节点 和 R 的 左子节点 对称。
+   ```
+   
+3. 
 
 ### 二叉树层次遍历
 1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)

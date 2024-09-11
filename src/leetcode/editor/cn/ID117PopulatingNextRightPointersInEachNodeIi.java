@@ -27,15 +27,16 @@ public class ID117PopulatingNextRightPointersInEachNodeIi {
         Solution solution = new ID117PopulatingNextRightPointersInEachNodeIi().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public Node connect(Node root) {
+            if (root == null)
+                return root;
 
-            return null;
+            return root;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
