@@ -138,9 +138,9 @@
 ## 二叉树
 
 1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)
-2. [相同的树](src/leetcode/editor/cn/ID100SameTree.java)
+2. [相同的树](src/leetcode/editor/cn/ID100SameTree.java)  
 3. [翻转二叉树](src/leetcode/editor/cn/ID226InvertBinaryTree.java)
-4. [对称二叉树](src/leetcode/editor/cn/ID101SymmetricTree.java)
+4. [对称二叉树](src/leetcode/editor/cn/ID101SymmetricTree.java)        [参考题解](https://leetcode.cn/problems/symmetric-tree/solutions/2361627/101-dui-cheng-er-cha-shu-fen-zhi-qing-xi-8oba/)
 5. [从前序与中序遍历序列构造二叉树](src/leetcode/editor/cn/ID105ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
 6. [从中序与后序遍历序列构造二叉树](src/leetcode/editor/cn/ID106ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
 7. [填充每个节点的下一个右侧节点指针Ⅱ](src/leetcode/editor/cn/ID117PopulatingNextRightPointersInEachNodeIi.java)
@@ -151,6 +151,10 @@
 12. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)
 13. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
 14. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)
+
+#### 笔记
+
+1. [写树算法的套路框架](https://leetcode.cn/problems/same-tree/solutions/6558/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/)
 
 ### 二叉树层次遍历
 1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)

@@ -2,37 +2,23 @@ package leetcode.editor.cn;
 
 import leetcode.editor.util.TreeNode;
 
-public class ID106ConstructBinaryTreeFromInorderAndPostorderTraversal{
-	public static void main(String[] args) {
-		Solution solution = new ID106ConstructBinaryTreeFromInorderAndPostorderTraversal().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution {
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
+public class ID106ConstructBinaryTreeFromInorderAndPostorderTraversal {
+    public static void main(String[] args) {
+        Solution solution = new ID106ConstructBinaryTreeFromInorderAndPostorderTraversal().new Solution();
+        StringBuilder builder = new StringBuilder();
 
-		return null;
+        // 执行测试
+
+        System.out.println(builder);
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public TreeNode buildTree(int[] inorder, int[] postorder) {
+
+            return null;
+        }
+    }
+// leetcode submit region end(Prohibit modification and deletion)
 
 }
