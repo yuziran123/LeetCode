@@ -2,37 +2,26 @@ package leetcode.editor.cn;
 
 import leetcode.editor.util.TreeNode;
 
-public class ID530MinimumAbsoluteDifferenceInBst{
-	public static void main(String[] args) {
-		Solution solution = new ID530MinimumAbsoluteDifferenceInBst().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution {
-    public int getMinimumDifference(TreeNode root) {
+public class ID530MinimumAbsoluteDifferenceInBst {
+    public static void main(String[] args) {
+        Solution solution = new ID530MinimumAbsoluteDifferenceInBst().new Solution();
+        StringBuilder builder = new StringBuilder();
 
-		return 0;
+        // 执行测试
+
+        System.out.println(builder);
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int getMinimumDifference(TreeNode root) {
+
+
+            int minL = getMinimumDifference(root.left);
+            int minR = getMinimumDifference(root.right);
+            return Math.min(minL, minR);
+        }
+    }
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
