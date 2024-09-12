@@ -44,7 +44,6 @@ public class ID102BinaryTreeLevelOrderTraversal {
                 }
                 ans.add(vals);
                 vals = new ArrayList<>();
-                vals.clear();
                 // 这段代码清空了 vals 列表中的所有元素，但 vals 的引用并没有改变。
                 // 如果在调用 vals.clear() 后再将 vals 添加到 ans，ans 中将只会包含一个空的 vals 列表。
                 // vals.clear();
