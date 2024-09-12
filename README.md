@@ -148,7 +148,7 @@
 
 11. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)
 12. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
-13. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)
+13. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)       [参考题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/?envType=study-plan-v2&envId=top-interview-150)
 
 #### 笔记
 
@@ -161,13 +161,33 @@
    2.L.left.val = R.right.val ：即 L 的 左子节点 和 R 的 右子节点 对称。
    3.L.right.val = R.left.val ：即 L 的 右子节点 和 R 的 左子节点 对称。
    ```
+
+3. 细节
+
+   ```Java
+   List<TreeNode> cur = new ArrayList<>();
+   List<TreeNode> next = new ArrayList<>();
+   cur = next;
+   将 cur 引用设置为指向 next 对象。cur 和 next 将指向同一个 ArrayList 实例
+   cur 和 next 共享相同的数据，并且对其中一个的修改需要反映到另一个上
+   ```
+
+4.  `Deque<T> cur = new LinkedList<>();和Deque<T> cur = new ArrayDeque<>();`
+
+   ```Java
+   LinkedList 是基于链表的实现。每个元素都包含指向前一个和下一个元素的指针。
+   ArrayDeque 是基于动态数组的实现，内部使用了数组来存储元素
    
-3. 
+   LinkedList: 更适合频繁的插入和删除操作，尤其是在列表的两端或中间；随机访问较慢，内存开销较大。
+   ArrayDeque: 更适合频繁的两端插入和删除操作，以及需要较低的内存开销；随机访问性能较好，但在极端情况下可能需要扩展数组的容量
+   ```
+
+   
 
 ### 二叉树层次遍历
 1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)
 2. [二叉树的层平均值](src/leetcode/editor/cn/ID637AverageOfLevelsInBinaryTree.java)
-3. [二叉树的层序遍历](src/leetcode/editor/cn/ID102BinaryTreeLevelOrderTraversal.java)
+3. [二叉树的层序遍历](src/leetcode/editor/cn/ID102BinaryTreeLevelOrderTraversal.java)        [参考题解](https://leetcode.cn/problems/binary-tree-level-order-traversal/solutions/2049807/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlpz/?envType=study-plan-v2&envId=top-interview-150)
 4. [二叉树的锯齿形层序遍历](src/leetcode/editor/cn/ID103BinaryTreeZigzagLevelOrderTraversal.java)
 
 ### 二叉搜索树

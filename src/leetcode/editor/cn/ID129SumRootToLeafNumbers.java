@@ -16,32 +16,43 @@ public class ID129SumRootToLeafNumbers {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 描述:pathSum记录当前路径和，每下一层*10，返回上一层/10；遇到到叶子节点加入总和
-         * Date 2024/9/11
-         */
-        int sum = 0;
-        int pathSum = 0;
-
         public int sumNumbers(TreeNode root) {
-            sum(root);
-            return this.sum;
+            return sum(root, 0);
         }
 
-        public void sum(TreeNode root) {
+        public int sum(TreeNode root, int sum) {
             if (root == null)
-                return;
-            pathSum = pathSum * 10 + root.val;
+                return 0;
+            int curSum = sum * 10 + root.val;
             if (root.left == null && root.right == null)
-                sum += pathSum;
+                return curSum;
 
-            sum(root.left);
-            sum(root.right);
-            pathSum = pathSum - root.val;
-            pathSum = pathSum / 10;
+            return sum(root.left, curSum) + sum(root.right, curSum);
         }
+
+
     }
     // leetcode submit region end(Prohibit modification and deletion)
+
+    int sum = 0;
+    int pathSum = 0;
+
+    /**
+     * 描述:pathSum记录当前路径和，每下一层*10，返回上一层/10；遇到到叶子节点加入总和
+     * Date 2024/9/11
+     */
+    public void sum1(TreeNode root) {
+        if (root == null)
+            return;
+        pathSum = pathSum * 10 + root.val;
+        if (root.left == null && root.right == null)
+            sum += pathSum;
+
+        sum1(root.left);
+        sum1(root.right);
+        pathSum = pathSum - root.val;
+        pathSum = pathSum / 10;
+    }
 
     /**
      * 描述:用list将每条路径以字符存储——再遍历循环转数字求和即可
