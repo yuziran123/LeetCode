@@ -1,6 +1,6 @@
 # LeetCode刷题记录
 
-## 数组
+## 一、数组
 1. [删除有序数组中的重复项Ⅱ ](src/leetcode/editor/cn/ID80RemoveDuplicatesFromSortedArrayIi.java)
 2. [轮转数组](src/leetcode/editor/cn/ID189RotateArray.java)
 3. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID122BestTimeToBuyAndSellStockIi.java)
@@ -73,7 +73,17 @@
 1. 最大子数组和
 2. 环形子数组的最大和
 
-## 数据结构
+### 回溯
+
+1. [电话号码的字母组合](src/leetcode/editor/cn/ID17LetterCombinationsOfAPhoneNumber.java)
+2. [组合](src/leetcode/editor/cn/ID77Combinations.java)
+3. [全排列](src/leetcode/editor/cn/ID46Permutations.java)
+4. [组合总和](src/leetcode/editor/cn/ID39CombinationSum.java)
+5. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
+6. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)
+7. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
+
+## 二、栈&链表
 
 ### 栈
 
@@ -132,7 +142,7 @@
    //修改 head 可能会导致链表丢失；使用额外的 current 指针，可以在不改变原链表结构的情况下遍历链表。
    ```
 
-## 二叉树
+## 三、二叉树
 
 1. [二叉树的最大深度](src/leetcode/editor/cn/ID104MaximumDepthOfBinaryTree.java)
 2. [相同的树](src/leetcode/editor/cn/ID100SameTree.java)  
@@ -195,7 +205,14 @@
 2. [二叉搜索树中第K小的元素](src/leetcode/editor/cn/ID230KthSmallestElementInABst.java)
 3. [验证二叉搜索树](src/leetcode/editor/cn/ID98ValidateBinarySearchTree.java)
 
-## 图
+### 分治
+
+1. [将有序数组转换为二叉搜索树](src/leetcode/editor/cn/ID108ConvertSortedArrayToBinarySearchTree.java)
+2. [排序链表](src/leetcode/editor/cn/ID148SortList.java)
+3. [建立四叉树](src/leetcode/editor/cn/ID427ConstructQuadTree.java)
+4. [合并K个升序链表](src/leetcode/editor/cn/ID23MergeKSortedLists.java)
+
+## 四、图
 1. [岛屿数量](src/leetcode/editor/cn/ID200NumberOfIslands.java)
 2. [被围绕的区域](src/leetcode/editor/cn/ID130SurroundedRegions.java)
 3. [克隆图](src/leetcode/editor/cn/ID133CloneGraph.java)
@@ -208,22 +225,7 @@
 2. [最小基因变化](src/leetcode/editor/cn/ID433MinimumGeneticMutation.java)
 3. [单词接龙](src/leetcode/editor/cn/ID127WordLadder.java)
 
-## 回溯
-1. [电话号码的字母组合](src/leetcode/editor/cn/ID17LetterCombinationsOfAPhoneNumber.java)
-2. [组合](src/leetcode/editor/cn/ID77Combinations.java)
-3. [全排列](src/leetcode/editor/cn/ID46Permutations.java)
-4. [组合总和](src/leetcode/editor/cn/ID39CombinationSum.java)
-5. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
-6. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)
-7. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
-
-## 分治
-1. [将有序数组转换为二叉搜索树](src/leetcode/editor/cn/ID108ConvertSortedArrayToBinarySearchTree.java)
-2. [排序链表](src/leetcode/editor/cn/ID148SortList.java)
-3. [建立四叉树](src/leetcode/editor/cn/ID427ConstructQuadTree.java)
-4. [合并K个升序链表](src/leetcode/editor/cn/ID23MergeKSortedLists.java)
-
-## 查找
+## 五、查找
 
 ### 字典树
 
@@ -248,7 +250,7 @@
 3. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)
 4. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
 
-## 数学
+## 六、数学
 1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
 2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
 3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)
@@ -272,7 +274,7 @@
 5. [只出现一次的数字Ⅱ](src/leetcode/editor/cn/ID137SingleNumberIi.java)
 6. [数字范围按位OR](src/leetcode/editor/cn/ID201BitwiseAndOfNumbersRange.java)
 
-## 动态规划
+## 七、动态规划
 
 ### 一维动态规划
 
@@ -292,3 +294,5 @@
 7. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID123BestTimeToBuyAndSellStockIii.java)
 8. [买卖股票的最佳时机Ⅳ](src/leetcode/editor/cn/ID188BestTimeToBuyAndSellStockIv.java)
 9. [最大正方形](src/leetcode/editor/cn/ID221MaximalSquare.java)
+
+## 八、贪心算法
