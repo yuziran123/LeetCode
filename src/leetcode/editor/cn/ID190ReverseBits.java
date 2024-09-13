@@ -13,9 +13,12 @@ public class ID190ReverseBits {
     public class Solution {
         // you need treat n as an unsigned value
         public int reverseBits(int n) {
-            return 0;
+            StringBuilder str = new StringBuilder(String.valueOf(n)).reverse();
+            n = 0;
+            n = Integer.parseInt(str.toString(), 2);
+            return n;
         }
     }
-	// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
