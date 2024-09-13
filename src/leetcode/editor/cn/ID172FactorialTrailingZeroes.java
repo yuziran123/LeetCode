@@ -13,16 +13,7 @@ public class ID172FactorialTrailingZeroes {
         public int trailingZeroes(int n) {
             if (n == 0)
                 return 0;
-            int count = 0;
-            int f = 1;
-            for (int i = 1; i <= n; i++) {
-                f = f * i;
-                while (f % 10 == 0) {
-                    f = f / 10;
-                    count++;
-                }
-            }
-            return count;
+            return n / 5 + trailingZeroes(n / 5);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

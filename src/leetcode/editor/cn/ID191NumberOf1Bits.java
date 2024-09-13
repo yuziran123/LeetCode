@@ -12,9 +12,20 @@ public class ID191NumberOf1Bits {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int hammingWeight(int n) {
-            return 0;
+            // StringBuilder res = new StringBuilder();
+            int mod = 0; // 余数
+            int count = 0;
+            while (n != 0) {
+                mod = n % 2;
+                if (mod == 1)
+                    count++;
+                n = n / 2;
+                // res.append(mod);
+            }
+            // System.out.println(n + "====" + res.reverse().toString());
+            return count;
         }
     }
-	// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

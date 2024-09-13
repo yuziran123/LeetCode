@@ -260,7 +260,7 @@
 ## 六、数学
 1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
 2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
-3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)
+3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
 4. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
 5. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
    - [ ] [直线上最多的点数](src/leetcode/editor/cn/ID149MaxPointsOnALine.java)
@@ -281,6 +281,29 @@
 4. [只出现一次的数字](src/leetcode/editor/cn/ID136SingleNumber.java)
 5. [只出现一次的数字Ⅱ](src/leetcode/editor/cn/ID137SingleNumberIi.java)
 6. [数字范围按位OR](src/leetcode/editor/cn/ID201BitwiseAndOfNumbersRange.java)
+
+#### 笔记
+
+1. 在数学上，将一个整数转换为二进制的过程包括以下步骤：
+
+   1. **除以 2**: 将整数除以 2，记录下余数（0 或 1）。
+   2. **记录商**: 将除法得到的商作为新的数，重复步骤 1。
+   3. **重复直到商为 0**: 继续除以 2，直到商为 0。
+   4. **逆序余数**: 最终，二进制表示是余数从最后一次到第一次的逆序排列。
+
+   ### 示例
+
+   将 13 转换为二进制：
+
+   13 ÷ 2 = 6，余数 1
+
+   6 ÷ 2 = 3，余数 0
+
+   3 ÷ 2 = 1，余数 1
+
+   1 ÷ 2 = 0，余数 1
+
+   余数从最后到最开始的逆序是 1101，因此 13 的二进制表示是 `1101`
 
 ## 七、动态规划
 
