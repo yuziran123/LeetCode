@@ -182,7 +182,7 @@
    cur 和 next 共享相同的数据，并且对其中一个的修改需要反映到另一个上
    ```
 
-4.  `Deque<T> cur = new LinkedList<>();和Deque<T> cur = new ArrayDeque<>();`
+4. `Deque<T> cur = new LinkedList<>();和Deque<T> cur = new ArrayDeque<>();`
 
    ```Java
    LinkedList 是基于链表的实现。每个元素都包含指向前一个和下一个元素的指针。
@@ -192,7 +192,11 @@
    ArrayDeque: 更适合频繁的两端插入和删除操作，以及需要较低的内存开销；随机访问性能较好，但在极端情况下可能需要扩展数组的容量
    ```
 
-   
+5. 二叉搜索树
+
+   前序遍历：往左子树，更新当前值为右区间；往右子树，更新当前值为左区间
+
+   中序遍历：是个递增数组
 
 ### 二叉树层次遍历
 1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)
@@ -203,7 +207,7 @@
 ### 二叉搜索树
 1. [二叉搜索树的最小绝对差](src/leetcode/editor/cn/ID530MinimumAbsoluteDifferenceInBst.java)
 2. [二叉搜索树中第K小的元素](src/leetcode/editor/cn/ID230KthSmallestElementInABst.java)
-3. [验证二叉搜索树](src/leetcode/editor/cn/ID98ValidateBinarySearchTree.java)
+3. [验证二叉搜索树](src/leetcode/editor/cn/ID98ValidateBinarySearchTree.java)        [参考题解](https://leetcode.cn/problems/validate-binary-search-tree/solutions/2020306/qian-xu-zhong-xu-hou-xu-san-chong-fang-f-yxvh/)
 
 ### 分治
 
