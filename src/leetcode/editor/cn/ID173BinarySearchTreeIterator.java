@@ -2,25 +2,38 @@ package leetcode.editor.cn;
 
 import leetcode.editor.util.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class ID173BinarySearchTreeIterator {
     public static void main(String[] args) {
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class BSTIterator {
+        Deque<TreeNode> deque = new ArrayDeque<>();
 
         public BSTIterator(TreeNode root) {
-
+            leftDfs(root);
         }
 
         public int next() {
-
-            return 0;
+            TreeNode node = deque.pollLast();
+            int ans = node.val;
+            node = node.right;
+            leftDfs(node);
+            return ans;
         }
 
         public boolean hasNext() {
+            return !deque.isEmpty();
+        }
 
-            return true;
+        public void leftDfs(TreeNode root) {
+            while (root != null) {
+                deque.add(root);
+                root = root.left;
+            }
         }
     }
 

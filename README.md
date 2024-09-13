@@ -156,7 +156,7 @@
 10. [求根节点到叶节点数字之和](src/leetcode/editor/cn/ID129SumRootToLeafNumbers.java)
     - [ ] [二叉树中的最大路径和](src/leetcode/editor/cn/ID124BinaryTreeMaximumPathSum.java)
 
-11. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)
+11. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)        [参考题解](https://leetcode.cn/problems/binary-search-tree-iterator/solutions/684405/xiang-jie-ru-he-dui-die-dai-ban-de-zhong-4rxj/)
 12. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
 13. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)       [参考题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/?envType=study-plan-v2&envId=top-interview-150)
 
@@ -194,9 +194,12 @@
 
 5. 二叉搜索树
 
+   ```
    前序遍历：往左子树，更新当前值为右区间；往右子树，更新当前值为左区间
-
    中序遍历：是个递增数组
+   ```
+
+   
 
 ### 二叉树层次遍历
 1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)
