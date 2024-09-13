@@ -13,10 +13,14 @@ public class ID190ReverseBits {
     public class Solution {
         // you need treat n as an unsigned value
         public int reverseBits(int n) {
-            StringBuilder str = new StringBuilder(String.valueOf(n)).reverse();
-            n = 0;
-            n = Integer.parseInt(str.toString(), 2);
-            return n;
+            int result = 0;
+            for (int i = 0; i < 32; i++) {
+                result <<= 1;               // 将结果左移一位
+                result |= (n & 1);         // 将n的最低位加到结果中
+                n >>= 1;                   // 将n右移一位，处理下一个位
+            }
+            return result;
+            // return Integer.reverse(n);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

@@ -278,9 +278,9 @@
 1. [二进制求和](src/leetcode/editor/cn/ID67AddBinary.java)
 2. [颠倒二进制位](src/leetcode/editor/cn/ID190ReverseBits.java)
 3. [位1的个数](src/leetcode/editor/cn/ID191NumberOf1Bits.java)
-4. [只出现一次的数字](src/leetcode/editor/cn/ID136SingleNumber.java)
-5. [只出现一次的数字Ⅱ](src/leetcode/editor/cn/ID137SingleNumberIi.java)
-6. [数字范围按位OR](src/leetcode/editor/cn/ID201BitwiseAndOfNumbersRange.java)
+4. [只出现一次的数字](src/leetcode/editor/cn/ID136SingleNumber.java)       [参考题解](https://leetcode.cn/problems/single-number/solutions/10261/hua-jie-suan-fa-136-zhi-chu-xian-yi-ci-de-shu-zi-b/)        [参考题解2](https://leetcode.cn/problems/single-number/solutions/2481594/li-yong-yi-huo-de-xing-zhi-fu-ti-dan-pyt-oizc/)
+5. [只出现一次的数字Ⅱ](src/leetcode/editor/cn/ID137SingleNumberIi.java)        [参考题解](https://leetcode.cn/problems/single-number-ii/solutions/2482832/dai-ni-yi-bu-bu-tui-dao-chu-wei-yun-suan-wnwy/)
+6. [数字范围按位OR](src/leetcode/editor/cn/ID201BitwiseAndOfNumbersRange.java)        [参考题解](https://leetcode.cn/problems/bitwise-and-of-numbers-range/solutions/624595/hua-tu-fen-xi-201-ti-shu-zi-fan-wei-an-w-vzfb/)
 
 #### 笔记
 
