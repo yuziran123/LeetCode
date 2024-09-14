@@ -1,25 +1,27 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.util.TreeNode;
-
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class ID17LetterCombinationsOfAPhoneNumber{
-	public static void main(String[] args) {
-		Solution solution = new ID17LetterCombinationsOfAPhoneNumber().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<String> letterCombinations(String digits) {
+public class ID17LetterCombinationsOfAPhoneNumber {
+    public static void main(String[] args) {
+        Solution solution = new ID17LetterCombinationsOfAPhoneNumber().new Solution();
 
-		return null;
+        // 执行测试
+
+        System.out.println("");
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public List<String> letterCombinations(String digits) {
+            List<String> ans = new ArrayList<>();
+
+            return null;
+        }
+    }
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

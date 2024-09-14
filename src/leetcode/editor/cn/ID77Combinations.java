@@ -1,25 +1,26 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.util.TreeNode;
-
+import java.util.ArrayList;
 import java.util.List;
 
-public class ID77Combinations{
-	public static void main(String[] args) {
-		Solution solution = new ID77Combinations().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public List<List<Integer>> combine(int n, int k) {
+public class ID77Combinations {
+    public static void main(String[] args) {
+        Solution solution = new ID77Combinations().new Solution();
+        // 执行测试
 
-		return null;
+        System.out.println("");
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public List<List<Integer>> combine(int n, int k) {
+			List<List<Integer>> ans = new ArrayList<>();
+			for (int i = 1; i <= n; i++) {
+
+			}
+            return null;
+        }
+    }
+	// leetcode submit region end(Prohibit modification and deletion)
 
 }
