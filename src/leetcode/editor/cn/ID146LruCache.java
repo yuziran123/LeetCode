@@ -7,11 +7,11 @@ public class ID146LruCache {
     // leetcode submit region begin(Prohibit modification and deletion)
     // 利用LinkHashMap实现
     class LRUCache {
-        private int cacapacity = 0;
+        private int capacity = 0;
         private Map<Integer, Integer> LRU = new LinkedHashMap<>();
 
         public LRUCache(int capacity) {
-            this.cacapacity = capacity;
+            this.capacity = capacity;
         }
 
         public int get(int key) {
@@ -30,7 +30,7 @@ public class ID146LruCache {
                 LRU.put(key, value);
                 return;
             } else {
-                if (LRU.size() == this.cacapacity) {
+                if (LRU.size() == this.capacity) {
                     // 使用 iterator() 方法获取迭代器，并通过 next() 方法获取第一个键，即最久未使用的键。
                     Integer firstKey = LRU.keySet().iterator().next();
                     LRU.remove(firstKey);
