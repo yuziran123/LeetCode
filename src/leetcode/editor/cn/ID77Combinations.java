@@ -1,26 +1,20 @@
 package leetcode.editor.cn;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ID77Combinations {
     public static void main(String[] args) {
         Solution solution = new ID77Combinations().new Solution();
-        // 执行测试
+        StringBuilder builder = new StringBuilder();
 
-        System.out.println("");
+        // 执行测试
+        System.out.println(builder);
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public List<List<Integer>> combine(int n, int k) {
-			List<List<Integer>> ans = new ArrayList<>();
-			for (int i = 1; i <= n; i++) {
-
-			}
-            return null;
+        public boolean wordPattern(String pattern, String s){
+            return true;
         }
     }
-	// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
