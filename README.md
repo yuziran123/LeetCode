@@ -78,7 +78,7 @@
 子集型
 
 1. [电话号码的字母组合](src/leetcode/editor/cn/ID17LetterCombinationsOfAPhoneNumber.java)        [参考题解](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solutions/2059416/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-3orv/)     
-2. [分割回文串](src/leetcode/editor/cn/ID131PalindromePartitioning.java)        参考题解
+2. [分割回文串](src/leetcode/editor/cn/ID131PalindromePartitioning.java)        [参考题解](https://leetcode.cn/problems/palindrome-partitioning/solutions/54233/hui-su-you-hua-jia-liao-dong-tai-gui-hua-by-liweiw/)
 3. [子集](src/leetcode/editor/cn/ID78Subsets.java)
 
 组合型 剪枝
@@ -90,8 +90,9 @@
 排列型
 
 1. [全排列](src/leetcode/editor/cn/ID46Permutations.java)
-2. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
-3. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
+2. [N皇后](src/leetcode/editor/cn/ID51NQueens.java)
+3. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
+4. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
 
 #### 笔记
 
