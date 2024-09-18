@@ -78,14 +78,14 @@
 子集型
 
 1. [电话号码的字母组合](src/leetcode/editor/cn/ID17LetterCombinationsOfAPhoneNumber.java)        [参考题解](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solutions/2059416/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-3orv/)     
-2. [分割回文串](src/leetcode/editor/cn/ID131PalindromePartitioning.java)
+2. [分割回文串](src/leetcode/editor/cn/ID131PalindromePartitioning.java)        参考题解
 3. [子集](src/leetcode/editor/cn/ID78Subsets.java)
 
 组合型 剪枝
 
 1. [组合](src/leetcode/editor/cn/ID77Combinations.java)        [参考题解](https://leetcode.cn/problems/combinations/solutions/2071017/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-65lh/)        [参考题解](https://leetcode.cn/problems/combinations/solutions/6701/hua-jie-suan-fa-77-zu-he-by-guanpengchn/)
 2. [组合总和](src/leetcode/editor/cn/ID39CombinationSum.java)
-3. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)
+3. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)        [参考题解](https://leetcode.cn/problems/generate-parentheses/solutions/2071015/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-wcdw/)
 
 排列型
 
