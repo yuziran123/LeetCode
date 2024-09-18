@@ -85,7 +85,7 @@
 
 1. [组合](src/leetcode/editor/cn/ID77Combinations.java)        [参考题解](https://leetcode.cn/problems/combinations/solutions/2071017/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-65lh/)        [参考题解](https://leetcode.cn/problems/combinations/solutions/6701/hua-jie-suan-fa-77-zu-he-by-guanpengchn/)
 2. [组合总和](src/leetcode/editor/cn/ID39CombinationSum.java)
-3. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)
+3. [括号生成](src/leetcode/editor/cn/ID22GenerateParentheses.java)        [参考题解](https://leetcode.cn/problems/generate-parentheses/solutions/2071015/hui-su-bu-hui-xie-tao-lu-zai-ci-pythonja-wcdw/)
 
 排列型
 
