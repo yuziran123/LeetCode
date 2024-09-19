@@ -861,6 +861,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID2850MinimumMovesToSpreadStonesOverGrid.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID2850MinimumMovesToSpreadStonesOverGrid.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2850" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID2850MinimumMovesToSpreadStonesOverGrid.java" />
+              <option name="titleSlug" value="minimum-moves-to-spread-stones-over-grid" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID289GameOfLife.java">
           <value>
             <LeetcodeEditor>

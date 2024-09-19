@@ -90,9 +90,10 @@
 排列型
 
 1. [全排列](src/leetcode/editor/cn/ID46Permutations.java)
-2. [N皇后](src/leetcode/editor/cn/ID51NQueens.java)
+2. [N皇后](src/leetcode/editor/cn/ID51NQueens.java)        [参考题解](https://leetcode.cn/problems/n-queens/solutions/2079586/hui-su-tao-lu-miao-sha-nhuang-hou-shi-pi-mljv/)
 3. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
-4. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
+4. [将石头分散到网格图的最少移动次数](src/leetcode/editor/cn/ID2850MinimumMovesToSpreadStonesOverGrid.java)
+5. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
 
 #### 笔记
 
