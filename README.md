@@ -90,13 +90,9 @@
 排列型
 
 1. [全排列](src/leetcode/editor/cn/ID46Permutations.java)
-2. [N皇后](src/leetcode/editor/cn/ID51NQueens.java)
+2. [N皇后](src/leetcode/editor/cn/ID51NQueens.java)        [参考题解](https://leetcode.cn/problems/n-queens/solutions/2079586/hui-su-tao-lu-miao-sha-nhuang-hou-shi-pi-mljv/)
 3. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
-4. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)
-
-#### 笔记
-
-
+4. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)        [参考题解](https://leetcode.cn/problems/word-search/solutions/12096/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/)
 
 ## 二、栈&链表
 
