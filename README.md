@@ -51,7 +51,7 @@
 3. [插入区间](src/leetcode/editor/cn/ID57InsertInterval.java)
 4. [用最少数量的箭引爆气球](src/leetcode/editor/cn/ID452MinimumNumberOfArrowsToBurstBalloons.java)	[参考题解](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solutions/858320/dai-ma-sui-xiang-lu-dai-ni-xue-tou-tan-x-5wfl/?envType=study-plan-v2&envId=top-interview-150)
 
-#### 笔记
+**笔记**
 
 1. `ans.toArray(new int[0][])` 会创建一个新的 `int[][]` 数组，并将 `ans` 中的元素复制到这个数组中。`new int[0][]` 是一个空的二维数组，用于告诉 `toArray` 方法返回的数组类型，并根据 `ans` 的大小来创建实际的数组。
 
@@ -105,7 +105,7 @@
 
 - [ ] [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
 
-#### 笔记
+**笔记**
 
 1. `path.split("/")`：将 `path` 字符串按 `/` 拆分成一个字符串数组。	
 
@@ -145,7 +145,7 @@
 11. [分隔链表](src/leetcode/editor/cn/ID86PartitionList.java)     [参考题解](https://leetcode.cn/problems/partition-list/solutions/2362068/86-fen-ge-lian-biao-shuang-zhi-zhen-qing-hha7/?envType=study-plan-v2&envId=top-interview-150)
 12. [LRU缓存](src/leetcode/editor/cn/ID146LruCache.java)     [参考题解](https://leetcode.cn/problems/lru-cache/solutions/2456294/tu-jie-yi-zhang-tu-miao-dong-lrupythonja-czgt/)
 
-#### 笔记
+**笔记**
 
 1. 链表遍历注意
 
@@ -171,7 +171,7 @@
 12. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
 13. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)       [参考题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/?envType=study-plan-v2&envId=top-interview-150)
 
-#### 笔记
+**笔记**
 
 1. [写树算法的套路框架](https://leetcode.cn/problems/same-tree/solutions/6558/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/)
 
@@ -255,10 +255,10 @@
 
 1. [搜索插入位置](src/leetcode/editor/cn/ID35SearchInsertPosition.java)
 2. [搜索二维矩阵](src/leetcode/editor/cn/ID74SearchA2dMatrix.java)
-3. [寻找峰值](src/leetcode/editor/cn/ID162FindPeakElement.java)
-4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)
+3. [寻找峰值](src/leetcode/editor/cn/ID162FindPeakElement.java)        [参考题解](https://leetcode.cn/problems/find-peak-element/solutions/6695/hua-jie-suan-fa-162-xun-zhao-feng-zhi-by-guanpengc/)
+4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)        参考题解
 5. [在排序数组中查找元素的第一个和最后一个位置](src/leetcode/editor/cn/ID34FindFirstAndLastPositionOfElementInSortedArray.java)
-6. [寻找旋转排序数组中的最小值](src/leetcode/editor/cn/ID153FindMinimumInRotatedSortedArray.java)
+6. [寻找旋转排序数组中的最小值](src/leetcode/editor/cn/ID153FindMinimumInRotatedSortedArray.java)        [参考题解](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/solutions/126635/er-fen-cha-zhao-wei-shi-yao-zuo-you-bu-dui-cheng-z/)
 7. [寻找两个正序数组的中位数](src/leetcode/editor/cn/ID4MedianOfTwoSortedArrays.java)
 
 ### 堆
@@ -293,7 +293,7 @@
 5. [只出现一次的数字Ⅱ](src/leetcode/editor/cn/ID137SingleNumberIi.java)        [参考题解](https://leetcode.cn/problems/single-number-ii/solutions/2482832/dai-ni-yi-bu-bu-tui-dao-chu-wei-yun-suan-wnwy/)
 6. [数字范围按位OR](src/leetcode/editor/cn/ID201BitwiseAndOfNumbersRange.java)        [参考题解](https://leetcode.cn/problems/bitwise-and-of-numbers-range/solutions/624595/hua-tu-fen-xi-201-ti-shu-zi-fan-wei-an-w-vzfb/)
 
-#### 笔记
+**笔记**
 
 1. 在数学上，将一个整数转换为二进制的过程包括以下步骤：
 
