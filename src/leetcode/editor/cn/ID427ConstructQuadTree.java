@@ -4,9 +4,7 @@ public class ID427ConstructQuadTree {
     public static void main(String[] args) {
         Solution solution = new ID427ConstructQuadTree().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
-
         System.out.println(builder);
     }
 
@@ -50,10 +48,9 @@ public class ID427ConstructQuadTree {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        // Node有点不一样
         public Node construct(int[][] grid) {
-
-            return null;
+            Node root = new Node();
+            return root;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
