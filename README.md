@@ -264,16 +264,40 @@
 ### 堆
 
 1. [数组中的第K个最大元素](src/leetcode/editor/cn/ID215KthLargestElementInAnArray.java)
-2. [IPO](src/leetcode/editor/cn/ID502Ipo.java)
-3. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)
-4. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
+
+   ```java
+   Queue<Integer> heap = new PriorityQueue<>();	// PriorityQueue 默认是小根堆
+   PriorityQueue 是一个基于优先级的队列，默认情况下，它按照自然顺序排列元素，即小根堆，堆顶是最小元素。为了实现大根堆，我们可以使用 Collections.reverseOrder() 作为构造参数。
+   Collections.reverseOrder() 返回一个比较器，这个比较器反转了元素的自然顺序
+       
+   maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // 大根堆
+   
+   不提供比较器：使用默认自然顺序（小根堆）。
+   提供比较器：按照指定的顺序排列元素（可以是大根堆或其他顺序）
+   ```
+
+   - [ ] [IPO](src/leetcode/editor/cn/ID502Ipo.java)
+
+2. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)        [参考题解](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210157/tong-ge-lai-shua-ti-la-you-xian-ji-dui-l-fw7y/)
+
+   **数组转List**
+
+   ```java
+   int[] poll = heap.poll();
+   List<Integer> list = Arrays.stream(poll).boxed().collect(Collectors.toList());
+   Arrays.stream(poll):	这个方法将 int[] 转换为一个流（Stream）。流是一种可以处理数据序列的功能。
+   .boxed():这个方法将 int 原始类型的流转换为 Integer 对象的流。因为 Java 的集合类（如 List）只能存储对象，而不能存储原始类型。
+   .collect(Collectors.toList()):最后，使用 Collectors.toList() 将流收集到一个 List<Integer> 中。这样就完成了从 int[] 到 List<Integer> 的转换。
+   ```
+3. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
 
 ## 六、数学
 1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
 2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
-3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
-4. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
-5. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
+3. 
+4. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
+5. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
+6. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
    - [ ] [直线上最多的点数](src/leetcode/editor/cn/ID149MaxPointsOnALine.java)
 
 
