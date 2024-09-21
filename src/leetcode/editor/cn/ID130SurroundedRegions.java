@@ -12,12 +12,12 @@ public class ID130SurroundedRegions {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public void solve(char[][] board) {
-			int m = board.length;
-			int n = board[0].length;
+            int m = board.length;
+            int n = board[0].length;
 
 
         }
     }
-	// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
