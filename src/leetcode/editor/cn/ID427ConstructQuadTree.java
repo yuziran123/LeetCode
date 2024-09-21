@@ -48,9 +48,29 @@ public class ID427ConstructQuadTree {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        private int[][] presum;
+
         public Node construct(int[][] grid) {
-            Node root = new Node();
-            return root;
+            int m = grid.length, n = grid[0].length;
+            presum = new int[m + 1][n + 1];
+            for (int i = 0; i < m; i++)
+                for (int j = 0; j < n; j++)
+                    presum[i + 1][j + 1] = presum[i + 1][j] + presum[i][j + 1] - presum[i][j] + grid[i][j];
+            return dfs(0, 0, m, n);
+        }
+
+        private Node dfs(int x0, int y0, int x1, int y1) {
+            int diff = presum[x1][y1] - presum[x1][y0] - presum[x0][y1] + presum[x0][y0];
+            if (diff == 0)
+                return new Node(false, true, null, null, null, null);
+            if (diff == (x1 - x0) * (y1 - y0))
+                return new Node(true, true, null, null, null, null);
+            int hx = (x0 + x1) / 2, hy = (y0 + y1) / 2;
+            return new Node(true, false,
+                    dfs(x0, y0, hx, hy),
+                    dfs(x0, hy, hx, y1),
+                    dfs(hx, y0, x1, hy),
+                    dfs(hx, hy, x1, y1));
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

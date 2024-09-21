@@ -227,7 +227,7 @@
 
 1. [将有序数组转换为二叉搜索树](src/leetcode/editor/cn/ID108ConvertSortedArrayToBinarySearchTree.java)        [参考题解](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/solutions/2592692/javapython3cfen-zhi-zhong-xu-bian-li-mei-qkzz/)
 2. [排序链表](src/leetcode/editor/cn/ID148SortList.java)        [参考题解](https://leetcode.cn/problems/sort-list/solutions/13728/sort-list-gui-bing-pai-xu-lian-biao-by-jyd/)
-3. [建立四叉树](src/leetcode/editor/cn/ID427ConstructQuadTree.java)        [参考题解](https://leetcode.cn/problems/construct-quad-tree/solutions/1457069/by-ac_oier-maul/)
+3. [建立四叉树](src/leetcode/editor/cn/ID427ConstructQuadTree.java)        
 4. [合并K个升序链表](src/leetcode/editor/cn/ID23MergeKSortedLists.java)
 
 
@@ -295,7 +295,6 @@
 ## 六、数学
 1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
 2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
-3. 
 4. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
 5. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
 6. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
