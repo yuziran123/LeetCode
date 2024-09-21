@@ -10,37 +10,35 @@ public class ID200NumberOfIslands {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        int ans = 0;
+        int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         char[][] grid;
-        int m, n;
-        int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {1, 0}};
 
         public int numIslands(char[][] grid) {
-
-            this.m = grid.length;
-            this.n = grid[0].length;
-            boolean[][] visited = new boolean[m + 1][n + 1];
+            int ans = 0;
             this.grid = grid;
-            for (int i = 0; i < m; i++) {
-                for (int j = 0; j < n; j++) {
-                    dfs(0, 0, visited);
+            for (int i = 0; i < grid.length; i++) {
+                for (int j = 0; j < grid[0].length; j++) {
+                    if (grid[i][j] == '1')
+                        ans += area(i, j);
                 }
             }
             return ans;
         }
 
-        private void dfs(int x, int y, boolean[][] visited) {
-            if (!inArea(x, y, visited))
-                return;
-            visited[x][y] = true;
-            for (int[] direction : DIRECTIONS) {
-                int newX = x + direction[0];
-                int newY = y + direction[0];
+        public int area(int x, int y) {
+            if (!inArea(x, y) || grid[x][y] != '1')
+                return 0;
+            // 说明此时有岛屿，利用DFS探寻该岛屿的最大范围 ，并设置探寻过的标记
+            grid[x][y] = '2';
+            for (int[] direction : DIRECTIONS) { // 从四个方向分别探寻岛屿
+                area(x + direction[0], y + direction[1]);
             }
+            return 1;
         }
 
-        public boolean inArea(int x, int y, boolean[][] visited) {
-            return x >= 0 && y >= 0 && x < m && y < n && !visited[x][y];
+        // 判断岛屿坐标是否越界
+        public boolean inArea(int x, int y) {
+            return x >= 0 && y >= 0 && x < grid.length && y < grid[0].length;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
