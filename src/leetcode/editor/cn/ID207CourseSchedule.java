@@ -34,19 +34,18 @@ public class ID207CourseSchedule {
             Deque<Integer> deque = new ArrayDeque<>(); // 记录入度=0的课程
             for (int i = 0; i < numCourses; i++) {
                 if (inDgrees[i] == 0)
-                    deque.offer(i);
+                    deque.offer(i); // 需要注意的是，入度表的索引号就是课程编号
             }
 
             while (!deque.isEmpty()) {
                 int course = deque.poll();
                 numCourses--;
                 List<Integer> list = adjacency.get(course);
-                System.out.println(list);
                 if (list != null) {
                     for (int nextCorse : list) {
                         inDgrees[nextCorse]--;
                         if (inDgrees[nextCorse] == 0)
-                            deque.offer(nextCorse); // 入的是序号
+                            deque.offer(nextCorse);
                     }
                 }
             }
