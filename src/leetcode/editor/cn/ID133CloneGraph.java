@@ -1,7 +1,9 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ID133CloneGraph {
     public static void main(String[] args) {
@@ -30,9 +32,23 @@ public class ID133CloneGraph {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        Map<Node, Node> map = new HashMap<>();
+
         public Node cloneGraph(Node node) {
-            Node root = new Node();
-            return root;
+            if (node == null)
+                return node;
+            return dfs(node);
+        }
+
+        private Node dfs(Node node) {
+            if (map.containsKey(node))
+                return map.get(node);
+            Node colne = new Node(node.val);
+            map.put(node, colne);
+            for (Node newNode : node.neighbors) {
+                colne.neighbors.add(dfs(newNode));
+            }
+            return colne;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
