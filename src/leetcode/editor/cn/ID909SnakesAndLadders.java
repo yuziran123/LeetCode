@@ -1,23 +1,21 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.util.TreeNode;
+public class ID909SnakesAndLadders {
+    public static void main(String[] args) {
+        Solution solution = new ID909SnakesAndLadders().new Solution();
 
-public class ID909SnakesAndLadders{
-	public static void main(String[] args) {
-		Solution solution = new ID909SnakesAndLadders().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int snakesAndLadders(int[][] board) {
+        // 执行测试
 
-		return 0;
+        System.out.println("");
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int snakesAndLadders(int[][] board) {
+
+            return 0;
+        }
+    }
+	// leetcode submit region end(Prohibit modification and deletion)
 
 }

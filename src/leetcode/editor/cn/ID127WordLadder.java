@@ -1,25 +1,23 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.util.TreeNode;
-
 import java.util.List;
 
-public class ID127WordLadder{
-	public static void main(String[] args) {
-		Solution solution = new ID127WordLadder().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+public class ID127WordLadder {
+    public static void main(String[] args) {
+        Solution solution = new ID127WordLadder().new Solution();
 
-		return 0;
+        // 执行测试
+
+        System.out.println("");
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+
+            return 0;
+        }
+    }
+	// leetcode submit region end(Prohibit modification and deletion)
 
 }

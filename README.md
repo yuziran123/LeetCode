@@ -232,24 +232,53 @@
 
 ## 四、图
 
+### 深度优先搜索
+
 1. [岛屿问题: 在网格中DFS](https://leetcode.cn/problems/number-of-islands/solutions/211211/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/)
    1. [岛屿数量](src/leetcode/editor/cn/ID200NumberOfIslands.java)        
    2. [岛屿的周长](src/leetcode/editor/cn/ID463IslandPerimeter.java) 
    3. [岛屿的最大面积](src/leetcode/editor/cn/ID695MaxAreaOfIsland.java) 
    4. [最大人工岛](src/leetcode/editor/cn/ID827MakingALargeIsland.java)         [参考题解](https://leetcode.cn/problems/making-a-large-island/solutions/2808887/jian-ji-gao-xiao-ji-suan-dao-yu-de-mian-ab4h7/)
-   
+
       ```Java
       HashSet 的 add 方法用于向集合中添加元素：
           集合中不存在该元素，add 方法会将其添加，并返回 true。
           如果元素已存在，则不做任何操作，返回 false
       ```
-2. [被围绕的区域](src/leetcode/editor/cn/ID130SurroundedRegions.java)
-3. [克隆图](src/leetcode/editor/cn/ID133CloneGraph.java)
-4. [除法求值](src/leetcode/editor/cn/ID399EvaluateDivision.java)
-5. [课程表](src/leetcode/editor/cn/ID207CourseSchedule.java)
-6. [课程表Ⅱ](src/leetcode/editor/cn/ID210CourseScheduleIi.java)
 
-### 图的广度优先搜索
+   5. [被围绕的区域](src/leetcode/editor/cn/ID130SurroundedRegions.java)
+
+2. [克隆图](src/leetcode/editor/cn/ID133CloneGraph.java)
+
+3. [除法求值](src/leetcode/editor/cn/ID399EvaluateDivision.java)
+
+**拓扑排序**
+
+1. [课程表](src/leetcode/editor/cn/ID207CourseSchedule.java)        [参考题解](https://leetcode.cn/problems/course-schedule/solutions/250377/bao-mu-shi-ti-jie-shou-ba-shou-da-tong-tuo-bu-pai-/)
+
+   ```Java
+   map.putIfAbsent(prerequisites[i][1], new ArrayList<>());
+   putIfAbsent 是 Map 接口的方法，它的功能是：
+   如果指定的键当前不在 map 中，则将该键和指定的值放入 map。
+   如果键已经存在，putIfAbsent 不会做任何操作，不会替换原有的值。
+   ```
+2. [课程表Ⅱ](src/leetcode/editor/cn/ID210CourseScheduleIi.java)
+
+   `list.isEmpty() 和 list == null`
+
+   ```java
+   List<String> list = new ArrayList<>();
+   System.out.println(list.isEmpty()); // true
+   System.out.println(list == null);    // false
+   
+   List<String> list = null;
+   System.out.println(list.isEmpty()); // 会抛出 NullPointerException
+   System.out.println(list == null);    // true
+   ```
+
+   
+
+### 广度优先搜索
 1. [蛇梯棋](src/leetcode/editor/cn/ID909SnakesAndLadders.java)
 2. [最小基因变化](src/leetcode/editor/cn/ID433MinimumGeneticMutation.java)
 3. [单词接龙](src/leetcode/editor/cn/ID127WordLadder.java)

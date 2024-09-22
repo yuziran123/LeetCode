@@ -5,12 +5,6 @@ import java.util.List;
 
 public class ID133CloneGraph {
     public static void main(String[] args) {
-        Solution solution = new ID133CloneGraph().new Solution();
-        StringBuilder builder = new StringBuilder();
-
-        // 执行测试
-
-        System.out.println(builder);
     }
 
     // Definition for a Node.
@@ -35,12 +29,10 @@ public class ID133CloneGraph {
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
-
-
     class Solution {
         public Node cloneGraph(Node node) {
-
-            return null;
+            Node root = new Node();
+            return root;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
