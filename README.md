@@ -236,7 +236,13 @@
    1. [岛屿数量](src/leetcode/editor/cn/ID200NumberOfIslands.java)        
    2. [岛屿的周长](src/leetcode/editor/cn/ID463IslandPerimeter.java) 
    3. [岛屿的最大面积](src/leetcode/editor/cn/ID695MaxAreaOfIsland.java) 
-   4. [最大人工岛](src/leetcode/editor/cn/ID827MakingALargeIsland.java) 
+   4. [最大人工岛](src/leetcode/editor/cn/ID827MakingALargeIsland.java)         [参考题解](https://leetcode.cn/problems/making-a-large-island/solutions/2808887/jian-ji-gao-xiao-ji-suan-dao-yu-de-mian-ab4h7/)
+   
+      ```Java
+      HashSet 的 add 方法用于向集合中添加元素：
+          集合中不存在该元素，add 方法会将其添加，并返回 true。
+          如果元素已存在，则不做任何操作，返回 false
+      ```
 2. [被围绕的区域](src/leetcode/editor/cn/ID130SurroundedRegions.java)
 3. [克隆图](src/leetcode/editor/cn/ID133CloneGraph.java)
 4. [除法求值](src/leetcode/editor/cn/ID399EvaluateDivision.java)
