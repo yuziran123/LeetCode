@@ -8,8 +8,7 @@
 5. [跳跃游戏Ⅱ](src/leetcode/editor/cn/ID45JumpGameIi.java)
 6. [H指数](src/leetcode/editor/cn/ID274HIndex.java)[除自身以外数组的乘积](src/leetcode/editor/cn/ID238ProductOfArrayExceptSelf.java)
 7. [加油站](src/leetcode/editor/cn/ID134GasStation.java)
-
-- [ ] [O(1) 时间插入、删除和获取随机元素](src/leetcode/editor/cn/ID380InsertDeleteGetrandomO1.java)
+8. [O(1) 时间插入、删除和获取随机元素](src/leetcode/editor/cn/ID380InsertDeleteGetrandomO1.java)
 
 
 
@@ -17,8 +16,7 @@
 
 1. [整数转罗马数字](src/leetcode/editor/cn/ID12IntegerToRoman.java)
 2. [Z字形变换](src/leetcode/editor/cn/ID6ZigzagConversion.java)
-
-- [ ] [文本左右对齐](src/leetcode/editor/cn/ID68TextJustification.java)
+3. [文本左右对齐](src/leetcode/editor/cn/ID68TextJustification.java)
 
 
 ### 双指针
@@ -31,9 +29,8 @@
 ### 滑动窗口
 1. [长度最小的子数组](src/leetcode/editor/cn/ID209MinimumSizeSubarraySum.java)
 2. [无重复字符的最长子串](src/leetcode/editor/cn/ID3LongestSubstringWithoutRepeatingCharacters.java)
-
-- [ ] [串联所有单词的子串](src/leetcode/editor/cn/ID30SubstringWithConcatenationOfAllWords.java)
-- [ ] [最小覆盖子串](src/leetcode/editor/cn/ID76MinimumWindowSubstring.java)
+3. [串联所有单词的子串](src/leetcode/editor/cn/ID30SubstringWithConcatenationOfAllWords.java)
+4. [最小覆盖子串](src/leetcode/editor/cn/ID76MinimumWindowSubstring.java)
 
 ### 哈希表
 1. [赎金信](src/leetcode/editor/cn/ID383RansomNote.java)
@@ -102,8 +99,7 @@
 2. [简化路径](src/leetcode/editor/cn/ID71SimplifyPath.java)
 3. [最小栈](src/leetcode/editor/cn/ID155MinStack.java) ——用栈+辅助栈实现
 4. [逆波兰表达式求值](src/leetcode/editor/cn/ID150EvaluateReversePolishNotation.java)
-
-- [ ] [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
+5. [基本计算器](src/leetcode/editor/cn/ID224BasicCalculator.java) 				
 
 **笔记**
 
@@ -165,11 +161,12 @@
 8. [二叉树展开为链表](src/leetcode/editor/cn/ID114FlattenBinaryTreeToLinkedList.java)
 9. [路径总和](src/leetcode/editor/cn/ID112PathSum.java)
 10. [求根节点到叶节点数字之和](src/leetcode/editor/cn/ID129SumRootToLeafNumbers.java)
-    - [ ] [二叉树中的最大路径和](src/leetcode/editor/cn/ID124BinaryTreeMaximumPathSum.java)
 
-11. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)        [参考题解](https://leetcode.cn/problems/binary-search-tree-iterator/solutions/684405/xiang-jie-ru-he-dui-die-dai-ban-de-zhong-4rxj/)
-12. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
-13. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)       [参考题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/?envType=study-plan-v2&envId=top-interview-150)
+11. [二叉树中的最大路径和](src/leetcode/editor/cn/ID124BinaryTreeMaximumPathSum.java)
+
+12. [二叉搜索树迭代器](src/leetcode/editor/cn/ID173BinarySearchTreeIterator.java)        [参考题解](https://leetcode.cn/problems/binary-search-tree-iterator/solutions/684405/xiang-jie-ru-he-dui-die-dai-ban-de-zhong-4rxj/)
+13. [完全二叉树的节点个数](src/leetcode/editor/cn/ID222CountCompleteTreeNodes.java)
+14. [二叉树的最近公共祖先](src/leetcode/editor/cn/ID236LowestCommonAncestorOfABinaryTree.java)       [参考题解](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/?envType=study-plan-v2&envId=top-interview-150)
 
 **笔记**
 
@@ -210,7 +207,6 @@
    中序遍历：是个递增数组
    ```
 
-   
 
 ### 二叉树层次遍历
 1. [二叉树的右视图](src/leetcode/editor/cn/ID199BinaryTreeRightSideView.java)
@@ -303,7 +299,7 @@
 
 1. [数组中的第K个最大元素](src/leetcode/editor/cn/ID215KthLargestElementInAnArray.java)
 
-   ```java
+   ```
    Queue<Integer> heap = new PriorityQueue<>();	// PriorityQueue 默认是小根堆
    PriorityQueue 是一个基于优先级的队列，默认情况下，它按照自然顺序排列元素，即小根堆，堆顶是最小元素。为了实现大根堆，我们可以使用 Collections.reverseOrder() 作为构造参数。
    Collections.reverseOrder() 返回一个比较器，这个比较器反转了元素的自然顺序
@@ -314,9 +310,9 @@
    提供比较器：按照指定的顺序排列元素（可以是大根堆或其他顺序）
    ```
 
-   - [ ] [IPO](src/leetcode/editor/cn/ID502Ipo.java)
+2. [IPO](src/leetcode/editor/cn/ID502Ipo.java)
 
-2. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)        [参考题解](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210157/tong-ge-lai-shua-ti-la-you-xian-ji-dui-l-fw7y/)
+3. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)        [参考题解](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210157/tong-ge-lai-shua-ti-la-you-xian-ji-dui-l-fw7y/)
 
    **数组转List**
 
@@ -327,15 +323,15 @@
    .boxed():这个方法将 int 原始类型的流转换为 Integer 对象的流。因为 Java 的集合类（如 List）只能存储对象，而不能存储原始类型。
    .collect(Collectors.toList()):最后，使用 Collectors.toList() 将流收集到一个 List<Integer> 中。这样就完成了从 int[] 到 List<Integer> 的转换。
    ```
-3. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
+4. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
 
 ## 六、数学
 1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
 2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
-4. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
-5. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
-6. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
-   - [ ] [直线上最多的点数](src/leetcode/editor/cn/ID149MaxPointsOnALine.java)
+3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
+4. [x的平方根](src/leetcode/editor/cn/ID69Sqrtx.java)
+5. [Pow(x, n)](src/leetcode/editor/cn/ID50PowxN.java)
+6. [直线上最多的点数](src/leetcode/editor/cn/ID149MaxPointsOnALine.java)
 
 
 ### 矩阵
