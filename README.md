@@ -285,16 +285,16 @@
 
 ### 字典树
 
-1. [实现Trie(前缀树)](src/leetcode/editor/cn/ID208ImplementTriePrefixTree.java)
-2. [添加与搜索单词-数据结构设计](src/leetcode/editor/cn/ID211DesignAddAndSearchWordsDataStructure.java)
-3. [单词搜索Ⅱ](src/leetcode/editor/cn/ID212WordSearchIi.java)
+1. [实现Trie(前缀树)](src/leetcode/editor/cn/ID208ImplementTriePrefixTree.java)       [参考题解](https://leetcode.cn/problems/implement-trie-prefix-tree/solutions/2614334/javapython3cdfsbiao-zhi-wei-gou-zao-zi-d-zxrc/)
+2. [添加与搜索单词-数据结构设计](src/leetcode/editor/cn/ID211DesignAddAndSearchWordsDataStructure.java)        [参考题解](https://leetcode.cn/problems/design-add-and-search-words-data-structure/solutions/2618841/javapython3czi-dian-shu-hui-su-fa-pi-pei-1tr7/)
+3. [单词搜索Ⅱ](src/leetcode/editor/cn/ID212WordSearchIi.java)        [参考题解](https://leetcode.cn/problems/word-search-ii/solutions/2663477/javapython3chui-su-fa-zi-dian-shu-jian-z-0o8a/)
 
 ### 二分查找
 
 1. [搜索插入位置](src/leetcode/editor/cn/ID35SearchInsertPosition.java)
 2. [搜索二维矩阵](src/leetcode/editor/cn/ID74SearchA2dMatrix.java)
 3. [寻找峰值](src/leetcode/editor/cn/ID162FindPeakElement.java)        [参考题解](https://leetcode.cn/problems/find-peak-element/solutions/6695/hua-jie-suan-fa-162-xun-zhao-feng-zhi-by-guanpengc/)
-4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)        参考题解
+4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)       
 5. [在排序数组中查找元素的第一个和最后一个位置](src/leetcode/editor/cn/ID34FindFirstAndLastPositionOfElementInSortedArray.java)
 6. [寻找旋转排序数组中的最小值](src/leetcode/editor/cn/ID153FindMinimumInRotatedSortedArray.java)        [参考题解](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/solutions/126635/er-fen-cha-zhao-wei-shi-yao-zuo-you-bu-dui-cheng-z/)
 7. [寻找两个正序数组的中位数](src/leetcode/editor/cn/ID4MedianOfTwoSortedArrays.java)
