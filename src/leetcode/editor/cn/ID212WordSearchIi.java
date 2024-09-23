@@ -6,9 +6,7 @@ public class ID212WordSearchIi {
     public static void main(String[] args) {
         Solution solution = new ID212WordSearchIi().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
-
         System.out.println(builder);
     }
 
