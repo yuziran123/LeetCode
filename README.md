@@ -67,8 +67,8 @@
 
 ### Kadane算法
 
-1. 最大子数组和
-2. 环形子数组的最大和
+1. [最大子数组和](src/leetcode/editor/cn/ID53MaximumSubarray.java)
+2. [环形子数组的最大和](src/leetcode/editor/cn/ID918MaximumSumCircularSubarray.java)
 
 ### 回溯
 
@@ -91,7 +91,17 @@
 3. [N皇后Ⅱ](src/leetcode/editor/cn/ID52NQueensIi.java)
 4. [单词搜索](src/leetcode/editor/cn/ID79WordSearch.java)        [参考题解](https://leetcode.cn/problems/word-search/solutions/12096/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/)
 
-## 二、栈&链表
+### 二分查找
+
+1. [搜索插入位置](src/leetcode/editor/cn/ID35SearchInsertPosition.java)
+2. [搜索二维矩阵](src/leetcode/editor/cn/ID74SearchA2dMatrix.java)
+3. [寻找峰值](src/leetcode/editor/cn/ID162FindPeakElement.java)        [参考题解](https://leetcode.cn/problems/find-peak-element/solutions/6695/hua-jie-suan-fa-162-xun-zhao-feng-zhi-by-guanpengc/)
+4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)       
+5. [在排序数组中查找元素的第一个和最后一个位置](src/leetcode/editor/cn/ID34FindFirstAndLastPositionOfElementInSortedArray.java)
+6. [寻找旋转排序数组中的最小值](src/leetcode/editor/cn/ID153FindMinimumInRotatedSortedArray.java)        [参考题解](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/solutions/126635/er-fen-cha-zhao-wei-shi-yao-zuo-you-bu-dui-cheng-z/)
+7. [寻找两个正序数组的中位数](src/leetcode/editor/cn/ID4MedianOfTwoSortedArrays.java)
+
+## 二、栈&链表&堆
 
 ### 栈
 
@@ -148,6 +158,37 @@
    ```Java
    //修改 head 可能会导致链表丢失；使用额外的 current 指针，可以在不改变原链表结构的情况下遍历链表。
    ```
+   
+   ### 堆
+   
+   1. [数组中的第K个最大元素](src/leetcode/editor/cn/ID215KthLargestElementInAnArray.java)
+   
+      ```
+      Queue<Integer> heap = new PriorityQueue<>();	// PriorityQueue 默认是小根堆
+      PriorityQueue 是一个基于优先级的队列，默认情况下，它按照自然顺序排列元素，即小根堆，堆顶是最小元素。为了实现大根堆，我们可以使用 Collections.reverseOrder() 作为构造参数。
+      Collections.reverseOrder() 返回一个比较器，这个比较器反转了元素的自然顺序
+          
+      maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // 大根堆
+      
+      不提供比较器：使用默认自然顺序（小根堆）。
+      提供比较器：按照指定的顺序排列元素（可以是大根堆或其他顺序）
+      ```
+   
+   2. [IPO](src/leetcode/editor/cn/ID502Ipo.java)
+   
+   3. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)        [参考题解](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210157/tong-ge-lai-shua-ti-la-you-xian-ji-dui-l-fw7y/)
+   
+      **数组转List**
+   
+      ```java
+      int[] poll = heap.poll();
+      List<Integer> list = Arrays.stream(poll).boxed().collect(Collectors.toList());
+      Arrays.stream(poll):	这个方法将 int[] 转换为一个流（Stream）。流是一种可以处理数据序列的功能。
+      .boxed():这个方法将 int 原始类型的流转换为 Integer 对象的流。因为 Java 的集合类（如 List）只能存储对象，而不能存储原始类型。
+      .collect(Collectors.toList()):最后，使用 Collectors.toList() 将流收集到一个 List<Integer> 中。这样就完成了从 int[] 到 List<Integer> 的转换。
+      ```
+   
+   4. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
 
 ## 三、二叉树
 
@@ -277,55 +318,13 @@
 2. [最小基因变化](src/leetcode/editor/cn/ID433MinimumGeneticMutation.java)
 3. [单词接龙](src/leetcode/editor/cn/ID127WordLadder.java)
 
-## 五、查找
-
 ### 字典树
 
 1. [实现Trie(前缀树)](src/leetcode/editor/cn/ID208ImplementTriePrefixTree.java)       [参考题解](https://leetcode.cn/problems/implement-trie-prefix-tree/solutions/2614334/javapython3cdfsbiao-zhi-wei-gou-zao-zi-d-zxrc/)
 2. [添加与搜索单词-数据结构设计](src/leetcode/editor/cn/ID211DesignAddAndSearchWordsDataStructure.java)        [参考题解](https://leetcode.cn/problems/design-add-and-search-words-data-structure/solutions/2618841/javapython3czi-dian-shu-hui-su-fa-pi-pei-1tr7/)
 3. [单词搜索Ⅱ](src/leetcode/editor/cn/ID212WordSearchIi.java)        [参考题解](https://leetcode.cn/problems/word-search-ii/solutions/2663477/javapython3chui-su-fa-zi-dian-shu-jian-z-0o8a/)
 
-### 二分查找
-
-1. [搜索插入位置](src/leetcode/editor/cn/ID35SearchInsertPosition.java)
-2. [搜索二维矩阵](src/leetcode/editor/cn/ID74SearchA2dMatrix.java)
-3. [寻找峰值](src/leetcode/editor/cn/ID162FindPeakElement.java)        [参考题解](https://leetcode.cn/problems/find-peak-element/solutions/6695/hua-jie-suan-fa-162-xun-zhao-feng-zhi-by-guanpengc/)
-4. [搜索旋转排序数组](src/leetcode/editor/cn/ID33SearchInRotatedSortedArray.java)       
-5. [在排序数组中查找元素的第一个和最后一个位置](src/leetcode/editor/cn/ID34FindFirstAndLastPositionOfElementInSortedArray.java)
-6. [寻找旋转排序数组中的最小值](src/leetcode/editor/cn/ID153FindMinimumInRotatedSortedArray.java)        [参考题解](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/solutions/126635/er-fen-cha-zhao-wei-shi-yao-zuo-you-bu-dui-cheng-z/)
-7. [寻找两个正序数组的中位数](src/leetcode/editor/cn/ID4MedianOfTwoSortedArrays.java)
-
-### 堆
-
-1. [数组中的第K个最大元素](src/leetcode/editor/cn/ID215KthLargestElementInAnArray.java)
-
-   ```
-   Queue<Integer> heap = new PriorityQueue<>();	// PriorityQueue 默认是小根堆
-   PriorityQueue 是一个基于优先级的队列，默认情况下，它按照自然顺序排列元素，即小根堆，堆顶是最小元素。为了实现大根堆，我们可以使用 Collections.reverseOrder() 作为构造参数。
-   Collections.reverseOrder() 返回一个比较器，这个比较器反转了元素的自然顺序
-       
-   maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // 大根堆
-   
-   不提供比较器：使用默认自然顺序（小根堆）。
-   提供比较器：按照指定的顺序排列元素（可以是大根堆或其他顺序）
-   ```
-
-2. [IPO](src/leetcode/editor/cn/ID502Ipo.java)
-
-3. [查找和最小的K对数字](src/leetcode/editor/cn/ID373FindKPairsWithSmallestSums.java)        [参考题解](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/solutions/1210157/tong-ge-lai-shua-ti-la-you-xian-ji-dui-l-fw7y/)
-
-   **数组转List**
-
-   ```java
-   int[] poll = heap.poll();
-   List<Integer> list = Arrays.stream(poll).boxed().collect(Collectors.toList());
-   Arrays.stream(poll):	这个方法将 int[] 转换为一个流（Stream）。流是一种可以处理数据序列的功能。
-   .boxed():这个方法将 int 原始类型的流转换为 Integer 对象的流。因为 Java 的集合类（如 List）只能存储对象，而不能存储原始类型。
-   .collect(Collectors.toList()):最后，使用 Collectors.toList() 将流收集到一个 List<Integer> 中。这样就完成了从 int[] 到 List<Integer> 的转换。
-   ```
-4. [数据流的中位数](src/leetcode/editor/cn/ID295FindMedianFromDataStream.java)
-
-## 六、数学
+## 五、数学
 1. [回文数](src/leetcode/editor/cn/ID9PalindromeNumber.java)
 2. [加一](src/leetcode/editor/cn/ID66PlusOne.java)
 3. [阶乘后的零](src/leetcode/editor/cn/ID172FactorialTrailingZeroes.java)        [参考题解](https://leetcode.cn/problems/factorial-trailing-zeroes/solutions/1366037/by-ac_oier-1y6w/)
@@ -373,7 +372,7 @@
 
    余数从最后到最开始的逆序是 1101，因此 13 的二进制表示是 `1101`
 
-## 七、动态规划
+## 六、动态规划
 
 ### 一维动态规划
 
@@ -394,4 +393,4 @@
 8. [买卖股票的最佳时机Ⅳ](src/leetcode/editor/cn/ID188BestTimeToBuyAndSellStockIv.java)
 9. [最大正方形](src/leetcode/editor/cn/ID221MaximalSquare.java)
 
-## 八、贪心算法
+## 七、贪心算法
