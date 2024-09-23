@@ -1,43 +1,34 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.util.TreeNode;
+import java.util.HashSet;
+import java.util.Random;
 
-public class ID380InsertDeleteGetrandomO1{
-	public static void main(String[] args) {
-		// Solution solution = new ID380InsertDeleteGetrandomO1().new Solution();
-		// StringBuilder builder = new StringBuilder();
-		//
-		// //执行测试
-		//
-		// System.out.println(builder);
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class RandomizedSet {
-
-    public RandomizedSet() {
-
+public class ID380InsertDeleteGetrandomO1 {
+    public static void main(String[] args) {
     }
-    
-    // public boolean insert(int val) {
-    //
-    // }
-    //
-    // public boolean remove(int val) {
-    //
-    // }
-    
-    // public int getRandom() {
-    //
-    // }
-}
 
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * RandomizedSet obj = new RandomizedSet();
- * boolean param_1 = obj.insert(val);
- * boolean param_2 = obj.remove(val);
- * int param_3 = obj.getRandom();
- */
-//leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class RandomizedSet {
+        private HashSet<Integer> set;
+        private Random random;
+        public RandomizedSet() {
+            set = new HashSet<>();
+            random = new Random();
+        }
+
+        public boolean insert(int val) {
+            return set.add(val);
+        }
+
+        public boolean remove(int val) {
+           return set.remove(val);
+        }
+
+        public int getRandom() {
+            int index = random.nextInt(set.size());
+            return (Integer) set.toArray()[index];
+        }
+    }
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

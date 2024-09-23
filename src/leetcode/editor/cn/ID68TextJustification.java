@@ -19,6 +19,6 @@ public class ID68TextJustification {
             return null;
         }
     }
-// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

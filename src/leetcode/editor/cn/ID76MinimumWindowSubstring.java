@@ -1,23 +1,26 @@
 package leetcode.editor.cn;
 
-import leetcode.editor.util.TreeNode;
+public class ID76MinimumWindowSubstring {
+    public static void main(String[] args) {
+        Solution solution = new ID76MinimumWindowSubstring().new Solution();
 
-public class ID76MinimumWindowSubstring{
-	public static void main(String[] args) {
-		Solution solution = new ID76MinimumWindowSubstring().new Solution();
-		StringBuilder builder = new StringBuilder();
-		
-		//执行测试
-		
-		System.out.println(builder);		
-	}
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public String minWindow(String s, String t) {
+        // 执行测试
 
-		return "";
+        System.out.println("");
     }
-}
-//leetcode submit region end(Prohibit modification and deletion)
+
+    // leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public String minWindow(String s, String t) {
+            int m = s.length();
+            int n = t.length();
+            if (m < n)
+                return "";
+
+
+            return "";
+        }
+    }
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
