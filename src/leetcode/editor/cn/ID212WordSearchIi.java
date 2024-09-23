@@ -1,5 +1,6 @@
 package leetcode.editor.cn;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ID212WordSearchIi {
@@ -13,8 +14,8 @@ public class ID212WordSearchIi {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public List<String> findWords(char[][] board, String[] words) {
-
-            return null;
+            List<String> ans  = new ArrayList<>();
+            return ans;
         }
     }
 	// leetcode submit region end(Prohibit modification and deletion)
