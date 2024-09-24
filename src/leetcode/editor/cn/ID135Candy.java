@@ -4,7 +4,6 @@ public class ID135Candy {
     public static void main(String[] args) {
         Solution solution = new ID135Candy().new Solution();
         // 执行测试
-
         System.out.println("");
     }
 

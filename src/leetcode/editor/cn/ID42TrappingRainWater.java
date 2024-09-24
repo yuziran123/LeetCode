@@ -4,7 +4,6 @@ public class ID42TrappingRainWater {
     public static void main(String[] args) {
         Solution solution = new ID42TrappingRainWater().new Solution();
         // 执行测试
-
         System.out.println("");
     }
 

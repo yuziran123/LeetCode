@@ -6,9 +6,7 @@ public class ID68TextJustification {
     public static void main(String[] args) {
         Solution solution = new ID68TextJustification().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
-
         System.out.println(builder);
     }
 
