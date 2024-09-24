@@ -29,8 +29,8 @@
 ### 滑动窗口
 1. [长度最小的子数组](src/leetcode/editor/cn/ID209MinimumSizeSubarraySum.java)
 2. [无重复字符的最长子串](src/leetcode/editor/cn/ID3LongestSubstringWithoutRepeatingCharacters.java)
-3. [串联所有单词的子串](src/leetcode/editor/cn/ID30SubstringWithConcatenationOfAllWords.java)
-4. [最小覆盖子串](src/leetcode/editor/cn/ID76MinimumWindowSubstring.java)
+3. [串联所有单词的子串](src/leetcode/editor/cn/ID30SubstringWithConcatenationOfAllWords.java)        [参考题解](https://leetcode.cn/problems/substring-with-concatenation-of-all-words/solutions/2345526/javapythondan-ci-hua-de-hua-dong-chuang-h93z1/)
+4. [最小覆盖子串](src/leetcode/editor/cn/ID76MinimumWindowSubstring.java)          [参考题解](https://leetcode.cn/problems/minimum-window-substring/solutions/2347155/javapython3hua-dong-chuang-kou-chai-zhi-u3q8t/)
 
 ### 哈希表
 1. [赎金信](src/leetcode/editor/cn/ID383RansomNote.java)
@@ -68,7 +68,7 @@
 ### Kadane算法
 
 1. [最大子数组和](src/leetcode/editor/cn/ID53MaximumSubarray.java)
-2. [环形子数组的最大和](src/leetcode/editor/cn/ID918MaximumSumCircularSubarray.java)
+2. [环形子数组的最大和](src/leetcode/editor/cn/ID918MaximumSumCircularSubarray.java)        [参考题解](https://leetcode.cn/problems/maximum-sum-circular-subarray/solutions/2351107/mei-you-si-lu-yi-zhang-tu-miao-dong-pyth-ilqh/)
 
 ### 回溯
 
