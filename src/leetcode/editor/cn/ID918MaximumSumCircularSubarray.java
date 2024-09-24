@@ -10,18 +10,16 @@ public class ID918MaximumSumCircularSubarray {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int maxSubarraySumCircular(int[] nums) {
-            int len = nums.length;
-            int max = nums[0];
-            int sum = 0;
-            int[] dp = new int[len];
-            dp[0] = nums[0];
-            for (int i = 1; i < len; i++) {
-                dp[i] = Math.max(dp[i - 1], 0) + nums[i];
-                max = Math.max(max, dp[i]);
+            int maxS = Integer.MIN_VALUE, minS = 0;
+            int sum = 0, curMax = 0, tmpMin = 0;
+            for (int num : nums) {
+                curMax = Math.max(curMax, 0) + num;
+                maxS = Math.max(curMax, maxS); //初始curMax=-1，maxS=0；此时maxS=0显然不对，故maxS初始化要足够小
+                tmpMin = Math.min(tmpMin, 0) + num;
+                minS = Math.min(minS, tmpMin);
+                sum += num;
             }
-            for (int i = 0; i < len; i++) {
-            }
-            return max;
+            return minS == sum ? maxS : Math.max(maxS, sum - minS);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

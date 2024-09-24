@@ -14,9 +14,20 @@ public class ID124BinaryTreeMaximumPathSum {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public int maxPathSum(TreeNode root) {
+        private int ans = Integer.MIN_VALUE;
 
-            return 0;
+        public int maxPathSum(TreeNode root) {
+            dfs(root);
+            return ans;
+        }
+
+        public int dfs(TreeNode node) {
+            if (node == null)
+                return 0;
+            int lVal = dfs(node.left);
+            int rVal = dfs(node.right);
+            ans = Math.max(ans, lVal + rVal + node.val);
+            return Math.max(Math.max(lVal, rVal) + node.val, 0);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
