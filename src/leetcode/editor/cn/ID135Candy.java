@@ -10,10 +10,21 @@ public class ID135Candy {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int candy(int[] ratings) {
-
-			return 0;
+            int n = ratings.length;
+            int ans = n;
+            for (int i = 1; i < n; i++) {
+                if (ratings[i] > ratings[i - 1])
+                    ans++;
+            }
+            for (int i = n - 2; i > 0; i--) {
+                if (ratings[i] > ratings[i + 1] && ratings[i] < ratings[i - 1])
+                    ans++;
+            }
+            if (ratings[0] > ratings[1])
+                ans++;
+            return ans;
         }
     }
-	// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }
