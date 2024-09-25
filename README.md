@@ -9,8 +9,8 @@
 6. [H指数](src/leetcode/editor/cn/ID274HIndex.java)[除自身以外数组的乘积](src/leetcode/editor/cn/ID238ProductOfArrayExceptSelf.java)
 7. [加油站](src/leetcode/editor/cn/ID134GasStation.java)
 8. [O(1) 时间插入、删除和获取随机元素](src/leetcode/editor/cn/ID380InsertDeleteGetrandomO1.java)
-9. [分发糖果](src/leetcode/editor/cn/ID135Candy.java)
-10. [接雨水](src/leetcode/editor/cn/ID42TrappingRainWater.java)
+9. [分发糖果 ](src/leetcode/editor/cn/ID135Candy.java)        [参考题解](https://leetcode.cn/problems/candy/solutions/17847/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/)
+10. [接雨水](src/leetcode/editor/cn/ID42TrappingRainWater.java)          参考题解
 
 ### 字符串
 
