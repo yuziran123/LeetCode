@@ -10,13 +10,13 @@
 7. [加油站](src/leetcode/editor/cn/ID134GasStation.java)
 8. [O(1) 时间插入、删除和获取随机元素](src/leetcode/editor/cn/ID380InsertDeleteGetrandomO1.java)
 9. [分发糖果 ](src/leetcode/editor/cn/ID135Candy.java)        [参考题解](https://leetcode.cn/problems/candy/solutions/17847/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/)
-10. [接雨水](src/leetcode/editor/cn/ID42TrappingRainWater.java)          参考题解
+10. [接雨水](src/leetcode/editor/cn/ID42TrappingRainWater.java)          [参考题解](https://leetcode.cn/problems/trapping-rain-water/solutions/2775093/shuang-zhi-zhen-xiang-xiang-yi-dong-xi-j-r3bs/)          [单调栈参考](https://leetcode.cn/circle/discuss/L5ZpxA/)        [参考题解2—巧妙](https://leetcode.cn/problems/trapping-rain-water/solutions/2705550/python3liu-xing-dai-ma-tu-xing-yin-ying-wfduo/)          [参考题解3](https://leetcode.cn/problems/trapping-rain-water/solutions/1974340/zuo-liao-nbian-huan-bu-hui-yi-ge-shi-pin-ukwm/)
 
 ### 字符串
 
 1. [整数转罗马数字](src/leetcode/editor/cn/ID12IntegerToRoman.java)
 2. [Z字形变换](src/leetcode/editor/cn/ID6ZigzagConversion.java)
-3. [文本左右对齐](src/leetcode/editor/cn/ID68TextJustification.java)
+3. [文本左右对齐 ](src/leetcode/editor/cn/ID68TextJustification.java)         [参考题解](https://leetcode.cn/problems/text-justification/solutions/987300/tong-ge-lai-shua-ti-la-zi-fu-chuan-mo-ni-pkdh/)
 
 
 ### 双指针
