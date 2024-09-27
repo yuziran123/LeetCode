@@ -378,9 +378,16 @@
 
 1. [爬楼梯](src/leetcode/editor/cn/ID70ClimbingStairs.java)
 2. [打家劫舍](src/leetcode/editor/cn/ID198HouseRobber.java)
+
+   ```java
+   String s = "catsandog";
+   String result = s.replace("san", "");  // 移除子串 "san"
+   ```
+
 3. [单词拆分](src/leetcode/editor/cn/ID139WordBreak.java)
 4. [零钱兑换](src/leetcode/editor/cn/ID322CoinChange.java)
-5. [最长递增子序列](src/leetcode/editor/cn/ID300LongestIncreasingSubsequence.java)
+5. [分割等和子集](src/leetcode/editor/cn/ID416PartitionEqualSubsetSum.java)
+6. [最长递增子序列](src/leetcode/editor/cn/ID300LongestIncreasingSubsequence.java)
 
 ### 多维动态规划
 1. [三角形最小路径和](src/leetcode/editor/cn/ID120Triangle.java)
@@ -389,8 +396,8 @@
 4. [最长回文子串](src/leetcode/editor/cn/ID5LongestPalindromicSubstring.java)
 5. [交错字符串](src/leetcode/editor/cn/ID97InterleavingString.java)
 6. [编辑距离](src/leetcode/editor/cn/ID72EditDistance.java)
-7. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID123BestTimeToBuyAndSellStockIii.java)
-8. [买卖股票的最佳时机Ⅳ](src/leetcode/editor/cn/ID188BestTimeToBuyAndSellStockIv.java)
-9. [最大正方形](src/leetcode/editor/cn/ID221MaximalSquare.java)
+7. [最大正方形](src/leetcode/editor/cn/ID221MaximalSquare.java)
+8. [买卖股票的最佳时机Ⅱ](src/leetcode/editor/cn/ID123BestTimeToBuyAndSellStockIii.java)
+9. [买卖股票的最佳时机Ⅳ](src/leetcode/editor/cn/ID188BestTimeToBuyAndSellStockIv.java)
 
 ## 七、贪心算法
