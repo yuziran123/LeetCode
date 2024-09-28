@@ -385,9 +385,11 @@
    ```
 
 3. [单词拆分](src/leetcode/editor/cn/ID139WordBreak.java)
+
+   **零钱兑换问题**
 4. [零钱兑换](src/leetcode/editor/cn/ID322CoinChange.java)
 5. [分割等和子集](src/leetcode/editor/cn/ID416PartitionEqualSubsetSum.java)
-6. [最长递增子序列](src/leetcode/editor/cn/ID300LongestIncreasingSubsequence.java)
+6. [最长递增子序列 ](src/leetcode/editor/cn/ID300LongestIncreasingSubsequence.java)             [参考题解](https://leetcode.cn/problems/longest-increasing-subsequence/solutions/24173/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/)
 
 ### 多维动态规划
 1. [三角形最小路径和](src/leetcode/editor/cn/ID120Triangle.java)
