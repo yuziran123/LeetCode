@@ -8,7 +8,7 @@ public class ID49GroupAnagrams {
         StringBuilder builder = new StringBuilder();
 
         // 执行测试
-        String[] strs = new String[1];
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
         solution.groupAnagrams(strs);
         System.out.println(builder);
     }

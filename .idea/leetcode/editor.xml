@@ -828,6 +828,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID2381ShiftingLettersIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID2381ShiftingLettersIi.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2381" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID2381ShiftingLettersIi.java" />
+              <option name="titleSlug" value="shifting-letters-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID238ProductOfArrayExceptSelf.java">
           <value>
             <LeetcodeEditor>
@@ -872,6 +883,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID2716MinimizeStringLength.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID2716MinimizeStringLength.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2716" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID2716MinimizeStringLength.java" />
+              <option name="titleSlug" value="minimize-string-length" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID2741SpecialPermutations.java">
           <value>
             <LeetcodeEditor>
@@ -880,6 +902,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID2741SpecialPermutations.java" />
               <option name="titleSlug" value="special-permutations" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID283MoveZeroes.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID283MoveZeroes.md" />
+              <option name="frontendQuestionId" value="leetcode.cn283" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID283MoveZeroes.java" />
+              <option name="titleSlug" value="move-zeroes" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1653,6 +1686,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/IDLCP 07ChuanDiXinXi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/IDLCP 07ChuanDiXinXi.md" />
+              <option name="frontendQuestionId" value="leetcode.cnLCP 07" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/IDLCP 07ChuanDiXinXi.java" />
+              <option name="titleSlug" value="chuan-di-xin-xi" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/IDLCR 138BiaoShiShuZhiDeZiFuChuanLcof.java">
           <value>
             <LeetcodeEditor>
@@ -1661,6 +1705,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/IDLCR 138BiaoShiShuZhiDeZiFuChuanLcof.java" />
               <option name="titleSlug" value="biao-shi-shu-zhi-de-zi-fu-chuan-lcof" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/IDLCR 182ZuoXuanZhuanZiFuChuanLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/IDLCR 182ZuoXuanZhuanZiFuChuanLcof.md" />
+              <option name="frontendQuestionId" value="leetcode.cnLCR 182" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/IDLCR 182ZuoXuanZhuanZiFuChuanLcof.java" />
+              <option name="titleSlug" value="zuo-xuan-zhuan-zi-fu-chuan-lcof" />
             </LeetcodeEditor>
           </value>
         </entry>

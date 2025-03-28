@@ -1,6 +1,6 @@
 package leetcode.editor.cn;
 
-import java.util.Arrays;
+import java.util.HashSet;
 
 public class ID128LongestConsecutiveSequence {
     public static void main(String[] args) {
@@ -17,20 +17,24 @@ public class ID128LongestConsecutiveSequence {
     class Solution {
         //[1,1,2,2] = 2
         public int longestConsecutive(int[] nums) {
-            int n = nums.length;
-            if (n == 0)
-                return 0;
-            Arrays.sort(nums); // 排序
-            int count = 0, ans = 0;
-            for (int i = 0; i < n - 1; i++) {
-                if (nums[i] == nums[i + 1]) continue;   // 相邻的数重复，跳过不做处理
-                if (nums[i + 1] == nums[i] + 1) count++;    // 相邻的数连续
-                else {
-                    ans = Math.max(ans, count + 1); // 相邻的数不连续——重新开始计数——记录当前长度是否最大
-                    count = 0;
-                }
+            int ans = 0;
+            HashSet<Integer> set = new HashSet<>();
+            for (int num : nums) {
+                set.add(num);
             }
-            return Math.max(ans, count + 1);
+            // nums转成set 去重
+            for (int x : set) {
+                if (set.contains(x - 1)) {
+                    continue;
+                }
+                int y = x + 1;
+                while (set.contains(y)) {
+                    y++;
+                }
+                // x 到 y-1 都是连续的 有 y-x个数
+                ans = Math.max(ans, y - x);
+            }
+            return ans;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

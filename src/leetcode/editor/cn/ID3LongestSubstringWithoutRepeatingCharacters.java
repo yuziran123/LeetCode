@@ -18,6 +18,7 @@ public class ID3LongestSubstringWithoutRepeatingCharacters {
 
         solution.lengthOfLongestSubstring(s);
         System.out.println("");
+        System.out.println(s);
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
