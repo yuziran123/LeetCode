@@ -1,7 +1,5 @@
 package leetcode.editor.cn;
 
-import java.util.*;
-
 public class ID11ContainerWithMostWater {
     public static void main(String[] args) {
         Solution solution = new ID11ContainerWithMostWater().new Solution();
@@ -21,8 +19,7 @@ public class ID11ContainerWithMostWater {
         /*这题还是可以双指针，但分析问题的性质最关键*/
         public int maxArea(int[] height) {
             int result = 0, area = 0;
-            int n = height.length;
-            int left = 0, right = n - 1;
+            int left = 0, right = height.length - 1;
             while (left < right) {
                 area = (right - left) * Math.min(height[left], height[right]);
                 // left-right围成的面积，受矮侧的影响最大

@@ -26,15 +26,20 @@ public class ID15ThreeSum {
             int sum = 0;
 
             for (int i = 0; i < n; i++) {
-                if (nums[i] > 0) break;
-                if (i > 0 && nums[i] == nums[i - 1]) continue;
+                if (nums[i] > 0)
+                    break;
+                // 三元组不重复
+                if (i > 0 && nums[i] == nums[i - 1])
+                    continue;
                 int L = i + 1, R = n - 1;
                 while (L < R) {
                     sum = nums[i] + nums[L] + nums[R];
                     if (sum == 0) {
                         result.add(Arrays.asList(nums[i], nums[L], nums[R]));
-                        while (L < R && nums[L] == nums[L + 1]) L++;
-                        while (L < R && nums[R] == nums[R - 1]) R--;
+                        while (L < R && nums[L] == nums[L + 1])
+                            L++;
+                        while (L < R && nums[R] == nums[R - 1])
+                            R--;
                         L++;
                         R--;
                     } else if (sum < 0) {
@@ -44,7 +49,6 @@ public class ID15ThreeSum {
                     }
                 }
             }
-
             return result;
         }
 
