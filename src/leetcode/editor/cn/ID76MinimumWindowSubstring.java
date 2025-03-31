@@ -13,38 +13,47 @@ public class ID76MinimumWindowSubstring {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public String minWindow(String s, String t) {
-            int m = s.length();
-            int n = t.length();
-            char ch;
-            Map<Character, Integer> charCount = new HashMap<>();    // 字符数量差值哈希表
-            for (int i = 0; i < n; i++) {   // 哈希表初始化
-                ch = t.charAt(i);
-                charCount.putIfAbsent(ch, 0);
-                charCount.put(ch, charCount.get(ch) + 1);
+            if (s == null || t == null || s.length() == 0 || t.length() == 0) {
+                return "";
             }
-            int diff = charCount.size();   // 统计当前滑动窗口未被覆盖的字符数，重复字符算一个，所以不能是n
-            int left = 0, right = 0;    // 左闭右开，滑动窗口左右指针，right指向下一个要加入滑动窗口的字符
-            int subBegin = left, minLen = m + 1;   //  最小滑动窗口的起始位置和长度，用于求解子串
-            while (right <= m) {  // 确保最后一个字符也在考虑范围内
-                if (diff > 0) {
-                    if (right == m)
-                        break;
-                    ch = s.charAt(right++);
-                    charCount.put(ch, charCount.getOrDefault(ch, 0) - 1);
-                    if (charCount.get(ch) == 0)
-                        diff--;
-                } else {
-                    if (right - left < minLen) {
-                        minLen = right - left;
-                        subBegin = left;
+            Map<Character, Integer> hash = new HashMap<>();
+            Map<Character, Integer> window = new HashMap<>();
+            StringBuilder sb = new StringBuilder();
+            for (char c : t.toCharArray()) {
+                hash.put(c, hash.getOrDefault(c, 0) + 1); // 当前子串出现频率
+            }
+            int left = 0, right = 0; // 左闭右开
+            int valid = 0;  // 匹配上的字符数
+            int start = 0, len = Integer.MAX_VALUE; // 记录最小窗口的 起始和长度
+            while (right < s.length()) {
+                char c = s.charAt(right);
+                right++;    // 扩展窗口
+
+                if (hash.containsKey(c)) {
+                    window.put(c, window.getOrDefault(c, 0) + 1);
+                    if (window.get(c).equals(hash.get(c))) {
+                        valid++;
                     }
-                    ch = s.charAt(left++);
-                    charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
-                    if (charCount.get(ch) == 1)
-                        diff++;
+                    // 所有字符都匹配上了 尝试缩小窗口——左侧可能有冗余的字符
+                    while (valid == hash.size()) {
+                        if (right - left < len) { // 当前窗口更小则更新记录
+                            start = left;
+                            len = right - left;
+                        }
+                        char cc = s.charAt(left);
+                        left++;
+
+                        if (hash.containsKey(cc)) {
+                            // 如果是子串的字符——更新窗口数据
+                            if (window.get(cc).equals(hash.get(cc))) {
+                                valid--;
+                            }
+                            window.put(cc, window.get(cc) - 1);
+                        }
+                    }
                 }
             }
-            return minLen == m + 1 ? "" : s.substring(subBegin, subBegin + minLen); // substring：左闭右开
+            return len == Integer.MAX_VALUE ? "" : s.substring(start, start + len);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
