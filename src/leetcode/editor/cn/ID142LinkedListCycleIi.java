@@ -23,8 +23,9 @@ public class ID142LinkedListCycleIi {
          * 5.故此时slow只需再走a步就可以到达入口，而head到入口正好是a步
          */
         public ListNode detectCycle(ListNode head) {
-            if (head == null)
+            if (head == null) {
                 return null;
+            }
             ListNode fast = head, slow = head;
             while (fast != null && fast.next != null) {
                 slow = slow.next;

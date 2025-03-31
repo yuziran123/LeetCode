@@ -16,17 +16,17 @@ public class ID141LinkedListCycle {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     public class Solution {
-        /*快慢指针：相遇的位置不确定*/
+        /**
+         * 描述:快慢指针
+         */
         public boolean hasCycle(ListNode head) {
-            if (head == null)
-                return false;
-            ListNode slow = head;
-            ListNode fast = head;
+            ListNode fast = head, slow = head;
             while (fast != null && fast.next != null) {
-                slow = slow.next;
                 fast = fast.next.next;
-                if (slow == fast)
+                slow = slow.next;
+                if (fast == slow) {
                     return true;
+                }
             }
             return false;
         }
