@@ -2,7 +2,6 @@ package leetcode.editor.cn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class ID56MergeIntervals {
     public static void main(String[] args) {
@@ -20,20 +19,35 @@ public class ID56MergeIntervals {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int[][] merge(int[][] intervals) {
-            // 对intervals按每一行的首元素排序
+            ArrayList<int[]> ans = new ArrayList<>();
+            // 排序 按区间左侧排序
             Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
-            List<int[]> ans = new ArrayList<>();
-            for (int[] arr : intervals) {
-                int size = ans.size();
-                if (size > 0 && ans.get(size - 1)[1] >= arr[0]) // 区间合并
-                    // 由于左端按序排列，只需选择较大的作为右端
-                    ans.get(size - 1)[1] = Math.max(ans.get(size - 1)[1], arr[1]);
-                else
-                    ans.add(arr); // 新的独立区间
+            for (int[] nums : intervals) {
+                int n = ans.size();
+                // 上一区间右侧和当前区间左侧相交-合并
+                if (!ans.isEmpty() && ans.get(n - 1)[1] >= nums[0]) {
+                    ans.get(n - 1)[1] = Math.max(ans.get(n - 1)[1], nums[1]);
+                } else {
+                    ans.add(nums);
+                }
             }
             return ans.toArray(new int[0][]);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
 
+    /*public int[][] merge(int[][] intervals) {
+        // 对intervals按每一行的首元素排序
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        List<int[]> ans = new ArrayList<>();
+        for (int[] arr : intervals) {
+            int size = ans.size();
+            if (size > 0 && ans.get(size - 1)[1] >= arr[0]) // 区间合并
+                // 由于左端按序排列，只需选择较大的作为右端
+                ans.get(size - 1)[1] = Math.max(ans.get(size - 1)[1], arr[1]);
+            else
+                ans.add(arr); // 新的独立区间
+        }
+        return ans.toArray(new int[0][]);
+    }*/
 }

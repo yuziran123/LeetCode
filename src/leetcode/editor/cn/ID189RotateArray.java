@@ -22,38 +22,35 @@ public class ID189RotateArray {
          * @param nums
          * @param k
          */
-
         public void rotate(int[] nums, int k) {
             int len = nums.length;
             int[] temp = new int[k];
             // 考虑数组元素长度小于k，做模运算
             k = k % len;
-
             // 将k个轮转元素存储
-            for (int j = 0; j < k; j++) {
-                temp[j] = nums[len - k + j];
-            }
+            System.arraycopy(nums, len - k, temp, 0, k);
             // 将其余元素后移
             for (int i = len - 1 - k; i >= 0; i--) {
                 nums[i + k] = nums[i];
             }
             // 依次存储轮转元素
-            for (int i = 0; i < k; i++) {
-                nums[i] = temp[i];
-            }
+            System.arraycopy(temp, 0, nums, 0, k);
             return;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
 
-            /*// 思路可以，但是超时
-            int len = nums.length;
-            int temp = 0;
-            for (int c = 1; c <= k; c++) {
-                temp = nums[len - 1];
-                for (int i = len - 1; i > 0; i--) {
-                    nums[i] = nums[i - 1];
-                }
-                nums[0] = temp;
-            }*/
+    /*int len = nums.length;// 思路可以，但是超时
+    int temp = 0;
+            for(
+    int c = 1;
+    c <=k;c++)
+
+    {
+        temp = nums[len - 1];
+        for (int i = len - 1; i > 0; i--) {
+            nums[i] = nums[i - 1];
+        }
+        nums[0] = temp;
+    }*/
 }

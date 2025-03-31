@@ -49,7 +49,7 @@ public class ID53MaximumSubarray {
         for (int i = 0; i < len; i++) {
             sum += nums[i];
             max = Math.max(max, sum);
-            // 当nums[i]<0时并且sum<0时，说明之前的自学列对面后面的自学列不会起到增加的效果，故应当重新开始子序列
+            // 当nums[i]<0时并且sum<0时，说明之前的自学列对面后面的子序列不会有增加的效果，故应当重新开始子序列
             if (nums[i] < 0 && sum <= 0) {
                 sum = 0;
             }
