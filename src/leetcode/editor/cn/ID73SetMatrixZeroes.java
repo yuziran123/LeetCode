@@ -41,11 +41,15 @@ public class ID73SetMatrixZeroes {
 
             for (int i = 0; i < m; i++) {
                 if (recordRow[i] != -1)
-                    for (int j = 0; j < n; j++) matrix[i][j] = 0;
+                    for (int j = 0; j < n; j++) {
+                        matrix[i][j] = 0;
+                    }
             }
             for (int i = 0; i < n; i++) {
                 if (recordCol[i] != -1)
-                    for (int j = 0; j < m; j++) matrix[j][i] = 0;
+                    for (int j = 0; j < m; j++) {
+                        matrix[j][i] = 0;
+                    }
             }
             return;
         }
@@ -78,7 +82,9 @@ public class ID73SetMatrixZeroes {
 
         for (int i = 0; i < n; i++) {
             if (recordCol[i] != -1)
-                for (int j = 0; j < m; j++) matrix[j][i] = 0;
+                for (int j = 0; j < m; j++) {
+                    matrix[j][i] = 0;
+                }
         }
         return;
     }
