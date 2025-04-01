@@ -29,19 +29,9 @@ public class ID21MergeTwoSortedLists {
                 }
                 p = p.next;
             }
-            // 对比这两种写法
-            if (l1 != null) p.next = l1;
-            if (l2 != null) p.next = l2;
-            /*while (l1 != null) {
-                p.next = l1;
-                l1 = l1.next;
-                p = p.next;
-            }
-            while (l2 != null) {
-                p.next = l2;
-                l2 = l2.next;
-                p = p.next;
-            }*/
+            // 合并剩余链表部分
+            p.next = (l1 == null ? p.next : l1);
+            p.next = (l2 == null ? p.next : l2);
             return head.next;
         }
     }

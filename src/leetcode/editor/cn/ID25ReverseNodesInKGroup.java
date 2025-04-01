@@ -15,33 +15,32 @@ public class ID25ReverseNodesInKGroup {
     class Solution {
         // 本质还是反转链表的思路
         public ListNode reverseKGroup(ListNode head, int k) {
-            ListNode sentry = new ListNode(0, head);
-            ListNode p0 = sentry;
-            ListNode cur = head;
+            ListNode dummy = new ListNode(0, head);
+            ListNode preGroupEnd = dummy, cur = head;
             while (cur != null) {
                 // 测试当前链表剩余节点数是够k个
                 ListNode test = cur;
                 for (int i = 1; i <= k; i++) {
-                    if (test == null)
-                        return sentry.next;
+                    if (test == null) {
+                        return dummy.next;
+                    }
                     test = test.next;
                 }
 
                 // 每次反转前pre指空
                 ListNode pre = null;
+                ListNode curEnd = cur; // 当前组反转后的尾节点
                 for (int i = 1; i <= k; i++) {
                     ListNode nxt = cur.next;
                     cur.next = pre;
                     pre = cur;
                     cur = nxt;
                 }
-                ListNode temp = p0.next;
-                p0.next.next = cur;
-                p0.next = pre;
-                // 反转链表部分的前一个节点需要更新记录
-                p0 = temp;
+                preGroupEnd.next = pre;
+                curEnd.next = cur; // 此时cur为下一组的首节点
+                preGroupEnd = curEnd;
             }
-            return sentry.next;
+            return dummy.next;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

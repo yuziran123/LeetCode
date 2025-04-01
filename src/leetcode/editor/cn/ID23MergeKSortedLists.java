@@ -54,7 +54,6 @@ public class ID23MergeKSortedLists {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
     class Solution1 {
         // 每次合并两个链表
         public ListNode mergeKLists(ListNode[] lists) {

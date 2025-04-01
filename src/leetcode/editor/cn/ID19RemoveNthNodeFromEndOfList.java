@@ -10,22 +10,30 @@ public class ID19RemoveNthNodeFromEndOfList {
 
         System.out.println(builder);
     }
-// leetcode submit region begin(Prohibit modification and deletion)
 
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode() {}
-     * ListNode(int val) { this.val = val; }
-     * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
+    // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
+            int len = getLength(head);
+            // 虚拟头节点 方便删除head节点
+            ListNode dummy = new ListNode(0);
+            dummy.next = head;
+            ListNode p = dummy;
+            for (int i = 0; i < len - n; i++) {
+                p = p.next;
+            }
+            p.next = p.next.next;
+            return dummy.next;
+        }
 
-            return null;
+        private int getLength(ListNode head) {
+            ListNode p = head;
+            int len = 0;
+            while (p != null) {
+                len++;
+                p = p.next;
+            }
+            return len;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

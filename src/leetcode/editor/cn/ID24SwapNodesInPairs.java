@@ -10,24 +10,25 @@ public class ID24SwapNodesInPairs {
 
         System.out.println(builder);
     }
-	// leetcode submit region begin(Prohibit modification and deletion)
 
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode() {}
-     * ListNode(int val) { this.val = val; }
-     * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
+    // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public ListNode swapPairs(ListNode head) {
-
-            return null;
+            ListNode dummy = new ListNode(0);
+            dummy.next = head;
+            ListNode pre = dummy, cur = head;
+            while (cur != null && cur.next != null) {
+                ListNode nxt = cur.next;
+                ListNode nxt2 = nxt.next;
+                cur.next = nxt.next;
+                nxt.next = cur;
+                pre.next = nxt;
+                pre = cur;
+                cur = nxt2;
+            }
+            return dummy.next;
         }
     }
-	// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

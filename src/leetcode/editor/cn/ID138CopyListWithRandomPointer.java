@@ -33,19 +33,16 @@ public class ID138CopyListWithRandomPointer {
             Node cur = head;
             // 1.第一次遍历——复制源节点的值
             while (cur != null) {
-                Node node = new Node(cur.val);
-                map.put(cur, node);
+                map.put(cur, new Node(cur.val));
                 cur = cur.next;
             }
             // 2.第二次遍历——复制源节点的next和random
             cur = head;
             while (cur != null) {
-                //map.get(cur)——cur对应的新节点
+                // map.get(cur)——cur对应的新节点
                 Node node = map.get(cur);
-                if (cur.next != null)
-                    node.next = map.get(cur.next);
-                if (cur.random != null)
-                    node.random = map.get(cur.random);
+                node.next = map.get(cur.next);
+                node.random = map.get(cur.random);
                 cur = cur.next;
             }
             return map.get(head);
