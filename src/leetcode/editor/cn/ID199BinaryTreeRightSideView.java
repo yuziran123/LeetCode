@@ -22,26 +22,37 @@ public class ID199BinaryTreeRightSideView {
          */
         public List<Integer> rightSideView(TreeNode root) {
             List<Integer> ans = new ArrayList<>();
-            if (root == null)
-                return ans;
+            if (root == null) {
+                return ans; // 空树直接返回空列表
+            }
+            // 使用两个列表分别存储当前层和下一层的节点
             List<TreeNode> cur = new ArrayList<>();
             List<TreeNode> next = new ArrayList<>();
             cur.add(root);
+
             while (!cur.isEmpty()) {
-                // 记录当前层最后一个节点值，即每一层最右边的点
+                // 记录当前层最后一个节点值
                 ans.add(cur.get(cur.size() - 1).val);
+
+                // 遍历当前层的所有节点，并将子节点加入到 next 列表中
                 for (TreeNode node : cur) {
-                    if (node.left != null)
+                    if (node.left != null) {
                         next.add(node.left);
-                    if (node.right != null)
+                    }
+                    if (node.right != null) {
                         next.add(node.right);
+                    }
                 }
-                // cur = next; //二者共享一个实例
-                cur = new ArrayList<>(next);
-                next.clear(); // 每一层遍历完需要清楚当前的next
+                // 交换 cur 和 next 的引用，避免创建新的 ArrayList
+                List<TreeNode> temp = cur;
+                cur = next;
+                next = temp;
+                next.clear(); // 清空 next 以复用
             }
             return ans;
         }
     }
+
+
     // leetcode submit region end(Prohibit modification and deletion)
 }

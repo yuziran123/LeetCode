@@ -19,6 +19,11 @@ public class ID230KthSmallestElementInABst {
         int count;
         int ans;
 
+        /**
+         * 描述:二叉搜索树（BST）的中序遍历结果是有序的
+         * <p>
+         * Date 2025/4/1
+         */
         public int kthSmallest(TreeNode root, int k) {
             this.count = k;
             inorder(root);
@@ -26,12 +31,14 @@ public class ID230KthSmallestElementInABst {
         }
 
         public void inorder(TreeNode root) {
-            if (root == null)
+            if (root == null || count == 0) {
                 return;
+            }
             inorder(root.left);
             count--;
-            if (count == 0)
+            if (count == 0) {
                 this.ans = root.val;
+            }
             inorder(root.right);
         }
     }
