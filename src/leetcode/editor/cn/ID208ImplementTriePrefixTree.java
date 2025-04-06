@@ -16,11 +16,13 @@ public class ID208ImplementTriePrefixTree {
             Node node = root;
             for (int i = 0; i < word.length(); i++) {
                 int index = word.charAt(i) - 'a';
-                if (node.childrens[index] == null)
+                if (node.childrens[index] == null) {
                     node.childrens[index] = new Node();
-                node = node.childrens[index];
+                }
+                node = node.childrens[index];   // 移动到子节点 未处理下一个字符做准备
             }
-            node.isEnd = true;
+
+            node.isEnd = true;  // 处理完所有字符 标记最后一个节点为单词结束
         }
 
         public boolean search(String word) {
@@ -40,8 +42,9 @@ public class ID208ImplementTriePrefixTree {
             for (int i = 0; i < word.length(); i++) {
                 int index = word.charAt(i) - 'a';
                 node = node.childrens[index];
-                if (node == null)
+                if (node == null) {
                     return null;
+                }
             }
             return node;
         }
