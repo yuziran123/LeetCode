@@ -19,9 +19,9 @@ public class ID114FlattenBinaryTreeToLinkedList {
         List<TreeNode> list = new ArrayList<>();
 
         public void flatten(TreeNode root) {
-            if (root == null)
+            if (root == null) {
                 return;
-
+            }
             preorder(root);
             TreeNode p = new TreeNode();
             TreeNode dummy = p;
@@ -34,8 +34,9 @@ public class ID114FlattenBinaryTreeToLinkedList {
         }
 
         public void preorder(TreeNode root) {
-            if (root == null)
+            if (root == null) {
                 return;
+            }
             list.add(root);
             preorder(root.left);
             preorder(root.right);

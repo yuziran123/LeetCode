@@ -20,11 +20,13 @@ public class ID124BinaryTreeMaximumPathSum {
         }
 
         public int dfs(TreeNode node) {
-            if (node == null)
+            if (node == null) {
                 return 0;
+            }
             int lVal = dfs(node.left);
             int rVal = dfs(node.right);
             ans = Math.max(ans, lVal + rVal + node.val);
+            // 从当前节点出发只能走左/右其中一条
             return Math.max(Math.max(lVal, rVal) + node.val, 0);
         }
     }

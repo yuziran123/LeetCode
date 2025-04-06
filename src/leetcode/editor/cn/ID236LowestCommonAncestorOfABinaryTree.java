@@ -24,20 +24,25 @@ public class ID236LowestCommonAncestorOfABinaryTree {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        /**
+         * 描述:后序遍历+自底向上[先递归到最底层（叶子节点），再回溯]
+         * <p>
+         * Date 2025/4/6
+         */
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-            if (root == null || root == p || root == q)
+            if (root == null || root == p || root == q) {
                 return root;
+            }
             TreeNode left = lowestCommonAncestor(root.left, p, q);
             TreeNode right = lowestCommonAncestor(root.right, p, q);
-            if (left != null && right != null)
+            if (left != null && right != null) {
                 return root;
-            if (left != null)
-                return left;
-            else // right!=null 或者 left,right都为空
-                return right;
+            }
+            return left != null ? left : right;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
+
 
     List<TreeNode> list = new ArrayList<>();
     List<TreeNode> list1 = new ArrayList<>(); // 存p的祖先路径
