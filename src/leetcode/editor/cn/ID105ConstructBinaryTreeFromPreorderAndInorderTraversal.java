@@ -22,7 +22,6 @@ public class ID105ConstructBinaryTreeFromPreorderAndInorderTraversal {
         Map<Integer, Integer> map = new HashMap<>();
         int[] preorder;
         int[] inorder;
-
         // 优化：递归参数改成子数组下标区间（左闭右开区间）的左右端点，从而避免复制数组
         public TreeNode buildTree(int[] preorder, int[] inorder) {
             this.preorder = preorder;
