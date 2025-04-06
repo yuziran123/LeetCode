@@ -18,16 +18,18 @@ public class ID200NumberOfIslands {
             this.grid = grid;
             for (int i = 0; i < grid.length; i++) {
                 for (int j = 0; j < grid[0].length; j++) {
-                    if (grid[i][j] == '1')
+                    if (grid[i][j] == '1') {
                         ans += area(i, j);
+                    }
                 }
             }
             return ans;
         }
 
         public int area(int x, int y) {
-            if (!inArea(x, y) || grid[x][y] != '1')
+            if (!inArea(x, y) || grid[x][y] != '1') {
                 return 0;
+            }
             // 说明此时有岛屿，利用DFS探寻该岛屿的最大范围 ，并设置探寻过的标记
             grid[x][y] = '2';
             for (int[] direction : DIRECTIONS) { // 从四个方向分别探寻岛屿
