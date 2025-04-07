@@ -5,9 +5,7 @@ import java.util.Stack;
 public class ID155MinStack {
     public static void main(String[] args) {
         MinStack minStack = new ID155MinStack().new MinStack();
-
         // 执行测试
-
         System.out.println("");
     }
 
@@ -23,15 +21,15 @@ public class ID155MinStack {
 
         public void push(int val) {
             stack.push(val);
-            if (min_stack.isEmpty() || val <= min_stack.peek())
+            if (min_stack.isEmpty() || val <= min_stack.peek()) {
                 min_stack.push(val);
+            }
         }
 
         public void pop() {
-            // if (stack.pop() == min_stack.peek())
-            //又是不能用==判断
-            if (stack.pop().equals(min_stack.peek()))
+            if (stack.pop().equals(min_stack.peek())) {
                 min_stack.pop();
+            }
         }
 
         public int top() {
@@ -42,15 +40,6 @@ public class ID155MinStack {
             return min_stack.peek();
         }
     }
-
-/**
- * Your MinStack object will be instantiated and called as such:
- * MinStack obj = new MinStack();
- * obj.push(val);
- * obj.pop();
- * int param_3 = obj.top();
- * int param_4 = obj.getMin();
- */
-// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

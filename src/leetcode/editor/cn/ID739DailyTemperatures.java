@@ -1,12 +1,13 @@
 package leetcode.editor.cn;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Stack;
 
 public class ID739DailyTemperatures {
     public static void main(String[] args) {
         Solution solution = new ID739DailyTemperatures().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
         int[] nusm = {73, 74, 75, 71, 69, 72, 76, 73};
         // int[] nusm = {73, 74, 75, 73};
@@ -29,26 +30,39 @@ public class ID739DailyTemperatures {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /*单调栈：从右往左——单调增栈;代码优化版*/
+        /**
+         * 描述:核心逻辑：使用一个单调递减栈（栈中存储的是温度数组的索引）。
+         * <p>
+         * 从右往左遍历数组：
+         * <p>
+         * 1.如果当前温度大于栈顶对应的温度，则弹出栈顶元素
+         * （因为这些温度已经不可能成为后续天数的答案）。
+         * <p>
+         * 2.当栈为空时，说明右侧没有更高温度，answer[i] = 0。
+         * <p>
+         * 3.否则，answer[i] 等于栈顶索引与当前索引的差值。
+         * <p>
+         * 4.当前索引入栈
+         * <p>
+         * Date 2025/4/7
+         */
         public int[] dailyTemperatures(int[] temperatures) {
-            // Stack<Integer> stack = new Stack<>();
-            Deque<Integer> stack = new ArrayDeque<>(); // 双端队列，开销更小，也可以实现先进后出
+            Deque<Integer> stack = new ArrayDeque<>(); // 使用双端队列实现单调栈
             int n = temperatures.length;
             int[] answer = new int[n];
-            int t = 0;
+            int curT = 0;
+            // 遍历温度数组，从右往左构建单调递减栈
             for (int i = n - 1; i >= 0; i--) {
-                t = temperatures[i];
-                while (!stack.isEmpty() && t >= temperatures[stack.peek()])
+                curT = temperatures[i];
+                while (!stack.isEmpty() && curT >= temperatures[stack.peek()]) {
                     stack.pop();
-                if (stack.isEmpty())
-                    answer[i] = 0;
-                else
-                    answer[i] = stack.peek() - i;
+                }
+                // 如果栈为空，表示右侧没有更高的温度；否则计算距离
+                answer[i] = stack.isEmpty() ? 0 : stack.peek() - i;
                 stack.push(i);
             }
             return answer;
         }
-
     }
     // leetcode submit region end(Prohibit modification and deletion)
 
