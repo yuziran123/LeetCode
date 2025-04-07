@@ -10,8 +10,9 @@ public class ID70ClimbingStairs {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int climbStairs(int n) {
-            if (n == 1 || n == 2)
+            if (n == 1 || n == 2) {
                 return n;
+            }
             int[] dp = new int[n];
             dp[0] = 1;
             dp[1] = 2;
