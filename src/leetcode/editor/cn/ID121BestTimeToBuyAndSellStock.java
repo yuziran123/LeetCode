@@ -5,7 +5,6 @@ public class ID121BestTimeToBuyAndSellStock {
         Solution solution = new ID121BestTimeToBuyAndSellStock().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
