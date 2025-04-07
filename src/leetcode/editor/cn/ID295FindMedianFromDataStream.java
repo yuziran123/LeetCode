@@ -9,7 +9,6 @@ public class ID295FindMedianFromDataStream {
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
-
     /**
      * 思路分析：
      * 使用大根堆（maxHeap）存储较小的一半元素，
@@ -30,21 +29,24 @@ public class ID295FindMedianFromDataStream {
          * 调整两个堆的大小，使它们的大小差不超过 1。
          */
         public void addNum(int num) {
-            if (maxHeap.isEmpty() || num <= maxHeap.peek())
+            if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
                 maxHeap.offer(num);
-            else
+            } else {
                 minHeap.offer(num);
-            if (maxHeap.size() > minHeap.size() + 1)
+            }
+            if (maxHeap.size() > minHeap.size() + 1) {
                 minHeap.offer(maxHeap.poll());
-            else if (minHeap.size() > maxHeap.size())
+            } else if (minHeap.size() > maxHeap.size()) {
                 maxHeap.offer(minHeap.poll());
+            }
         }
 
         public double findMedian() {
-            if (maxHeap.size() > minHeap.size())
+            if (maxHeap.size() > minHeap.size()) {
                 return maxHeap.peek();
-            else
+            } else {
                 return (minHeap.peek() + maxHeap.peek()) / 2.0;
+            }
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

@@ -21,8 +21,9 @@ public class ID215KthLargestElementInAnArray {
             Queue<Integer> heap = new PriorityQueue<>();
             for (int num : nums) {
                 heap.offer(num);
-                if (heap.size() > k) // 让堆的大小维持在k
+                if (heap.size() > k) { // 让堆的大小维持在k
                     heap.poll(); // 弹出最小的那个
+                }
             }
             return heap.poll();
         }
