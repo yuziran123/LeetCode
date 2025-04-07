@@ -21,18 +21,21 @@ public class ID34FindFirstAndLastPositionOfElementInSortedArray {
             while (left <= right) {
                 int mid = (left + right) / 2;
                 if (nums[mid] == target) {
-                    while (mid < n && nums[mid] == target)
+                    while (mid < n && nums[mid] == target) {
                         mid++;
+                    }
                     ans[1] = mid - 1;
                     mid = (left + right) / 2;
-                    while (mid >= 0 && nums[mid] == target)
+                    while (mid >= 0 && nums[mid] == target) {
                         mid--;
+                    }
                     ans[0] = mid + 1;
                     return ans;
-                } else if (nums[mid] < target)
+                } else if (nums[mid] < target) {
                     left = mid + 1;
-                else
+                } else {
                     right = mid - 1;
+                }
             }
             return ans;
         }

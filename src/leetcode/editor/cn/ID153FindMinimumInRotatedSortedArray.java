@@ -3,9 +3,7 @@ package leetcode.editor.cn;
 public class ID153FindMinimumInRotatedSortedArray {
     public static void main(String[] args) {
         Solution solution = new ID153FindMinimumInRotatedSortedArray().new Solution();
-
         // 执行测试
-
         System.out.println("");
     }
 
@@ -22,12 +20,13 @@ public class ID153FindMinimumInRotatedSortedArray {
             int left = 0, right = n - 1;
             while (left < right) {
                 int mid = (left + right) / 2;
-                if (nums[mid] > nums[right]) // 数组元素互不相同——不会有相等的情况
+                if (nums[mid] > nums[right]) {  // 数组元素互不相同——不会有相等的情况
                     left = mid + 1;
-                else
+                } else {
                     right = mid;
+                }
             }
-            return nums[left];  // return nums[right];
+            return nums[left];
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

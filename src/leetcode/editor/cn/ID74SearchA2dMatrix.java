@@ -3,9 +3,7 @@ package leetcode.editor.cn;
 public class ID74SearchA2dMatrix {
     public static void main(String[] args) {
         Solution solution = new ID74SearchA2dMatrix().new Solution();
-
         // 执行测试
-
         System.out.println("");
     }
 
@@ -16,18 +14,21 @@ public class ID74SearchA2dMatrix {
             int cols = matrix[0].length;
             int mid = 0;
             for (int i = 0; i < rows; i++) {
-                if (matrix[i][cols - 1] < target)
+                // 先确定在哪一行
+                if (matrix[i][cols - 1] < target) {
                     continue;
-
+                }
+                // 从当前行开始二分查查找
                 int left = 0, right = cols - 1;
                 while (left <= right) {
                     mid = (left + right) / 2;
-                    if (target == matrix[i][mid])
+                    if (target == matrix[i][mid]) {
                         return true;
-                    else if (target < matrix[i][mid])
+                    } else if (target < matrix[i][mid]) {
                         right = mid - 1;
-                    else
+                    } else {
                         left = mid + 1;
+                    }
                 }
             }
             return false;

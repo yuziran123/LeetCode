@@ -3,9 +3,7 @@ package leetcode.editor.cn;
 public class ID4MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         Solution solution = new ID4MedianOfTwoSortedArrays().new Solution();
-
         // 执行测试
-
         System.out.println("");
     }
 
@@ -27,37 +25,31 @@ public class ID4MedianOfTwoSortedArrays {
             int n1 = nums1.length, n2 = nums2.length;
             int mid = (n1 + n2) / 2;
             int idx1 = 0, idx2 = 0; // 两个数组的索引指针
-            int pre = 0, cur = 0;   // 记录mid和mid-1的数值
+            int pre = 0, cur = 0;   // 记录mid-1和mid的数值
             while (mid >= 0 && idx1 < n1 && idx2 < n2) {
                 pre = cur;
-                if (nums1[idx1] > nums2[idx2])
+                if (nums1[idx1] > nums2[idx2]) {
                     cur = nums2[idx2++];
-                else
+                } else {
                     cur = nums1[idx1++];
+                }
                 mid--;
             }
             // 考虑nums1或nums2走完了，也还没到中位数；处理剩余数组的数
-            if (idx1 == n1) {
-                while (mid >= 0) {
-                    pre = cur;
-                    cur = nums2[idx2];
-                    idx2++;
-                    mid--;
-                }
+            while (idx1 == n1 && mid >= 0) {
+                pre = cur;
+                cur = nums2[idx2];
+                idx2++;
+                mid--;
             }
-            if (idx2 == n2) {
-                while (mid >= 0) {
-                    pre = cur;
-                    cur = nums1[idx1];
-                    idx1++;
-                    mid--;
-                }
+            while (idx2 == n2 && mid >= 0) {
+                pre = cur;
+                cur = nums1[idx1];
+                idx1++;
+                mid--;
             }
             // 奇：mid就是中位数  偶：[mid+mid-1]/2.0
-            if ((n1 + n2) % 2 == 0)
-                return (pre + cur) / 2.0;
-            else
-                return cur;
+            return (n1 + n2) % 2 == 0 ? (pre + cur) / 2.0 : cur;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
