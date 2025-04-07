@@ -26,8 +26,6 @@ public class ID78Subsets {
         }
 
         public void dfs(int start) {
-            if (record.size() > nums.length)
-                return;
             // 与组合问题的不同之处在于——记录递归中的所有可能
             ans.add(new ArrayList<>(record));
             for (int i = start; i < nums.length; i++) {
@@ -35,6 +33,7 @@ public class ID78Subsets {
                 dfs(i + 1);
                 record.remove(record.size() - 1);
             }
+            return;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

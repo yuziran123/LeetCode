@@ -19,10 +19,16 @@ public class ID22GenerateParentheses {
 
         /**
          * 描述:和电话号码字母组合类似的处理方式
-         * !以一个字符数组实现当前位置选左括号还是右括号
+         * <p>
+         * 以一个字符数组实现当前位置选左括号还是右括号
+         * <p>
          * 不同的关键在于两点：
+         * <p>
          * 1.选左括号的前提是：其数量小于n
+         * <p>
          * 2.选右括号的前提是：右括号数量小于左括号数量
+         *
+         * <p>
          * Date 2024/9/18
          *
          * @param n
@@ -44,7 +50,7 @@ public class ID22GenerateParentheses {
                 path[i] = '(';
                 dfs(i + 1, left + 1);
             }
-            if (i - left < left) { // i-left（右括号数量:确保其小于右括号数量）
+            if (i - left < left) { // i-left（右括号数量:确保其小于左括号数量）
                 path[i] = ')';
                 dfs(i + 1, left);
             }

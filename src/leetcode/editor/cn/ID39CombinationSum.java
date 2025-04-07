@@ -27,9 +27,10 @@ public class ID39CombinationSum {
         }
 
         public void dfs(int start, int target) {
-            if (target < 0)
+            if (target < 0) {
                 return;
-            else if (target == 0) {
+            }
+            if (target == 0) {
                 ans.add(new ArrayList<>(path));
                 return;
             }

@@ -20,8 +20,9 @@ public class ID17LetterCombinationsOfAPhoneNumber {
 
         public List<String> letterCombinations(String digits) {
             int n = digits.length();
-            if (n == 0)
+            if (n == 0) {
                 return ans;
+            }
             this.digits = digits;
             path = new char[n];
             DFS(0);
@@ -39,7 +40,6 @@ public class ID17LetterCombinationsOfAPhoneNumber {
             }
         }
     }
-
     // leetcode submit region end(Prohibit modification and deletion)
     class Solution1 {
         private static final String[] alphabet =

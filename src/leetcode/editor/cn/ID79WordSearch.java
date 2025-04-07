@@ -30,34 +30,38 @@ public class ID79WordSearch {
             this.cols = board[0].length;
             this.visited = new boolean[rows][cols];
             for (int i = 0; i < rows; i++) {
-                for (int j = 0; j < cols; j++)
-                    // 当前单元格作为起始匹配失败——利用这个二维循环回溯
-                    if (dfs(i, j, 0)) return true;
+                for (int j = 0; j < cols; j++) {
+                    if (dfs(i, j, 0)) { // 以每个单元格作为起点 进行匹配
+                        return true;
+                    }
+                }
             }
             return false;
         }
 
         public boolean dfs(int x, int y, int start) {
-            if (start == wordArr.length - 1)   // 递归结束的出口
+            if (start == wordArr.length - 1) {  // 递归结束的出口
                 return board[x][y] == wordArr[start];
-
+            }
             if (board[x][y] == wordArr[start]) {
                 visited[x][y] = true;// 设置访问标记
                 for (int[] direction : DIRECTIONS) {
                     int newX = x + direction[0];
                     int newY = y + direction[1];
-                    if (isValid(newX, newY) && !visited[newX][newY])
-                        // 继续访问下一个可探索单元格
-                        if (dfs(newX, newY, start + 1)) return true;
+                    if (isValid(newX, newY)) { // 继续访问下一个可探索单元格
+                        if (dfs(newX, newY, start + 1)) {
+                            return true;
+                        }
+                    }
                 }
-                visited[x][y] = false; //非常重要：回溯前要恢复现场，将访问标记抹去
+                visited[x][y] = false; // 非常重要：回溯前要恢复现场，将访问标记抹去
             }
             return false;
         }
 
-        // 判断当前方向单元格是否越界
+        // 判断当前方向单元格是否越界 并且未被访问
         public boolean isValid(int x, int y) {
-            return x < rows && y < cols && x >= 0 && y >= 0;
+            return x < rows && y < cols && x >= 0 && y >= 0 && !visited[x][y];
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
