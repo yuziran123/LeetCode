@@ -23,15 +23,10 @@ public class ID51NQueens {
         // 存储所有可能的解决方案
         List<List<String>> ans = new ArrayList<>();
 
-        // onPath[c] 表示第c列是否有皇后
         boolean[] onPath;
-        // diag1[r+c] 表示r+c相同的主对角线是否有皇后
         boolean[] diag1;
-        // diag2[r-c+n-1] 表示r-c相同的副对角线是否有皇后
         boolean[] diag2;
-        // col[r] 表示第r行皇后放置的列号
-        int[] col;
-        // 棋盘的大小
+        int[] col;  // 皇后放在[r,col[r]] 记录每行皇后放在了哪一列
         int n;
 
         /**
@@ -42,7 +37,7 @@ public class ID51NQueens {
          */
         public List<List<String>> solveNQueens(int n) {
             this.n = n;
-            this.col = new int[n];
+            this.col = new int[n];  // 标记当前列
             this.onPath = new boolean[n];
             this.diag1 = new boolean[2 * n - 1]; // 主对角线
             this.diag2 = new boolean[2 * n - 1]; // 副对角线
