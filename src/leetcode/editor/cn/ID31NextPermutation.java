@@ -40,7 +40,6 @@ public class ID31NextPermutation {
                 // 交换 nums[i] 和 nums[j]
                 swap(nums, i, j);
             }
-
             // 反转 i 后的部分
             reverse(nums, i + 1, n - 1);
         }
