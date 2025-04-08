@@ -14,36 +14,31 @@ public class ID416PartitionEqualSubsetSum {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 误区:排序然后左右分成和大小一致的子集，并不合理，想等元素组成的子集不一定是连续的
-         */
-        /*空间优化*/
+        // 能否从 nums 中选出一个子序列，其元素和恰好等于元素和一半
+        // 于是就等价于0-1背包问题
         public boolean canPartition(int[] nums) {
-            int n = nums.length, sum = 0;
-            for (int i = 0; i < n; i++) {
-                sum += nums[i];
+            int n = nums.length;
+            int sum = 0;
+            for (int num : nums) {
+                sum += num;
             }
-            if (sum % 2 != 0)
+            if (sum % 2 == 1) {
                 return false;
-            sum = sum / 2; // 这个就是背包容量
-            int[] dp = new int[sum + 1];
-            int MAX = sum + 1;
-            Arrays.fill(dp, MAX);
-            dp[0] = 0;
-            for (int i = 1; i < n; i++) {
-                for (int h = sum; h >= 0; h--) {
-                    if (h < nums[i - 1])
-                        dp[h] = dp[h];
-                    else
-                        dp[h] = Math.min(dp[h], dp[h - nums[i - 1]] + 1);
-                }
-                if (dp[sum] != MAX)
-                    return true;
             }
-            return false;
+            int target = sum / 2;
+            int[] dp = new int[target + 1];
+            Arrays.fill(dp, Integer.MAX_VALUE);
+            dp[0] = 0;
+            for (int i = 0; i < n; i++) {
+                for (int j = target; j >= nums[i]; j--) {
+                    if (dp[j - nums[i]] != Integer.MAX_VALUE) { // 确保可以选到j-num[i]
+                        dp[j] = Math.min(dp[j], dp[j - nums[i]] + 1);
+                    }
+                }
+            }
+            return dp[target] != Integer.MAX_VALUE;
         }
     }
-
     // leetcode submit region end(Prohibit modification and deletion)
     public boolean canPartition0(int[] nums) {
         int n = nums.length, sum = 0;
