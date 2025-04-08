@@ -10,7 +10,7 @@ public class ID32LongestValidParentheses {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public int longestValidParentheses(String s) {
+        public int longestValidParentheses1(String s) {
             if (s == null) {
                 return 0;
             }
@@ -28,9 +28,10 @@ public class ID32LongestValidParentheses {
                     if (s.charAt(i - 1) == '(') {
                         // 当前位置的有效括号长度为前两个位置的长度加2
                         dp[i] = (i >= 2 ? dp[i - 2] : 0) + 2;
+                        //  dp[i - 1]的含义：表示以i-1位置结尾的最长有效括号子串的长度
+                        //  i - dp[i - 1] - 1：从当前位置i向前跳过dp[i - 1]个已经匹配的有效括号，再向前一个位置，判断该位置是否为左括号(。
                     } else if (i - dp[i - 1] > 0 && s.charAt(i - dp[i - 1] - 1) == '(') {
                         // 当前位置的前一个位置的有效括号长度为dp[i - 1]，再前面有一个左括号与当前位置的右括号匹配
-                        // 更新当前位置的有效括号长度
                         dp[i] = dp[i - 1] + ((i - dp[i - 1] - 2) >= 0 ? dp[i - dp[i - 1] - 2] : 0) + 2;
                     }
                     // 更新最大长度
