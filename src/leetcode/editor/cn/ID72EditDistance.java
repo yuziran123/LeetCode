@@ -37,7 +37,7 @@ public class ID72EditDistance {
                     if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
                         dp[i][j] = dp[i - 1][j - 1]; // 字符相等，无需操作
                     } else {
-                        // 取三种操作（删除、插入、替换）中的最小值，并加 1
+                        // dp[i - 1][j]：删除操作    dp[i][j - 1]：插入操作   dp[i - 1][j - 1]：替换操作
                         dp[i][j] = Math.min(Math.min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
                     }
                 }
