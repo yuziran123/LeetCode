@@ -31,28 +31,15 @@ public class ID55JumpGame {
             if (len == 1) {
                 return true;
             }
-
-            int index = len - 1;    // index表示下标而不是长度
-            int distance = 0;
-            int i = index - 1;
-            while (i >= 0) {
-                distance = index - i;   // 末尾元素与当前元素的距离
-                if (distance > nums[i]) // 距离过大，当前元素无法到达
-                {
-                    i--;
-                    continue;
-                } else {
-                    // 当i=0时，就是判断是否能完成跳跃的条件
-                    if (i == 0 && distance <= nums[i])
-                        return true;
-                    // 当前元素足够跳到末尾，将当前元素置为末尾元素
-                    index = i;
-                    i--;
+            int target = len - 1;
+            for (int i = len - 2; i >= 0; i--) {
+                if (i + nums[i] >= target) { // 如果当前位置可以到达目标位置
+                    target = i; // 更新目标位置为当前位置
                 }
             }
-            return false;
+            return target == 0;
         }
     }
-// leetcode submit region end(Prohibit modification and deletion)
+    // leetcode submit region end(Prohibit modification and deletion)
 
 }

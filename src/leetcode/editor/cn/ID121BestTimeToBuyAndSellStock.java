@@ -12,7 +12,15 @@ public class ID121BestTimeToBuyAndSellStock {
     class Solution {
         public int maxProfit(int[] prices) {
             int ans = 0;
-            return 0;
+            int min_prices = Integer.MAX_VALUE;
+            for (int price : prices) {
+                if (price < min_prices) {
+                    min_prices = price;  // 更新最低买入价
+                } else {
+                    ans = Math.max(ans, price - min_prices); // 比较利润
+                }
+            }
+            return ans;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
