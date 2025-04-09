@@ -12,7 +12,7 @@ public class ID115DistinctSubsequences {
     class Solution {
         public int numDistinct(String s, String t) {
 
-            return 0;
+            return 1;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
