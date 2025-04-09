@@ -124,6 +124,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID115DistinctSubsequences.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID115DistinctSubsequences.md" />
+              <option name="frontendQuestionId" value="leetcode.cn115" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID115DistinctSubsequences.java" />
+              <option name="titleSlug" value="distinct-subsequences" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID117PopulatingNextRightPointersInEachNodeIi.java">
           <value>
             <LeetcodeEditor>
