@@ -37,7 +37,6 @@ public class ID115DistinctSubsequences {
                     }
                 }
             }
-            // 返回最终结果
             return dp[m][n];
         }
     }
