@@ -32,7 +32,6 @@ public class ID42TrappingRainWater {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
     /*雨水 = sum(leftMax) + sum(rightMax) - sum(height[i]) - 整个长方形*/
     public int trap(int[] height) {
         int maxLeft = 0, maxRight = 0, ans = 0;

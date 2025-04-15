@@ -30,8 +30,7 @@ public class ID128LongestConsecutiveSequence {
                 while (set.contains(y)) {
                     y++;
                 }
-                // x 到 y-1 都是连续的 有 y-x个数
-                ans = Math.max(ans, y - x);
+                ans = Math.max(ans, y - x); // x 到 y-1 都是连续的 有 y-x个数
             }
             return ans;
         }

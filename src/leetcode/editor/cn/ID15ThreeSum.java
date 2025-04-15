@@ -8,17 +8,13 @@ public class ID15ThreeSum {
     public static void main(String[] args) {
         Solution solution = new ID15ThreeSum().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
         System.out.println(builder);
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 描述:双指针法
-         * Date 2024/9/7
-         */
+        // 排序后固定一个数，双指针找另外两数，注意去重
         public List<List<Integer>> threeSum(int[] nums) {
             List<List<Integer>> result = new ArrayList<>();
             int n = nums.length;
@@ -26,20 +22,17 @@ public class ID15ThreeSum {
             int sum = 0;
 
             for (int i = 0; i < n; i++) {
-                if (nums[i] > 0)
-                    break;
+                if (nums[i] > 0) break;
                 // 三元组不重复
-                if (i > 0 && nums[i] == nums[i - 1])
-                    continue;
+                if (i > 0 && nums[i] == nums[i - 1]) continue;
+
                 int L = i + 1, R = n - 1;
                 while (L < R) {
                     sum = nums[i] + nums[L] + nums[R];
                     if (sum == 0) {
                         result.add(Arrays.asList(nums[i], nums[L], nums[R]));
-                        while (L < R && nums[L] == nums[L + 1])
-                            L++;
-                        while (L < R && nums[R] == nums[R - 1])
-                            R--;
+                        while (L < R && nums[L] == nums[L + 1]) L++;
+                        while (L < R && nums[R] == nums[R - 1]) R--;
                         L++;
                         R--;
                     } else if (sum < 0) {
@@ -51,7 +44,6 @@ public class ID15ThreeSum {
             }
             return result;
         }
-
     }
     // leetcode submit region end(Prohibit modification and deletion)
 }

@@ -7,7 +7,6 @@ public class ID283MoveZeroes {
         Solution solution = new ID283MoveZeroes().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
@@ -27,18 +26,4 @@ public class ID283MoveZeroes {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    // 把nums当栈
-    public void moveZeroes2(int[] nums) {
-        int stackSize = 0;
-
-        for (int num : nums) {
-            if (num == 0) {
-                continue;
-            }
-            nums[stackSize++] = num;
-        }
-        // 从数组 nums 的索引 stackSize 开始，到数组末尾填充 0
-        Arrays.fill(nums, stackSize, nums.length, 0);
-    }
 }
