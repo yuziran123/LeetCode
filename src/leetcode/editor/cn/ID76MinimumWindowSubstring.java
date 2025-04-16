@@ -13,9 +13,6 @@ public class ID76MinimumWindowSubstring {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public String minWindow(String s, String t) {
-            if (s == null || t == null || s.length() == 0 || t.length() == 0) {
-                return "";
-            }
             Map<Character, Integer> hash = new HashMap<>();
             Map<Character, Integer> window = new HashMap<>();
             StringBuilder sb = new StringBuilder();
