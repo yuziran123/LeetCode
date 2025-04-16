@@ -5,7 +5,6 @@ public class ID41FirstMissingPositive {
         Solution solution = new ID41FirstMissingPositive().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
