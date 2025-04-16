@@ -24,6 +24,7 @@ public class ID438FindAllAnagramsInAString {
             for (int i = 0; i < p.length(); i++) {
                 pCount[p.charAt(i) - 'a']++;
             }
+
             int left = 0, right = 0;
             while (right < s.length()) {
                 char currentChar = s.charAt(right);
