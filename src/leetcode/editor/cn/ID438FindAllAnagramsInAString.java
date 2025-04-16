@@ -15,12 +15,10 @@ public class ID438FindAllAnagramsInAString {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        // 连续 可重复 任意组合
+        // 通过比较窗口内字符频率与目标串p的频率，判断是否为异位词
         public List<Integer> findAnagrams(String s, String p) {
             ArrayList<Integer> ans = new ArrayList<>();
-            if (s == null || p == null || s.length() < p.length()) {
-                return ans;
-            }
+
             int[] pCount = new int[26];
             int[] window = new int[26];
             for (int i = 0; i < p.length(); i++) {
@@ -59,32 +57,4 @@ public class ID438FindAllAnagramsInAString {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    // 超时
-    public List<Integer> findAnagrams(String s, String p) {
-        ArrayList<Integer> ans = new ArrayList<>();
-        HashMap<Character, Integer> subMap = new HashMap<>();
-        for (int i = 0; i < p.length(); i++) {
-            char key = p.charAt(i);
-            subMap.put(key, subMap.getOrDefault(key, 0) + 1);
-        }
-        for (int i = 0; i <= s.length() - p.length(); i++) {
-            if (!subMap.containsKey(s.charAt(i))) {
-                continue;
-            }
-            HashMap<Character, Integer> map = new HashMap<>();
-            for (int j = i; j < i + p.length(); j++) {
-                if (!subMap.containsKey(s.charAt(j))) {
-                    break;
-                }
-                char key = s.charAt(j);
-                map.put(key, map.getOrDefault(key, 0) + 1);
-            }
-            if (map.equals(subMap)) {
-                ans.add(i);
-            }
-        }
-        return ans;
-    }
-
 }
