@@ -1678,10 +1678,10 @@
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID628MaximumProductOfThreeNumbers.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID628MaximumProductOfThreeNumbers.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[628]三个数的最大乘积.md" />
               <option name="frontendQuestionId" value="leetcode.cn628" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID628MaximumProductOfThreeNumbers.java" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[628]三个数的最大乘积.java" />
               <option name="titleSlug" value="maximum-product-of-three-numbers" />
             </LeetcodeEditor>
           </value>
@@ -1928,6 +1928,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID7ReverseInteger.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ID7ReverseInteger.md" />
+              <option name="frontendQuestionId" value="leetcode.cn7" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID7ReverseInteger.java" />
+              <option name="titleSlug" value="reverse-integer" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ID827MakingALargeIsland.java">
           <value>
             <LeetcodeEditor>
@@ -2112,6 +2123,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ID12IntegerToRoman.java" />
               <option name="titleSlug" value="integer-to-roman" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[628]三个数的最大乘积.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[628]三个数的最大乘积.md" />
+              <option name="frontendQuestionId" value="leetcode.cn628" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[628]三个数的最大乘积.java" />
+              <option name="titleSlug" value="maximum-product-of-three-numbers" />
             </LeetcodeEditor>
           </value>
         </entry>
