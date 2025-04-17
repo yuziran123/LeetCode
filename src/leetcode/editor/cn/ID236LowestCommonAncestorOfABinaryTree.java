@@ -18,14 +18,17 @@ public class ID236LowestCommonAncestorOfABinaryTree {
          * Date 2025/4/6
          */
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            // 终止条件：空节点或找到 p/q
             if (root == null || root == p || root == q) {
                 return root;
             }
             TreeNode left = lowestCommonAncestor(root.left, p, q);
             TreeNode right = lowestCommonAncestor(root.right, p, q);
+            // 如果左右均不为空，说明 p 和 q 分布在两侧，当前 root 是 LCA
             if (left != null && right != null) {
                 return root;
             }
+            // 否则返回非空的一侧（即 p 和 q 在同一子树中）
             return left != null ? left : right;
         }
     }

@@ -12,18 +12,17 @@ public class ID437PathSumIii {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        // 从每个节点出发，向下找所有路径，和等于目标就计数，左右子树递归查
         public int pathSum(TreeNode root, int targetSum) {
             if (root == null) {
                 return 0;
             }
-            // 计算根 左 右为起点的路径数
             int count = dfs(root, targetSum, 0L);
             count += pathSum(root.left, targetSum);
             count += pathSum(root.right, targetSum);
             return count;
         }
 
-        //
         private int dfs(TreeNode root, int target, long curSum) {
             if (root == null) {
                 return 0;
