@@ -36,6 +36,9 @@ public class ID25ReverseNodesInKGroup {
                     pre = cur;
                     cur = nxt;
                 }
+                // preGroupEnd.next = pre;：将前一组的尾节点指向当前组反转后的头节点。
+                // curEnd.next = cur;：将当前组反转后的尾节点指向下一组的头节点（即未反转部分的起始节点）。
+                // preGroupEnd = curEnd;：更新前一组的尾节点为当前组的尾节点，以便处理下一组。
                 preGroupEnd.next = pre;
                 curEnd.next = cur; // 此时cur为下一组的首节点
                 preGroupEnd = curEnd;

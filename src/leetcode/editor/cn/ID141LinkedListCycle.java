@@ -2,8 +2,6 @@ package leetcode.editor.cn;
 
 import leetcode.editor.util.ListNode;
 
-import java.util.HashSet;
-
 public class ID141LinkedListCycle {
     public static void main(String[] args) {
         Solution solution = new ID141LinkedListCycle().new Solution();
@@ -16,9 +14,7 @@ public class ID141LinkedListCycle {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     public class Solution {
-        /**
-         * 描述:快慢指针
-         */
+        // 描述:快慢指针
         public boolean hasCycle(ListNode head) {
             ListNode fast = head, slow = head;
             while (fast != null && fast.next != null) {
@@ -32,21 +28,4 @@ public class ID141LinkedListCycle {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    // 哈希表法
-    public boolean hasCycle(ListNode head) {
-        HashSet<ListNode> visitedNodes = new HashSet<>();
-        // 修改 head 可能会导致链表丢失。
-        // 使用额外的 current 指针，可以在不改变原链表结构的情况下遍历链表。
-        ListNode current = head;
-        while (current != null) {
-            if (visitedNodes.contains(current))
-                return true;
-
-            visitedNodes.add(current);
-            current = current.next;
-        }
-        // 遍历完链表后没有发现环
-        return false;
-    }
 }

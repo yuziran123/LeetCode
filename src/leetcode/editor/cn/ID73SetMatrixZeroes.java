@@ -6,7 +6,6 @@ public class ID73SetMatrixZeroes {
     public static void main(String[] args) {
         Solution solution = new ID73SetMatrixZeroes().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
         int[][] matrix = {
                 {0, 1, 2, 0},
@@ -38,54 +37,24 @@ public class ID73SetMatrixZeroes {
                     }
                 }
             }
-
+            // 根据recordRow数组将对应i行置为全0
             for (int i = 0; i < m; i++) {
-                if (recordRow[i] != -1)
+                if (recordRow[i] != -1) {
                     for (int j = 0; j < n; j++) {
                         matrix[i][j] = 0;
                     }
+                }
             }
+            // 根据recordCol数组将对应i列置为全0
             for (int i = 0; i < n; i++) {
-                if (recordCol[i] != -1)
+                if (recordCol[i] != -1) {
                     for (int j = 0; j < m; j++) {
                         matrix[j][i] = 0;
                     }
+                }
             }
             return;
         }
-
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-
-    /*O(m + n)的空间复杂度优化为O(n)*/
-    public void setZeroes2(int[][] matrix) {
-        int m = matrix.length; // 行
-        int n = matrix[0].length; // 列
-
-        int[] recordCol = new int[n];
-        Arrays.fill(recordCol, -1);
-        boolean flag = true;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == 0) {
-                    recordCol[j] = i;
-                    flag = false;
-                }
-            }
-            if (!flag) {
-                // 记录当前行原本就有的含0元素列后，本行置0
-                Arrays.fill(matrix[i], 0);
-                flag = true;
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            if (recordCol[i] != -1)
-                for (int j = 0; j < m; j++) {
-                    matrix[j][i] = 0;
-                }
-        }
-        return;
-    }
 }

@@ -7,7 +7,6 @@ public class ID234PalindromeLinkedList {
         Solution solution = new ID234PalindromeLinkedList().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
@@ -15,10 +14,9 @@ public class ID234PalindromeLinkedList {
 
     /**
      * 1.快慢指针找中间节点
-     * 2.反转半截链表进行比较
+     * 2.反转后半截链表进行比较
      */
     class Solution {
-        // 一个走一步一个走两步 二者相交 走一步的在中点
         public boolean isPalindrome(ListNode head) {
             ListNode mid = findMid(head);
             ListNode q = reverseList(mid);

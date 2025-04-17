@@ -7,7 +7,6 @@ public class ID160IntersectionOfTwoLinkedLists {
         Solution solution = new ID160IntersectionOfTwoLinkedLists().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 

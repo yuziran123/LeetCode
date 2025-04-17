@@ -31,8 +31,7 @@ public class ID142LinkedListCycleIi {
                 slow = slow.next;
                 fast = fast.next.next;
                 if (fast == slow) { // 此时相遇 slow和head都走a步在入口相遇
-                    // ListNode node = head;
-                    fast = head; // 内存优化
+                    fast = head;
                     while (slow != fast) {
                         slow = slow.next;
                         fast = fast.next;
@@ -44,33 +43,4 @@ public class ID142LinkedListCycleIi {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    // 标记法——给访问过的节点赋予一个不一样的值
-    public ListNode detectCycle2(ListNode head) {
-        if (head == null)
-            return null;
-        ListNode node = head;
-        while (node != null) {
-            if (node.val == 100002)
-                return node;
-            node.val = 100002;
-            node = node.next;
-        }
-        return null;
-    }
-
-    // 哈希表法
-    public ListNode detectCycle1(ListNode head) {
-        if (head == null)
-            return null;
-        ListNode node = head;
-        HashSet<ListNode> set = new HashSet<>();
-        while (node != null) {
-            if (set.contains(node))
-                return node;
-            set.add(node);
-            node = node.next;
-        }
-        return null;
-    }
 }

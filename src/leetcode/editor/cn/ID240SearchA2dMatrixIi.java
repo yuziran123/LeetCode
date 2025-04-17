@@ -36,7 +36,6 @@ public class ID240SearchA2dMatrixIi {
                     col--; // 向左移动
                 }
             }
-
             return false;
         }
     }

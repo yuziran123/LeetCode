@@ -22,15 +22,15 @@ public class ID23MergeKSortedLists {
          */
         public ListNode mergeKLists(ListNode[] lists) {
             int len = lists.length;
-            if (len == 0)
-                return null;
+            if (len == 0) return null;
             return merge(lists, 0, len - 1);
         }
 
         public ListNode merge(ListNode[] lists, int L, int R) {
-            if (L == R) // 此时只有一个链表，直接返回头节点
+            if (L == R) { // 此时只有一个链表，直接返回头节点
                 return lists[L];
-            int mid = (L + R) / 2;  // 选左中点：注意和构建二叉搜索树中点的区别
+            }
+            int mid = (L + R) / 2;
             ListNode left = merge(lists, L, mid);
             ListNode right = merge(lists, mid + 1, R);
             return mergeTwoLists(left, right);
@@ -38,55 +38,20 @@ public class ID23MergeKSortedLists {
 
         public ListNode mergeTwoLists(ListNode left, ListNode right) {
             ListNode dummy = new ListNode(-1);
-            ListNode head = dummy;
+            ListNode p = dummy;
             while (left != null && right != null) {
                 if (left.val < right.val) {
-                    dummy.next = left;
+                    p.next = left;
                     left = left.next;
                 } else {
-                    dummy.next = right;
+                    p.next = right;
                     right = right.next;
                 }
-                dummy = dummy.next;
+                p = p.next;
             }
-            dummy.next = left != null ? left : right;
-            return head.next;
+            p.next = (left != null ? left : right);
+            return dummy.next;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-    class Solution1 {
-        // 每次合并两个链表
-        public ListNode mergeKLists(ListNode[] lists) {
-            int len = lists.length;
-            if (len == 0 || len == 1)
-                return len == 0 ? null : lists[0];
-            ListNode head = new ListNode(-1);
-            ListNode ans = head;
-            head.next = lists[0];
-            for (int i = 1; i < len; i++) {
-                ListNode H = mergeTwoLists(head.next, lists[i]);
-                head.next = H;
-            }
-            return ans.next;
-        }
-
-        public ListNode mergeTwoLists(ListNode left, ListNode right) {
-            ListNode dummy = new ListNode(-1);
-            ListNode head = dummy;
-            while (left != null && right != null) {
-                if (left.val < right.val) {
-                    dummy.next = left;
-                    left = left.next;
-                } else {
-                    dummy.next = right;
-                    right = right.next;
-                }
-                dummy = dummy.next;
-            }
-            dummy.next = left != null ? left : right;
-            return head.next;
-        }
-
-    }
-
 }

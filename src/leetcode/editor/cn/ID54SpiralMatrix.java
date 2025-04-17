@@ -5,18 +5,12 @@ public class ID54SpiralMatrix {
         Solution solution = new ID54SpiralMatrix().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public Object[] spiralOrder(int[][] matrix) {
-            // 输入校验
-            if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-                return new Object[0];
-            }
-
             // 初始化变量
             int m = matrix.length;       // 行数
             int n = matrix[0].length;   // 列数
@@ -58,11 +52,9 @@ public class ID54SpiralMatrix {
                     left++;
                 }
             }
-
             return result;
         }
     }
-
     // leetcode submit region end(Prohibit modification and deletion)
 
 }

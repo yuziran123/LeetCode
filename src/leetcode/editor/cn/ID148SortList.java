@@ -6,7 +6,6 @@ public class ID148SortList {
     public static void main(String[] args) {
         Solution solution = new ID148SortList().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
         System.out.println(builder);
     }
@@ -41,13 +40,7 @@ public class ID148SortList {
             return merge(left, right);
         }
 
-        /**
-         * 合并两个有序链表
-         *
-         * @param l1 第一个链表
-         * @param l2 第二个链表
-         * @return 合并后的链表头节点
-         */
+        // 合并两个有序链表
         private ListNode merge(ListNode l1, ListNode l2) {
             ListNode dummy = new ListNode(0); // 创建虚拟头节点
             ListNode cur = dummy;
@@ -62,10 +55,8 @@ public class ID148SortList {
                 }
                 cur = cur.next;
             }
-
             // 拼接剩余部分
-            cur.next = (l1 != null) ? l1 : l2;
-
+            cur.next = (l1 != null ? l1 : l2);
             return dummy.next; // 返回合并后的链表头节点
         }
     }
