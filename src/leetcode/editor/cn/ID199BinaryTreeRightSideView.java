@@ -43,16 +43,11 @@ public class ID199BinaryTreeRightSideView {
                         next.add(node.right);
                     }
                 }
-                // 交换 cur 和 next 的引用，避免创建新的 ArrayList
-                List<TreeNode> temp = cur;
                 cur = next;
-                next = temp;
-                next.clear(); // 清空 next 以复用
+                next = new ArrayList<>();
             }
             return ans;
         }
     }
-
-
     // leetcode submit region end(Prohibit modification and deletion)
 }

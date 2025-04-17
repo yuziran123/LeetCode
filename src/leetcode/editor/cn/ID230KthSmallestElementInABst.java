@@ -2,9 +2,6 @@ package leetcode.editor.cn;
 
 import leetcode.editor.util.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ID230KthSmallestElementInABst {
     public static void main(String[] args) {
         Solution solution = new ID230KthSmallestElementInABst().new Solution();
@@ -16,49 +13,27 @@ public class ID230KthSmallestElementInABst {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         // 中序遍历——设置计数器
-        int count;
+        int k;
         int ans;
 
-        /**
-         * 描述:二叉搜索树（BST）的中序遍历结果是有序的
-         * <p>
-         * Date 2025/4/1
-         */
+        // 二叉搜索树（BST）的中序遍历结果是有序的
         public int kthSmallest(TreeNode root, int k) {
-            this.count = k;
+            this.k = k;
             inorder(root);
             return this.ans;
         }
 
         public void inorder(TreeNode root) {
-            if (root == null || count == 0) {
+            if (root == null || k == 0) {
                 return;
             }
             inorder(root.left);
-            count--;
-            if (count == 0) {
+            k--;
+            if (k == 0) {
                 this.ans = root.val;
             }
             inorder(root.right);
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    class Solution1 {
-        // 中序遍历存入数组
-        List<Integer> list = new ArrayList<>();
-
-        public int kthSmallest(TreeNode root, int k) {
-            inorder(root);
-            return list.get(k - 1);
-        }
-
-        public void inorder(TreeNode root) {
-            if (root == null)
-                return;
-            inorder(root.left);
-            list.add(root.val);
-            inorder(root.right);
-        }
-    }
 }

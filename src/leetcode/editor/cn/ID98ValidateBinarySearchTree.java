@@ -12,7 +12,6 @@ public class ID98ValidateBinarySearchTree {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        long pre = Long.MIN_VALUE;
         /**
          * 判断一个二叉树是否为有效的二叉搜索树
          * 通过中序遍历来检查树中的每个节点，确保它们的值严格递增
@@ -20,6 +19,8 @@ public class ID98ValidateBinarySearchTree {
          * @param root 二叉树的根节点
          * @return 如果树是有效的二叉搜索树，则返回true；否则返回false
          */
+        long pre = Long.MIN_VALUE;
+
         public boolean isValidBST(TreeNode root) {
             // 如果节点为空，自然是有效的二叉搜索树
             if (root == null) {
@@ -40,20 +41,4 @@ public class ID98ValidateBinarySearchTree {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-    class Solution1 {
-        // 先序遍历
-        // int INF = Integer.MAX_VALUE; //会有边界问题
-        Long INF = Long.MAX_VALUE;// 无穷大
-
-        public boolean isValidBST(TreeNode root) {
-            return isValid(root, -INF, INF);
-        }
-
-        public boolean isValid(TreeNode root, long left, long right) {
-            if (root == null)
-                return true;
-            int x = root.val;
-            return (left < x && x < right) && isValid(root.left, left, x) && isValid(root.right, x, right);
-        }
-    }
 }

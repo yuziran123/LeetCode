@@ -1,11 +1,12 @@
 package leetcode.editor.cn;
 
+import leetcode.editor.util.TreeNode;
+
 public class ID543DiameterOfBinaryTree {
     public static void main(String[] args) {
         Solution solution = new ID543DiameterOfBinaryTree().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
@@ -23,6 +24,7 @@ public class ID543DiameterOfBinaryTree {
             }
             int left = dfs(node.left) + 1;
             int right = dfs(node.right) + 1;
+            // left + right 表示经过当前节点的最长路径（左子树高度 + 右子树高度）。
             ans = Math.max(ans, left + right);
             return Math.max(left, right);
         }

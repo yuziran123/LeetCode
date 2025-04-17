@@ -18,35 +18,29 @@ public class ID102BinaryTreeLevelOrderTraversal {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 描述:队列实现层序遍历
-         * Date 2024/9/12
-         *
-         * @param root
-         * @return List<List < Integer>>
-         */
+        // 描述:队列实现层序遍历
         public List<List<Integer>> levelOrder(TreeNode root) {
+            if (root == null) {
+                return new ArrayList<>();
+            }
             List<List<Integer>> ans = new ArrayList<>();
-            if (root == null)
-                return ans;
-            List<Integer> vals = new ArrayList<>();
+            List<Integer> levels = new ArrayList<>();
             Deque<TreeNode> cur = new ArrayDeque<>();
             cur.add(root);
             while (!cur.isEmpty()) {
                 int n = cur.size();
                 for (int i = 0; i < n; i++) {
                     TreeNode node = cur.poll();
-                    vals.add(node.val);
-                    if (node.left != null)
+                    levels.add(node.val);
+                    if (node.left != null) {
                         cur.add(node.left);
-                    if (node.right != null)
+                    }
+                    if (node.right != null) {
                         cur.add(node.right);
+                    }
                 }
-                ans.add(vals);
-                vals = new ArrayList<>();
-                // 这段代码清空了 vals 列表中的所有元素，但 vals 的引用并没有改变。
-                // 如果在调用 vals.clear() 后再将 vals 添加到 ans，ans 中将只会包含一个空的 vals 列表。
-                // vals.clear();
+                ans.add(levels);
+                levels = new ArrayList<>();
             }
             return ans;
         }

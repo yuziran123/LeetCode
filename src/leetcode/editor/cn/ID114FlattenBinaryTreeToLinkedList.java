@@ -22,9 +22,11 @@ public class ID114FlattenBinaryTreeToLinkedList {
             if (root == null) {
                 return;
             }
+            // 先序遍历存入链表
             preorder(root);
             TreeNode p = new TreeNode();
             TreeNode dummy = p;
+            // 遍历链表 每个节点左孩子为null
             for (TreeNode node : list) {
                 p.left = null;
                 p.right = node;
@@ -43,5 +45,4 @@ public class ID114FlattenBinaryTreeToLinkedList {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
 }

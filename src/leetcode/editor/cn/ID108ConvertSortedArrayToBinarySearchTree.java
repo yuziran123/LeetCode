@@ -13,15 +13,14 @@ public class ID108ConvertSortedArrayToBinarySearchTree {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public TreeNode sortedArrayToBST(int[] nums) {
-            // 左闭右开的区间
-            return buildBST(nums, 0, nums.length - 1);
+            return buildBST(nums, 0, nums.length - 1);// 左闭右开的区间
         }
 
         public TreeNode buildBST(int[] nums, int left, int right) {
-            if (left > right)
+            if (left > right) {
                 return null;
-            // 选择右中间元素，构建的更平衡
-            int mid = (left + right + 1) / 2;
+            }
+            int mid = (left + right) / 2;
             TreeNode node = new TreeNode(nums[mid]);
             node.left = buildBST(nums, left, mid - 1);
             node.right = buildBST(nums, mid + 1, right);
