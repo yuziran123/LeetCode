@@ -18,7 +18,11 @@ public class ID41FirstMissingPositive {
                     nums[i] = n + 1;
                 }
             }
-            // 对于遍历到的数x 如果再[1,n] ,就把对应的x-1出打上标记
+            /*遍历数组，对于每个数x（取绝对值，因为可能被前面的操作标记为负数），
+              如果x在[1, n]范围内，就将数组的第x-1个位置的数标记为负数。
+              这是一种“就地哈希”技术：
+              用数组的下标0到n-1表示数字1到n是否存在。
+              如果nums[i]为负数，表示数字i+1存在*/
             for (int i = 0; i < n; i++) {
                 int num = Math.abs(nums[i]);
                 if (num < n + 1) {
