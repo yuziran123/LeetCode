@@ -15,9 +15,7 @@ public class ID207CourseSchedule {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 方法二：拓扑排序——BFS实现
-         */
+        // 拓扑排序——BFS实现
         public boolean canFinish(int numCourses, int[][] prerequisites) {
             // 初始化入度数组和邻接表
             int[] inDegrees = new int[numCourses];
@@ -27,18 +25,18 @@ public class ID207CourseSchedule {
             }
             // 构建图并计算入度
             for (int[] pre : prerequisites) {
-                inDegrees[pre[0]]++;
-                adjacency.get(pre[1]).add(pre[0]);
+                inDegrees[pre[0]]++;  // inDegrees[i] 表示课程 i 的入度（即有多少课程依赖它）。
+                adjacency.get(pre[1]).add(pre[0]); //存储所有依赖课程 i 的后续课程
             }
 
-            // 将所有入度为0的课程加入队列
+            // 将所有入度为 0 的课程加入队列
             Deque<Integer> deque = new ArrayDeque<>();
             for (int i = 0; i < numCourses; i++) {
                 if (inDegrees[i] == 0) {
                     deque.offer(i);
                 }
             }
-            // 拓扑排序过程
+
             while (!deque.isEmpty()) {
                 int course = deque.poll();
                 numCourses--; // 每完成一门课程，课程总数减1

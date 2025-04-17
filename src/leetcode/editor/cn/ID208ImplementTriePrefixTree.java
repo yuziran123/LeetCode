@@ -54,7 +54,7 @@ public class ID208ImplementTriePrefixTree {
          */
         private class Node {
             Node[] childrens;  // 子节点列表
-            boolean isEnd;     // 是否是尾节点
+            boolean isEnd;     // 是否是尾节点 标记从根到当前节点的路径是否构成完整单词。
 
             Node() {
                 childrens = new Node[26];

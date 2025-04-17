@@ -21,6 +21,7 @@ public class ID994RottingOranges {
             int freshOranges = 0;
             int minutes = 0;
             Queue<int[]> queue = new LinkedList<>();
+            // 遍历网格，统计新鲜橘子，并将腐烂橘子加入队列
             for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
                     if (grid[i][j] == 1) {
@@ -39,6 +40,7 @@ public class ID994RottingOranges {
                 boolean isRotten = false;
                 for (int i = 0; i < size; i++) {
                     int[] cur = queue.poll();
+                    // 检查四个方向的新鲜橘子
                     for (int[] direction : DIRECTIONS) {
                         int row = cur[0] + direction[0];
                         int col = cur[1] + direction[1];
