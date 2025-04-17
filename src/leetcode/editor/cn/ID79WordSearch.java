@@ -39,17 +39,17 @@ public class ID79WordSearch {
             return false;
         }
 
-        public boolean dfs(int x, int y, int start) {
-            if (start == wordArr.length - 1) {  // 递归结束的出口
-                return board[x][y] == wordArr[start];
+        public boolean dfs(int x, int y, int index) {
+            if (index == wordArr.length - 1) {  // 递归结束的出口
+                return board[x][y] == wordArr[index];
             }
-            if (board[x][y] == wordArr[start]) {
+            if (board[x][y] == wordArr[index]) {
                 visited[x][y] = true;// 设置访问标记
                 for (int[] direction : DIRECTIONS) {
                     int newX = x + direction[0];
                     int newY = y + direction[1];
                     if (isValid(newX, newY)) { // 继续访问下一个可探索单元格
-                        if (dfs(newX, newY, start + 1)) {
+                        if (dfs(newX, newY, index + 1)) {
                             return true;
                         }
                     }

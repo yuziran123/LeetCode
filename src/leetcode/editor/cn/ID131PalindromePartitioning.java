@@ -52,7 +52,6 @@ public class ID131PalindromePartitioning {
             }
             return true;
         }
-
     }
     // leetcode submit region end(Prohibit modification and deletion)
 

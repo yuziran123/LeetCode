@@ -7,9 +7,7 @@ public class ID78Subsets {
     public static void main(String[] args) {
         Solution solution = new ID78Subsets().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
-
         System.out.println(builder);
     }
 

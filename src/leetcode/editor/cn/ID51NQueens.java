@@ -13,12 +13,6 @@ public class ID51NQueens {
     }
 
     // leetcode submit region begin(Prohibit modification and deletion)
-
-    /**
-     * N皇后问题解决方案类
-     * 该问题的目标是在n*n的棋盘上放置n个皇后，使得它们互不攻击
-     * 互不攻击的定义是：任意两个皇后都不能处于同一行、同一列或同一斜线上
-     */
     class Solution {
         // 存储所有可能的解决方案
         List<List<String>> ans = new ArrayList<>();
@@ -29,12 +23,6 @@ public class ID51NQueens {
         int[] col;  // 皇后放在[r,col[r]] 记录每行皇后放在了哪一列
         int n;
 
-        /**
-         * 解决N皇后问题的入口方法
-         *
-         * @param n 棋盘的大小
-         * @return 所有可能的解决方案
-         */
         public List<List<String>> solveNQueens(int n) {
             this.n = n;
             this.col = new int[n];  // 标记当前列

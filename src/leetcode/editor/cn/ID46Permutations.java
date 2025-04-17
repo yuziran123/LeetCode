@@ -7,9 +7,7 @@ public class ID46Permutations {
     public static void main(String[] args) {
         Solution solution = new ID46Permutations().new Solution();
         StringBuilder builder = new StringBuilder();
-
         // 执行测试
-
         System.out.println(builder);
     }
 
@@ -32,7 +30,9 @@ public class ID46Permutations {
                 if (!selected[i]) {
                     selected[i] = true;
                     path.add(nums[i]);
+
                     backtrack(path, selected, nums);
+
                     path.remove(path.size() - 1);
                     selected[i] = false;
                 }
