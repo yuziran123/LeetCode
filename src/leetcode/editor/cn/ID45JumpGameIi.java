@@ -12,29 +12,18 @@ public class ID45JumpGameIi {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 思路: 使用贪心算法，从左往右遍历数组，记录当前能够到达的最远位置。
-         * <p>
-         * 每次跳跃时更新目标位置，直到到达终点。
-         * <p>
-         * Date 2024/8/29
-         */
         public int jump(int[] nums) {
-            int resCount = 0;
-            int curEnd = 0;
-            int maxReach = 0;
-            for (int i = 0; i < nums.length - 1; i++) {
-                // 更新下一次最远跳到哪
+            int jumps = 0; // 记录跳跃次数
+            int end = 0; // 当前能到达的最远边界
+            int maxReach = 0; // 当前能跳到的最远位置
+            for (int i = 0; i < nums.length - 1; i++) { // 注意：不需要遍历到最后一个元素
                 maxReach = Math.max(maxReach, i + nums[i]);
-                if (i == curEnd) { // 到达了跳跃边界，需要进行一次跳跃
-                    curEnd = maxReach;
-                    resCount++;
-                    if (curEnd >= nums.length - 1) { // 提前终止
-                        break;
-                    }
+                if (i == end) { // 到达当前步数的边界，必须跳一步
+                    jumps++;
+                    end = maxReach;
                 }
             }
-            return resCount;
+            return jumps;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

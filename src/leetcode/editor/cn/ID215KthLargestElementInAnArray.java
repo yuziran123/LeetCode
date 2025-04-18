@@ -29,10 +29,4 @@ public class ID215KthLargestElementInAnArray {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
-    public int findKthLargest(int[] nums, int k) {
-        // 有内置方法不用？没道理的
-        Arrays.sort(nums);
-        return nums[nums.length - k];
-    }
 }

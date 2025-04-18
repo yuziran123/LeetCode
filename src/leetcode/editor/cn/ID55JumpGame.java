@@ -16,28 +16,18 @@ public class ID55JumpGame {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        /**
-         * 描述:
-         * 1.元素表示最大跳跃长度-不是只能跳这么多
-         * 2.能到到达最后一个元素即可-和末尾元素值无关
-         * Date 2024/8/29
-         *
-         * @param nums
-         * @return boolean
-         */
         public boolean canJump(int[] nums) {
-            int len = nums.length;
-            // 后面的算法考虑的都是其他元素和末尾元素的距离，所以len为1的情况要先过滤
-            if (len == 1) {
-                return true;
-            }
-            int target = len - 1;
-            for (int i = len - 2; i >= 0; i--) {
-                if (i + nums[i] >= target) { // 如果当前位置可以到达目标位置
-                    target = i; // 更新目标位置为当前位置
+            int maxReach = 0; // 当前能跳到的最远位置
+            for (int i = 0; i < nums.length; i++) {
+                if (i > maxReach) {  // 如果当前i已经超过了能跳的最远距离，说明无法到达
+                    return false;
+                }
+                maxReach = Math.max(maxReach, i + nums[i]);
+                if (maxReach >= nums.length - 1) {  // 可以跳到终点
+                    return true;
                 }
             }
-            return target == 0;
+            return false;
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)

@@ -42,11 +42,11 @@ public class ID84LargestRectangleInHistogram {
             // 计算以每个柱子为高度的矩形面积
             for (int i = 0; i <= n; i++) {
                 // 设置哨兵节点 确保所有的柱子都可以计算
-                int curHeight = (i == n) ? 0 : heights[i];
+                int curHeight = (i == n ? 0 : heights[i]);
                 while (!stack.isEmpty() && curHeight < heights[stack.peek()]) { // 栈顶元素右侧第一个比他矮的柱子出现了
                     int height = heights[stack.pop()];
                     // 栈空：左侧没有比当前柱子更矮的
-                    int width = (stack.isEmpty()) ? i : i - stack.peek() - 1; // 减去左侧就是当前柱子的最大矩形面积
+                    int width = (stack.isEmpty() ? i : i - stack.peek() - 1); // 减去左侧就是当前柱子的最大矩形面积
                     ans = Math.max(ans, height * width);
                 }
                 stack.push(i);

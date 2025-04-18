@@ -24,23 +24,10 @@ public class ID122BestTimeToBuyAndSellStockIi {
 
         public int maxProfit(int[] prices) {
             int profit = 0;
-            int temp = 0;
-            int len = prices.length;
-            for (int i = 1; i < len; ) {
-                // 序列不递增
-                if (prices[i] <= prices[i - 1]) {
-                    i++;
-                    continue;
-                } else {
-                    // 记录递增子序列的首位
-                    temp = prices[i - 1];
-                    // 找到递增子序列的最后一位
-                    while (i < len && prices[i] > prices[i - 1]) {
-                        i++;
-                    }
-                    // 记录当前递增子序列的差值
-                    //!跳出循环的i指向递增子序列末尾的下一位，故作i-1的处理
-                    profit = profit + prices[i - 1] - temp;
+            for (int i = 1; i < prices.length; i++) {
+                if (prices[i] > prices[i - 1]) {
+                    // 只要今天比昨天高就累加利润
+                    profit += prices[i] - prices[i - 1];
                 }
             }
             return profit;
