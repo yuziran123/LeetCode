@@ -40,29 +40,4 @@ public class ID416PartitionEqualSubsetSum {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-    public boolean canPartition0(int[] nums) {
-        int n = nums.length, sum = 0;
-        for (int i = 0; i < n; i++) {
-            sum += nums[i];
-        }
-        if (sum % 2 != 0)
-            return false;
-        int halfSum = sum / 2; // 这个就是背包容量
-        int[][] dp = new int[n + 1][halfSum + 1];
-        int MAX = halfSum + 1;
-        for (int i = 1; i < MAX; i++) {
-            dp[0][i] = MAX;
-        }
-        for (int i = 1; i < n; i++) {
-            for (int h = 1; h <= halfSum; h++) {
-                if (h < nums[i - 1])
-                    dp[i][h] = dp[i - 1][h];
-                else
-                    dp[i][h] = Math.min(dp[i - 1][h], dp[i - 1][h - nums[i - 1]] + 1);
-            }
-            if (dp[i][halfSum] != MAX)
-                return true;
-        }
-        return false;
-    }
 }

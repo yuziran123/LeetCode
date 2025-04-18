@@ -3,9 +3,7 @@ package leetcode.editor.cn;
 public class ID64MinimumPathSum {
     public static void main(String[] args) {
         Solution solution = new ID64MinimumPathSum().new Solution();
-
         // 执行测试
-
         System.out.println("");
     }
 

@@ -16,7 +16,7 @@ public class ID5LongestPalindromicSubstring {
                 int len1 = expandParliament(s, i, i); // 以i为中心寻找
                 int len2 = expandParliament(s, i, i + 1); // 以(i i+1)为中心寻找
                 int maxLen = Math.max(len1, len2);
-                if (maxLen > end - start) { // 更新最大回文串
+                if (maxLen > end - start) { // 更新最大回文串的起始索引
                     start = i - (maxLen - 1) / 2;
                     end = i + maxLen / 2;
                 }
@@ -30,10 +30,9 @@ public class ID5LongestPalindromicSubstring {
                 left--;
                 right++;
             }
-            // 不满足会问条件退出循环 所以左右都多移动一次
+            // 不满足回文条件退出循环 所以左右都多移动一次
             return right - left - 1;
         }
-
     }
     // leetcode submit region end(Prohibit modification and deletion)
 

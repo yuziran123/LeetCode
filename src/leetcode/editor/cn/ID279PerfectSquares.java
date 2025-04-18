@@ -19,6 +19,7 @@ public class ID279PerfectSquares {
             dp[0] = 0;
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j * j <= i; j++) {
+                    // 对于数字 i，尝试所有可能的平方数 j * j，选择其中能使 dp[i] 最小的分解方式
                     dp[i] = Math.min(dp[i], dp[i - j * j] + 1);
                 }
             }

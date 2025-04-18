@@ -10,7 +10,7 @@ public class ID32LongestValidParentheses {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public int longestValidParentheses1(String s) {
+        public int longestValidParentheses(String s) {
             if (s == null) {
                 return 0;
             }
@@ -42,5 +42,4 @@ public class ID32LongestValidParentheses {
         }
     }
     // leetcode submit region end(Prohibit modification and deletion)
-
 }

@@ -5,7 +5,6 @@ public class ID1143LongestCommonSubsequence {
         Solution solution = new ID1143LongestCommonSubsequence().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-
         System.out.println(builder);
     }
 
@@ -26,8 +25,6 @@ public class ID1143LongestCommonSubsequence {
                     }
                 }
             }
-
-            // 返回最终结果
             return dp[m][n];
         }
     }
