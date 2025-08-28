@@ -1,7 +1,5 @@
 package leetcode.editor.cn;
 
-import java.util.Arrays;
-
 public class ID283MoveZeroes {
     public static void main(String[] args) {
         Solution solution = new ID283MoveZeroes().new Solution();
@@ -14,13 +12,13 @@ public class ID283MoveZeroes {
     class Solution {
         // 双指针
         public void moveZeroes(int[] nums) {
-            int p0 = 0;
+            int point = 0; // 下一个需要填充非0元素的位置
             for (int i = 0; i < nums.length; i++) {
                 if (nums[i] != 0) {
                     int temp = nums[i];
-                    nums[i] = nums[p0];
-                    nums[p0] = temp;
-                    p0++;
+                    nums[i] = nums[point];
+                    nums[point] = temp;
+                    point++;
                 }
             }
         }

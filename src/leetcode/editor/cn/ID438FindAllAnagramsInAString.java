@@ -1,7 +1,6 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class ID438FindAllAnagramsInAString {
@@ -27,10 +26,9 @@ public class ID438FindAllAnagramsInAString {
 
             int left = 0, right = 0;
             while (right < s.length()) {
-                char currentChar = s.charAt(right);
                 // 扩大窗口 右侧字符加入
                 if (right - left + 1 <= p.length()) {
-                    window[currentChar - 'a']++;
+                    window[s.charAt(right) - 'a']++;
                 }
                 // 达到窗口大小
                 if (right - left + 1 == p.length()) {
@@ -38,8 +36,7 @@ public class ID438FindAllAnagramsInAString {
                         ans.add(left);
                     }
                     // 缩小窗口 左侧字符移除
-                    char leftChar = s.charAt(left);
-                    window[leftChar - 'a']--;
+                    window[s.charAt(left) - 'a']--;
                     left++;
                 }
                 right++;

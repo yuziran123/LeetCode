@@ -8,7 +8,8 @@ public class ID560SubarraySumEqualsK {
         Solution solution = new ID560SubarraySumEqualsK().new Solution();
         StringBuilder builder = new StringBuilder();
         // 执行测试
-        solution.subarraySum(new int[]{1, 1, 1}, 2);
+        // solution.subarraySum(new int[]{1, 1, 1}, 2);
+        solution.subarraySum(new int[]{1, 2, 3}, 3);
         System.out.println(builder);
     }
 
