@@ -30,8 +30,9 @@ public class ID21MergeTwoSortedLists {
                 p = p.next;
             }
             // 合并剩余链表部分
-            p.next = (l1 == null ? p.next : l1);
-            p.next = (l2 == null ? p.next : l2);
+            // p.next = (l1 == null ? p.next : l1);
+            // p.next = (l2 == null ? p.next : l2);
+            p.next = (l1 == null ? l2 : l1);
             return head.next;
         }
     }

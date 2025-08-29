@@ -18,7 +18,7 @@ public class ID25ReverseNodesInKGroup {
             ListNode dummy = new ListNode(0, head);
             ListNode preGroupEnd = dummy, cur = head;
             while (cur != null) {
-                // 测试当前链表剩余节点数是够k个
+                // 1.测试当前链表剩余节点数是够k个
                 ListNode test = cur;
                 for (int i = 1; i <= k; i++) {
                     if (test == null) {
@@ -27,6 +27,7 @@ public class ID25ReverseNodesInKGroup {
                     test = test.next;
                 }
 
+                // 2.反转当前子链表
                 // 每次反转前pre指空
                 ListNode pre = null;
                 ListNode curEnd = cur; // 当前组反转后的尾节点
@@ -36,6 +37,7 @@ public class ID25ReverseNodesInKGroup {
                     pre = cur;
                     cur = nxt;
                 }
+                // 3.处理子链表反转后的前后节点
                 // preGroupEnd.next = pre;：将前一组的尾节点指向当前组反转后的头节点。
                 // curEnd.next = cur;：将当前组反转后的尾节点指向下一组的头节点（即未反转部分的起始节点）。
                 // preGroupEnd = curEnd;：更新前一组的尾节点为当前组的尾节点，以便处理下一组。

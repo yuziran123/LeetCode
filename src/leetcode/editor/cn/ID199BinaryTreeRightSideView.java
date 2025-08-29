@@ -2,7 +2,9 @@ package leetcode.editor.cn;
 
 import leetcode.editor.util.TreeNode;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class ID199BinaryTreeRightSideView {
@@ -23,28 +25,23 @@ public class ID199BinaryTreeRightSideView {
         public List<Integer> rightSideView(TreeNode root) {
             List<Integer> ans = new ArrayList<>();
             if (root == null) {
-                return ans; // 空树直接返回空列表
+                return ans;
             }
-            // 使用两个列表分别存储当前层和下一层的节点
-            List<TreeNode> cur = new ArrayList<>();
-            List<TreeNode> next = new ArrayList<>();
-            cur.add(root);
 
-            while (!cur.isEmpty()) {
-                // 记录当前层最后一个节点值
-                ans.add(cur.get(cur.size() - 1).val);
+            Deque<TreeNode> deque = new ArrayDeque<>();
+            deque.add(root);
 
-                // 遍历当前层的所有节点，并将子节点加入到 next 列表中
-                for (TreeNode node : cur) {
-                    if (node.left != null) {
-                        next.add(node.left);
-                    }
-                    if (node.right != null) {
-                        next.add(node.right);
-                    }
+            while (!deque.isEmpty()) {
+                int size = deque.size();
+                for (int i = 0; i < size; i++) {
+                    TreeNode node = deque.poll();
+                    if (node.left != null)
+                        deque.add(node.left);
+                    if (node.right != null)
+                        deque.add(node.right);
+                    if (i == size - 1)
+                        ans.add(node.val);
                 }
-                cur = next;
-                next = new ArrayList<>();
             }
             return ans;
         }

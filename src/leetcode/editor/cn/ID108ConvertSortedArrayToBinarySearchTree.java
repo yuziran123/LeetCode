@@ -12,6 +12,8 @@ public class ID108ConvertSortedArrayToBinarySearchTree {
 
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        // 利用有序数组的中间元素作为根节点，天然保证左右子树节点数量均衡，从而实现 “平衡”;
+        // 递归划分左右区间，自然满足 BST 的 “左小右大” 特性。
         public TreeNode sortedArrayToBST(int[] nums) {
             return buildBST(nums, 0, nums.length - 1);// 左闭右开的区间
         }

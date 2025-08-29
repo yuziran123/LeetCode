@@ -17,9 +17,9 @@ public class ID142LinkedListCycleIi {
         /**
          * 快慢指针法——要一定的数学推导
          * 1.假设环形前有a个点 环形有b个点
-         * 2.fast和slow相遇时，有f=2*s（fast走两步一次）；f=s+n*b（fast比slow夺走了n圈）
+         * 2.fast和slow相遇时，有f=2*s（fast走两步一次）; f=s+n*b（fast比slow多走了n圈）
          * 3.推出，相遇时slow一共走了n*b
-         * 4.走到环形入口一定需要需要走a+N*b
+         * 4.走到环形入口一定需要走a+N*b
          * 5.故此时slow只需再走a步就可以到达入口，而head到入口正好是a步
          */
         public ListNode detectCycle(ListNode head) {

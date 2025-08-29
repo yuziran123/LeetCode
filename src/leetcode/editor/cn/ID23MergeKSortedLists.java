@@ -18,7 +18,7 @@ public class ID23MergeKSortedLists {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         /**
-         * 描述:分治合并只有logk层，而顺序合并有k层：这是分支合并的根本优化
+         * 描述:分治合并只有logk层，而顺序合并有k层：这是分治合并的根本优化
          */
         public ListNode mergeKLists(ListNode[] lists) {
             int len = lists.length;
