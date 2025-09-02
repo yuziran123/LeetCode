@@ -34,7 +34,7 @@ public class ID39CombinationSum {
                 ans.add(new ArrayList<>(path));
                 return;
             }
-            // 可以重复选取-i依旧从start开始选取
+            // 可以重复选取   i依旧从start开始选取
             for (int i = start; i < n; i++) {
                 path.add(candidates[i]);
                 dfs(i, target - candidates[i]);

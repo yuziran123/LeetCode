@@ -17,13 +17,13 @@ public class ID55JumpGame {
     // leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public boolean canJump(int[] nums) {
-            int maxReach = 0; // 当前能跳到的最远位置
+            int nextMaxReach = 0; // 下一步能到达的最远位置
             for (int i = 0; i < nums.length; i++) {
-                if (i > maxReach) {  // 如果当前i已经超过了能跳的最远距离，说明无法到达
+                if (i > nextMaxReach) {  // 若i超出nextMaxReach，说明i无法到达
                     return false;
                 }
-                maxReach = Math.max(maxReach, i + nums[i]);
-                if (maxReach >= nums.length - 1) {  // 可以跳到终点
+                nextMaxReach = Math.max(nextMaxReach, i + nums[i]);
+                if (nextMaxReach >= nums.length - 1) {  // 可以跳到终点
                     return true;
                 }
             }

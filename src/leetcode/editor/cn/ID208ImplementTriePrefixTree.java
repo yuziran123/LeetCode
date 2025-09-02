@@ -19,7 +19,7 @@ public class ID208ImplementTriePrefixTree {
                 if (node.childrens[index] == null) {
                     node.childrens[index] = new Node();
                 }
-                node = node.childrens[index];   // 移动到子节点 未处理下一个字符做准备
+                node = node.childrens[index];   // 移动到子节点 为处理下一个字符做准备
             }
 
             node.isEnd = true;  // 处理完所有字符 标记最后一个节点为单词结束

@@ -19,11 +19,9 @@ public class ID394DecodeString {
             Deque<String> strStack = new ArrayDeque<>();
             int count = 0;
             for (char c : s.toCharArray()) {
-                if (Character.isDigit(c)) {
-                    // 数字
+                if (Character.isDigit(c)) { // 数字
                     count = count * 10 + (c - '0');
-                } else if (c == '[') {
-                    // 左括号-数字和字符入栈
+                } else if (c == '[') {  // 左括号:数字和字符入栈
                     numStack.push(count);
                     strStack.push(str.toString());
                     str = new StringBuilder();
@@ -31,9 +29,7 @@ public class ID394DecodeString {
                 } else if (c == ']') {
                     int repeats = numStack.pop();
                     StringBuilder temp = new StringBuilder(strStack.pop());
-                    for (int i = 0; i < repeats; i++) {
-                        temp.append(str);
-                    }
+                    temp.append(str.toString().repeat(repeats));
                     str = temp;
                 } else {
                     str.append(c);

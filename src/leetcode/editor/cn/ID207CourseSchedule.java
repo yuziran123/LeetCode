@@ -25,15 +25,15 @@ public class ID207CourseSchedule {
             }
             // 构建图并计算入度
             for (int[] pre : prerequisites) {
-                inDegrees[pre[0]]++;  // inDegrees[i] 表示课程 i 的入度（即有多少课程依赖它）。
-                adjacency.get(pre[1]).add(pre[0]); //存储所有依赖课程 i 的后续课程
+                inDegrees[pre[0]]++; // 入度 = 某门课程需要先完成的先修课程数量
+                adjacency.get(pre[1]).add(pre[0]);  // 存储先修课程i修完后可以学习的课程列表
             }
 
-            // 将所有入度为 0 的课程加入队列
+            // 将所有入度为 0 的课程加入队列，表示没有先修课程，可以直接学习
             Deque<Integer> deque = new ArrayDeque<>();
             for (int i = 0; i < numCourses; i++) {
                 if (inDegrees[i] == 0) {
-                    deque.offer(i);
+                    deque.add(i);
                 }
             }
 
@@ -45,7 +45,7 @@ public class ID207CourseSchedule {
                     for (int nextCourse : nextCourses) {
                         inDegrees[nextCourse]--;
                         if (inDegrees[nextCourse] == 0) {
-                            deque.offer(nextCourse);
+                            deque.add(nextCourse);
                         }
                     }
                 }

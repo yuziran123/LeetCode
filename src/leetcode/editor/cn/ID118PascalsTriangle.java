@@ -16,7 +16,7 @@ public class ID118PascalsTriangle {
         public List<List<Integer>> generate(int numRows) {
             List<List<Integer>> ans = new ArrayList<>();
             for (int i = 0; i < numRows; i++) {
-                List<Integer> row = new ArrayList<>();
+                List<Integer> row = new ArrayList<>(i);
                 for (int j = 0; j <= i; j++) {
                     if (j == 0 || j == i) { // 两端元素始终为1
                         row.add(1);

@@ -16,11 +16,14 @@ public class ID20ValidParentheses {
             Stack<Character> stack = new Stack<>();
             for (char c : s.toCharArray()) {
                 // 如果是左括号，则将对应的右括号入栈
-                if (c == '(') stack.push(')');
-                else if (c == '{') stack.push('}');
-                else if (c == '[') stack.push(']');
-                    // 如果是右括号，且栈为空（没有左括号可以匹配）或栈顶元素不匹配，则字符串无效
-                else if (stack.isEmpty() || stack.pop() != c) return false;
+                if (c == '(')
+                    stack.push(')');
+                else if (c == '{')
+                    stack.push('}');
+                else if (c == '[')
+                    stack.push(']');
+                else if (stack.isEmpty() || stack.pop() != c)
+                    return false;   // 如果是右括号，且栈为空（没有左括号可以匹配）或栈顶元素不匹配，则字符串无效
             }
             return stack.isEmpty();
         }

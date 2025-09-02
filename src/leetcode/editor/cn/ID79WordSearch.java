@@ -40,7 +40,7 @@ public class ID79WordSearch {
         }
 
         public boolean dfs(int x, int y, int index) {
-            if (index == wordArr.length - 1) {  // 递归结束的出口
+            if (index == wordArr.length - 1) { // 若已匹配到单词的最后一个字符，直接判断当前单元格是否匹配
                 return board[x][y] == wordArr[index];
             }
             if (board[x][y] == wordArr[index]) {
